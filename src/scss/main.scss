@@ -1,0 +1,30 @@
+/*! main.scss | ListKit | Css ninja 2021-2022 */
+
+/* ==========================================================================
+SCSS Imports
+========================================================================== */
+
+@import "_overrides/initial-variables";
+@import "../sass/sass/utilities/functions";
+@import "_overrides/derived-variables";
+@import "../sass/sass/utilities/animations";
+@import "../sass/sass/utilities/mixins";
+@import "../sass/sass/utilities/controls";
+
+@import "../sass/sass/base/all";
+@import "../sass/sass/elements/all";
+@import "../sass/sass/form/all";
+@import "../sass/sass/components/all";
+@import "../sass/sass/grid/all";
+@import "../sass/sass/layout/all";
+
+@import "abstracts/variables";
+@import "abstracts/brands";
+@import "abstracts/shadows";
+@import "abstracts/typography";
+@import "abstracts/animations";
+@import "abstracts/helpers";
+
+h1 {
+    color: $primary !important;
+}
