@@ -3,18 +3,40 @@ layout: default
 title: Index
 ---
 
-<section class="section">
-    <div class="container">
-        <h1 class="title">
-            Hello World
-        </h1>
-        <p class="subtitle">
-            My first website with <strong>Bulma and Alpine</strong>!
-        </p>
-        <p x-data x-text="$store.app.getFirstName()">
-            <!-- outputs "Ryan Chandler" -->
-        </p>
-    </div>
-</section>
+<!--Main Navbar-->
+{{> main-navigation}}
 
+<div class="hero is-big is-grey is-bold" data-background="/img/photo/bg/people.jpg">
+    <div class="hero-overlay"></div>
+    <div class="hero-body">
+        <div class="container is-fluid">
+            <div class="columns is-vcentered">
+                <div class="column is-10 is-offset-1">
+                    <div class="hero-text is-light has-text-centered">
+                        <h1 class="title is-1 is-bold">
+                            Meet New People.
+                        </h1>
+                        <p class="subtitle">
+                            Explore events scheduled by members of the community and prepare to have loads of fun.
+                        </p>
+                        <div class="has-text-centered">
+                            <a class="button is-primary mx-1">Explore Events</a>
+                            <a class="button is-heavy mx-1">Learn More</a>
+                        </div>
+                        <!--p x-data x-text="$store.app.getFirstName()">
+
+                        </p-->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    
+</div>
+
+<footer class="footer"></footer>
 

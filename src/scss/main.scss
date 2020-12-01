@@ -17,6 +17,7 @@ SCSS Imports
 @import "../sass/sass/components/all";
 @import "../sass/sass/grid/all";
 @import "../sass/sass/layout/all";
+@import "../sass/sass/helpers/all";
 
 @import "abstracts/variables";
 @import "abstracts/brands";
@@ -25,6 +26,9 @@ SCSS Imports
 @import "abstracts/animations";
 @import "abstracts/helpers";
 
-h1 {
-    color: $primary !important;
-}
+@import "layout/hero";
+
+@import "elements/button";
+
+@import "components/navigation-main";
+@import "components/datepicker";

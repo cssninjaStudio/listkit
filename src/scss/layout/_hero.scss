@@ -1,0 +1,46 @@
+.hero {
+    position: relative;
+
+    &.is-big {
+        min-height: 85vh;
+
+        .hero-body {
+            display: flex;
+            align-items: center;
+
+            .hero-text {
+                .subtitle {
+                    max-width: 530px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba($dark-text, 0.6);
+        z-index: 0;
+    }
+
+    .hero-body {
+        .hero-text {
+            z-index: 2;
+    
+            &.is-light {
+                .title, .subtitle {
+                    color: $white;
+                }
+            }
+
+            .button {
+                min-width: 165px;
+            }
+        }
+    }
+}

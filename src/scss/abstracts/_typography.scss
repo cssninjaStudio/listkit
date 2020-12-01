@@ -1,4 +1,4 @@
-/*! _typography.scss | Huro | Css ninja 2020-2021 */
+/*! _typography.scss | ListKit | Css ninja 2021-2022 */
 
 /*
     1. Titles
@@ -10,11 +10,11 @@
 1. Titles
 ========================================================================== */
 
-$font: 'Roboto', sans-serif;
-$font-alt: 'Montserrat', sans-serif;
+$font: 'Karla', sans-serif;
+$font-main: 'Montserrat', sans-serif;
 
 .title {
-    font-family: $font-alt;
+    font-family: $font-main;
     color: $dark-text;
 
     &.is-narrow {
@@ -124,7 +124,7 @@ body {
 }
 
 .is-font-alt {
-    font-family: $font-alt !important;
+    font-family: $font-main !important;
 }
 
 .is-weight-300 {
