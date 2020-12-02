@@ -1,0 +1,35 @@
+<div class="mobile-main-navigation" x-data="initNavbarMobile()" :class="{
+        'is-active': mobileSearchOpened,
+        '': !mobileSearchOpened
+    }">
+    <div class="mobile-main-navigation--inner">
+        <div class="field">
+            <div class="control has-icon">
+                <input x-on:focus="toggleMobileSearch()" type="text" class="input is-rounded" placeholder="Where are you?">
+                <div class="form-icon">
+                    <i data-feather="search"></i>
+                </div>
+            </div>
+        </div>
+        <a x-show="mobileSearchOpened" @click="toggleMobileSearch()" class="cancel-link">Cancel</a>
+    </div>
+
+    <div class="mobile-main-navigation--location">
+        <a class="near-link">
+            <div class="near-icon">
+                <i data-feather="map-pin"></i>
+            </div>
+            <span>Explore events near you</span>
+        </a>
+        <div class="near-tags">
+            <h4>Places near you</h4>
+            <div class="tags">
+                <span class="tag">Los Angeles</span>
+                <span class="tag">San Francisco</span>
+                <span class="tag">San Diego</span>
+                <span class="tag">Orange County</span>
+                <span class="tag">San Juan</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -19,7 +19,7 @@ $lightblue: lightblue;
     flex-direction: column;
     z-index: 9001;
     user-select: none;
-    border: 1px solid $border;
+    //border: 1px solid $border;
     border-radius: 16px;
     padding: 30px;
     overflow: hidden;
@@ -46,11 +46,11 @@ $lightblue: lightblue;
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba($dark-text, 0.85);
     color: $white;
     width: 100%;
     height: 100%;
-    padding: .5em;
+    padding: 20px;
     z-index: 1;
     opacity: 1;
     transition: opacity $transition;
@@ -67,7 +67,7 @@ $lightblue: lightblue;
         background: transparent;
         border-bottom: 1px solid white;
         border-radius: 0;
-        color: white;
+        color: $white;
         font-size: $font-size;
         padding: .25em 0;
         width: 80%;
@@ -79,6 +79,10 @@ $lightblue: lightblue;
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
         }
+
+        &::placeholder {
+            color: darken($white, 8%);
+        }
     }
 
     .qs-close {
@@ -86,20 +90,28 @@ $lightblue: lightblue;
         cursor: pointer;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 8px;
+        color: $white;
+        font-weight: 600;
+        opacity: .7;
     }
 
     .qs-submit {
         border: 1px solid white;
         border-radius: $radius;
-        padding: .5em;
+        padding: .35em .75em;
         margin: 0 auto auto;
         cursor: pointer;
-        background: rgba(128, 128, 128, 0.4);
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+        border-radius: 8px;
+        min-width: 110px;
+        text-align: center;
 
         &.qs-disabled {
-            color: gray;
-            border-color: gray;
+            opacity: .6;
+            pointer-events: none;
             cursor: not-allowed;
         }
     }
@@ -118,6 +130,8 @@ $lightblue: lightblue;
         cursor: pointer;
         opacity: .5;
         transition: opacity ($transition / 2);
+        color: $white;
+        font-family: $font;
 
         &.active, &:hover {
             opacity: 1;
@@ -172,17 +186,18 @@ $lightblue: lightblue;
     &.qs-left:after {
         border-right-color: gray;
         right: 50%;
-        transform: translate(25%, -50%);
+        transform: translate(25%, -50%) scale(.7);
     }
 
     &.qs-right:after {
         border-left-color: gray;
         left: 50%;
-        transform: translate(-25%, -50%);
+        transform: translate(-25%, -50%) scale(.7);
     }
 }
 
 .qs-month-year {
+    font-family: $font;
     font-weight: bold;
     transition: border .2s;
     border-bottom: 1px solid transparent;
@@ -220,27 +235,34 @@ $lightblue: lightblue;
 
 .qs-square {
     width: calc(100% / 7);
-    height: $width / 10;
+    height: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background .1s;
+    font-family: $font;
+    font-size: .9rem;
+    transition: all .3s;
 
     // Overriden for date-range dates below.
     border-radius: $radius;
 
     &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active) {
         &:hover {
-            background: orange;
+            background: $primary;
+            box-shadow: $primary-box-shadow;
+            color: $white;
         }
     }
 }
 
 // Today's date
 .qs-current {
-    font-weight: bold;
-    text-decoration: underline;
+    font-family: $font;
+    background: $success !important;
+    color: $white !important;
+    box-shadow: $success-box-shadow;
+    font-weight: 600;
 }
 
 /*
@@ -252,7 +274,9 @@ $lightblue: lightblue;
 .qs-active,
 .qs-range-start,
 .qs-range-end {
-    background: $lightblue;
+    background: $primary;
+    color: $white;
+    box-shadow: $primary-box-shadow;
 }
 
 // Daterange start selection.
@@ -265,7 +289,7 @@ $lightblue: lightblue;
 
 // Daterange middle selections.
 .qs-range-middle {
-    background: lighten($lightblue, 10%);
+    background: lighten($primary, 48%);
 
     &:not(.qs-range-0):not(.qs-range-6) {
         border-radius: 0;
@@ -305,8 +329,10 @@ $lightblue: lightblue;
 
 .qs-day {
     cursor: default;
-    font-weight: bold;
-    color: gray;
+    font-family: $font;
+    font-size: .9rem;
+    font-weight: 500;
+    color: $light-text;
 }
 
 .qs-event {

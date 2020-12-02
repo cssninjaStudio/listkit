@@ -36,13 +36,13 @@
         
                 <div class="right">
                     <div class="navigation-link">
-                        <a>Host an Event</a>
+                        <a>Host Event</a>
                     </div>
                     <div class="navigation-link is-icon mx-4">
-                        <ion-icon name="globe-outline"></ion-icon>
+                        <i data-feather="globe"></i>
                     </div>
                     <figure class="image is-32x32">
-                        <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                        <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="">
                     </figure>
                 </div>
             </div>
@@ -50,77 +50,135 @@
 
     </div>
     <div class="main-navigation--search">
-        <div class="search-bar">
-            <div class="block-30" @click="openDrop('location-drop'), $refs.locationInput.focus()" @click.away="closeDrop('location-drop')" :class="{
-                    'is-active': locationDropOpened,
-                    '': !locationDropOpened
-                }">
-                <div class="field">
-                    <label>Location</label>
-                    <div class="control">
-                        <input x-ref="locationInput" placeholder="Where are you?">
+        <form id="search-form">
+            <div class="search-bar" @click.away="disableSearch()">
+                <div class="block-30" @click.stop="openDrop('location-drop'), $refs.locationInput.focus()" @click.away="closeDrop('location-drop')" :class="{
+                        'is-active': locationDropOpened,
+                        '': !locationDropOpened
+                    }">
+                    <div class="field">
+                        <label>Location</label>
+                        <div class="control">
+                            <input x-ref="locationInput" required="required" placeholder="Where are you?">
+                            <button type="reset" class="clear-value">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-
-                <div x-show.transition="locationDropOpened" class="location-dropdown">
-                    <div class="location-dropdown-inner">
-                        <a class="near-link">
-                            <div class="near-icon">
-                                <i data-feather="map-pin"></i>
-                            </div>
-                            <span>Explore events near you</span>
-                        </a>
-                        <div class="near-tags">
-                            <h4>Places near you</h4>
-                            <div class="tags">
-                                <span class="tag">Los Angeles</span>
-                                <span class="tag">San Francisco</span>
-                                <span class="tag">San Diego</span>
-                                <span class="tag">Orange County</span>
-                                <span class="tag">San Juan</span>
+    
+                    <div x-show.transition="locationDropOpened" class="location-dropdown">
+                        <div class="location-dropdown-inner">
+                            <a class="near-link">
+                                <div class="near-icon">
+                                    <i data-feather="map-pin"></i>
+                                </div>
+                                <span>Explore events near you</span>
+                            </a>
+                            <div class="near-tags">
+                                <h4>Places near you</h4>
+                                <div class="tags">
+                                    <span class="tag">Los Angeles</span>
+                                    <span class="tag">San Francisco</span>
+                                    <span class="tag">San Diego</span>
+                                    <span class="tag">Orange County</span>
+                                    <span class="tag">San Juan</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="block-20" @click="openDrop('start-date-drop'), $refs.startDateInput.focus()" @click.away="closeDrop('start-date-drop')" :class="{
-                    'is-active': startDateDropOpened,
-                    '': !startDateDropOpened
-                }">
-                <div class="field">
-                    <label>Starting</label>
-                    <div class="control">
-                        <input x-ref="startDateInput" class="search-datepicker-start" placeholder="Select a date">
-                    </div>
-                </div>
-            </div>
-            <div class="block-20" @click="openDrop('end-date-drop'), $refs.endDateInput.focus()" @click.away="closeDrop('end-date-drop')" :class="{
-                    'is-active': endDateDropOpened,
-                    '': !endDateDropOpened
-                }">
-                <div class="field">
-                    <label>Ending</label>
-                    <div class="control">
-                        <input x-ref="endDateInput" class="search-datepicker-end" placeholder="Select a date">
-                    </div>
-                </div>
-            </div>
-            <div class="block-30">
-                <div class="field has-search-button">
-                    <label>Audience</label>
-                    <div class="control">
-                        <input placeholder="Pick a type">
-                    </div>
-                </div>
-
-                <button class="search-button":class="{
-                        'is-expanded': searchActive,
-                        '': !searchActive
+                <div class="block-20" @click="openDrop('start-date-drop'), $refs.startDateInput.focus()" @click.away="closeDrop('start-date-drop')" :class="{
+                        'is-active': startDateDropOpened,
+                        '': !startDateDropOpened
                     }">
-                    <i data-feather="search"></i>
-                    <span> Search</span>
-                </button>
+                    <div class="field">
+                        <label>Starting</label>
+                        <div class="control">
+                            <input x-ref="startDateInput" required="required" class="search-datepicker-start" placeholder="Select a date">
+                            <button type="reset" class="clear-value">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-20" @click="openDrop('end-date-drop'), $refs.endDateInput.focus()" @click.away="closeDrop('end-date-drop')" :class="{
+                        'is-active': endDateDropOpened,
+                        '': !endDateDropOpened
+                    }">
+                    <div class="field">
+                        <label>Ending</label>
+                        <div class="control">
+                            <input x-ref="endDateInput" required="required" class="search-datepicker-end" placeholder="Select a date">
+                            <button @click="$refs.endDateInput.value = ''" type="reset" class="clear-value">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-30" @click="openDrop('type-drop'), $refs.typeInput.focus()" @click.away="closeDrop('type-drop')" :class="{
+                        'is-active': typeDropOpened,
+                        '': !typeDropOpened
+                    }">
+                    <div class="field has-search-button">
+                        <label>Audience</label>
+                        <div class="control">
+                            <input x-ref="typeInput" required="required" placeholder="Pick a type">
+                            <button type="reset" class="clear-value">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div x-show.transition="typeDropOpened" class="type-dropdown">
+                        <div class="type-dropdown-inner">
+                            <div class="type-block">
+                                <div class="meta">
+                                    <span>General audience</span>
+                                    <span>Suitable for everyone</span>
+                                </div>
+                                <div class="action">
+                                    <label class="form-switch is-primary">
+                                        <input type="radio" name="search_type_radio" class="is-switch" checked>
+                                        <i></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="type-block">
+                                <div class="meta">
+                                    <span>Family</span>
+                                    <span>Suitable for kids and families</span>
+                                </div>
+                                <div class="action">
+                                    <label class="form-switch is-primary">
+                                        <input type="radio" name="search_type_radio" class="is-switch">
+                                        <i></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="type-block">
+                                <div class="meta">
+                                    <span>Adults only</span>
+                                    <span>Only for adults and grown ups</span>
+                                </div>
+                                <div class="action">
+                                    <label class="form-switch is-primary">
+                                        <input type="radio" name="search_type_radio" class="is-switch">
+                                        <i></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <button type="button" class="search-button" :class="{
+                            'is-expanded': searchActive,
+                            '': !searchActive
+                        }">
+                        <i data-feather="search"></i>
+                        <span> Search</span>
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>

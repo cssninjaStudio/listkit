@@ -22,11 +22,16 @@ export function initNavbar() {
         },
 
         searchActive: false,
+        disableSearch() {
+            this.searchActive = false;
+        },
+
         locationDropOpened: false,
         startDatepicker: searchStartDatepicker,
         endDatepicker: searchEndDatepicker,
         startDateDropOpened: false,
         endDateDropOpened: false,
+        typeDropOpened: false,
 
         openDrop(param) {
 
@@ -40,7 +45,12 @@ export function initNavbar() {
                     this.startDateDropOpened = true;
                     break;
                 case 'end-date-drop':
+                    this.searchActive = true;
                     this.endDateDropOpened = true;
+                    break;
+                case 'type-drop':
+                    this.typeDropOpened = true;
+                    this.searchActive = true;
                     break;
 
                 default:
@@ -54,13 +64,15 @@ export function initNavbar() {
             switch (param) {
                 case 'location-drop':
                     this.locationDropOpened = false;
-                    this.searchActive = false;
                     break;
                 case 'start-date-drop':
                     this.startDateDropOpened = false;
                     break;
                 case 'end-date-drop':
                     this.endDateDropOpened = false;
+                    break;
+                case 'type-drop':
+                    this.typeDropOpened = false;
                     break;
 
                 default:

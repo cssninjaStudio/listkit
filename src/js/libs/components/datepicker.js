@@ -6,6 +6,12 @@ const searchStartDatepicker = datepicker('.search-datepicker-start', {
     minDate: new Date(),
     startDate: new Date(),
     showAllDates: true,
+    formatter: (input, date, instance) => {
+        const value = date.toLocaleDateString('en-EN', {
+            month: "short", day: "numeric"
+        });
+        input.value = value;
+    }
 });
 const searchEndDatepicker = datepicker('.search-datepicker-end', {
     id: 1,
@@ -13,4 +19,10 @@ const searchEndDatepicker = datepicker('.search-datepicker-end', {
     minDate: new Date(),
     startDate: new Date(),
     showAllDates: true,
+    formatter: (input, date, instance) => {
+        const value = date.toLocaleDateString('en-EN', {
+            month: "short", day: "numeric"
+        });
+        input.value = value;
+    }
 });
