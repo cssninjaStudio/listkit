@@ -1,0 +1,237 @@
+/*! _section.scss | ListKit | Css ninja 2021-2022 */
+
+/*
+    1. Categories Section
+*/
+
+
+.section {
+    &.is-dark {
+        background: $dark-sidebar;
+    }
+}
+
+
+.mdl-featured-episodes {
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        h4 {
+            font-family: $font-main;
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: $white;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: $white;
+            max-width: 520px;
+        }
+
+        .links {
+            
+        }
+    }
+
+    .episodes-grid {
+        display: flex;
+        align-items: stretch;
+        margin-top: 20px;
+
+        .left-side {
+            width: 50%;
+
+            .episode {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 6px;
+                width: calc(100% - 12px);
+                height: calc(100% - 12px);
+
+                .episode-thumb {
+                    flex-grow: 2;
+
+                    img {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 1.25rem;
+                    }
+                }
+
+                .episode-foot {
+                    padding-top: 4px;
+
+                    span {
+                        display: block;
+
+                        &:first-child {
+                            font-size: .9rem;
+                            font-weight: 500;
+                            color: $muted-grey;
+                        }
+
+                        &:nth-child(2) {
+                            font-family: $font;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            color: $dark-text;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-side {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .episode {
+                margin: 6px;
+                width: calc(50% - 12px);
+                height: calc(50% - 12px);
+
+                .episode-thumb {
+                    img {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 1.25rem;
+
+                        &.is-pulled {
+                            margin-top: -3px;
+                        }
+                    }
+                }
+
+                .episode-foot {
+                    margin-top: 2px;
+
+                    span {
+                        display: block;
+
+                        &:first-child {
+                            font-size: .8rem;
+                            font-weight: 500;
+                            color: $muted-grey;
+                        }
+
+                        &:nth-child(2) {
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-weight: 600;
+                            font-size: .85rem;
+                            color: $dark-text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Categories Section
+========================================================================== */
+
+.mdl-latest-episodes {
+    margin-top: 50px;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h4 {
+            font-family: $font-main;
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: $dark-text;
+        }
+
+        .links {
+            a {
+                font-size: .9rem;
+                font-weight: 500;
+                color: $muted-grey;
+                padding: 0 10px;
+                transition: color .3s;
+
+                &.is-active {
+                    font-weight: 600;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .episodes {
+        display: flex;
+        align-items: stretch;
+        margin-top: 20px;
+        margin-left: -8px;
+        margin-right: -8px;
+
+        .episode {
+            display: block;
+            width: calc(25% - 16px);
+            margin: 8px;
+
+            .episode-thumb {
+                overflow: hidden;
+                border-radius: 10px;
+
+                img {
+                    display: block;
+                    min-height: 220px;
+                    object-fit: cover;
+                }
+            }
+
+            .episode-foot {
+                margin-top: 2px;
+
+                span {
+                    display: block;
+
+                    &:first-child {
+                        margin-top: 6px;
+                        font-size: .8rem;
+                        font-weight: 500;
+                        color: $muted-grey;
+
+                        span {
+                            display: inline;
+                        }
+
+                        .separator {
+                            position: relative;
+                            top: -.5px;
+                            padding: 0 5px;
+                            font-size: .6rem;
+                            color: darken($fade-grey, 10%) !important;
+
+                            //opacity: .6;
+                            text-align: center;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        font-family: $font;
+                        font-weight: 600;
+                        font-size: .85rem;
+                        color: $dark-text;
+                    }
+                }
+            }
+        }
+    }
+}

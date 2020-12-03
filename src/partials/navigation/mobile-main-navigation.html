@@ -1,6 +1,8 @@
-<div class="mobile-main-navigation" x-data="initNavbarMobile()" :class="{
-        'is-active': mobileSearchOpened,
-        '': !mobileSearchOpened
+<div class="mobile-main-navigation" x-data="initNavbarMobile()"  x-on:scroll.window="scroll()"  :class="{
+        'is-active is-scrolled': mobileSearchOpened,
+        '': !mobileSearchOpened,
+        'is-scrolled': scrolled,
+        '': !scrolled,
     }">
     <div class="mobile-main-navigation--inner">
         <div class="field">
@@ -15,7 +17,7 @@
     </div>
 
     <div class="mobile-main-navigation--location">
-        <a class="near-link">
+        <a class="near-link" @click="toggleMobileSearchPanel()">
             <div class="near-icon">
                 <i data-feather="map-pin"></i>
             </div>
@@ -32,4 +34,134 @@
             </div>
         </div>
     </div>
+
+    <div class="mobile-search-panel" :class="{
+            'is-active': mobileSearchPanelOpened,
+            '': !mobileSearchPanelOpened
+        }">
+        <div class="mobile-search-panel--inner">
+            <div class="panel-header">
+                <button class="close-button" @click="toggleMobileSearchPanel()">
+                    <i data-feather="chevron-left"></i>
+                </button>
+            </div>
+            <div class="panel-body">
+                
+                <div x-show.transition="activeWizardStep === 0" class="panel-step">
+                    <h3>What are you looking for?</h3>
+                    <div class="radio-cards-group">
+                        <!--Card-->
+                        <div class="radio-card">
+                            <input type="radio" name="topic_selection" checked>
+                            <div class="radio-card-inner">
+                                <img src="https://dummyimage.com/150x150" alt="">
+                                <div class="meta">
+                                    <span>Everything</span>
+                                    <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Card-->
+                        <div class="radio-card">
+                            <input type="radio" name="topic_selection">
+                            <div class="radio-card-inner">
+                                <img src="https://dummyimage.com/150x150" alt="">
+                                <div class="meta">
+                                    <span>Events</span>
+                                    <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Card-->
+                        <div class="radio-card">
+                            <input type="radio" name="topic_selection">
+                            <div class="radio-card-inner">
+                                <img src="https://dummyimage.com/150x150" alt="">
+                                <div class="meta">
+                                    <span>Meetups</span>
+                                    <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Card-->
+                        <div class="radio-card">
+                            <input type="radio" name="topic_selection">
+                            <div class="radio-card-inner">
+                                <img src="https://dummyimage.com/150x150" alt="">
+                                <div class="meta">
+                                    <span>Trips</span>
+                                    <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+
+                <div x-show.transition="activeWizardStep === 1" class="panel-step">
+                    <h3>When should that be?</h3>
+
+                    <div class="mobile-dates">
+                        <div class="search-datepicker-start-mobile"></div>
+                        <div class="search-datepicker-end-mobile is-hidden"></div>
+                    </div>
+                </div>
+
+                <div x-show.transition="activeWizardStep === 2" class="panel-step">
+                    <h3>When should that be?</h3>
+
+                    <div class="type-blocks">
+                        <div class="type-block">
+                            <div class="meta">
+                                <span>General audience</span>
+                                <span>Suitable for everyone</span>
+                            </div>
+                            <div class="action">
+                                <label class="form-switch is-primary">
+                                    <input type="radio" name="search_type_radio_mobile" class="is-switch" checked>
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="type-block">
+                            <div class="meta">
+                                <span>Family</span>
+                                <span>Suitable for kids and families</span>
+                            </div>
+                            <div class="action">
+                                <label class="form-switch is-primary">
+                                    <input type="radio" name="search_type_radio_mobile" class="is-switch">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="type-block">
+                            <div class="meta">
+                                <span>Adults only</span>
+                                <span>Only for adults and grown ups</span>
+                            </div>
+                            <div class="action">
+                                <label class="form-switch is-primary">
+                                    <input type="radio" name="search_type_radio_mobile" class="is-switch">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Wizard Navigation Buttons-->
+    <div class="search-panel-buttons" :class="{
+            'is-active': mobileSearchPanelOpened,
+            '': !mobileSearchPanelOpened
+        }">
+        <div class="search-panel-buttons-inner">
+            <button class="button h-button is-light is-bold" @click="wizardBack($event)">Previous</button>
+            <button class="button h-button is-primary is-bold" @click="wizardForward($event)">Next</button>
+        </div>
+    </div>
 </div>
+
