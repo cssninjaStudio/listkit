@@ -38,12 +38,26 @@
                     <div class="navigation-link">
                         <a>Host Event</a>
                     </div>
-                    <div class="navigation-link is-icon mx-4">
+                    <button class="navigation-link is-icon mx-4">
                         <i data-feather="globe"></i>
+                    </button>
+                    <div class="account-drop">
+                        <button @click="openDrop('account-drop')" @click.away="closeDrop('account-drop')">
+                            <figure class="image is-32x32">
+                                <img class="is-rounded" src="https://dummyimage.com/150x150" data-demo-src="/img/photo/avatar/placeholder.png" alt="">
+                            </figure>
+                        </button>
+                        <div x-show.transition="accountDropOpened" class="drop-menu">
+                            <div class="drop-menu-inner">
+                                <a class="drop-menu-item is-heavy">Sign In</a>
+                                <a class="drop-menu-item">Register</a>
+                                <hr>
+                                <a class="drop-menu-item">Host Event</a>
+                                <a class="drop-menu-item">Explore Events</a>
+                                <a class="drop-menu-item">Help</a>
+                            </div>
+                        </div>
                     </div>
-                    <figure class="image is-32x32">
-                        <img class="is-rounded" src="https://dummyimage.com/150x150" alt="">
-                    </figure>
                 </div>
             </div>
         </div>

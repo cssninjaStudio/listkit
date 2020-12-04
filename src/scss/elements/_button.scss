@@ -11,4 +11,14 @@
     &.is-heavy {
         font-weight: 500;
     }
+
+    &.is-primary {
+        &.is-raised-hover:hover {
+            box-shadow: $primary-box-shadow;
+        }
+
+        &.is-raised {
+            box-shadow: $primary-box-shadow;
+        }
+    }
 }

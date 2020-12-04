@@ -32,6 +32,7 @@ export function initNavbar() {
         startDateDropOpened: false,
         endDateDropOpened: false,
         typeDropOpened: false,
+        accountDropOpened: false,
 
         openDrop(param) {
 
@@ -51,6 +52,9 @@ export function initNavbar() {
                 case 'type-drop':
                     this.typeDropOpened = true;
                     this.searchActive = true;
+                    break;
+                case 'account-drop':
+                    this.accountDropOpened = true;
                     break;
 
                 default:
@@ -73,6 +77,9 @@ export function initNavbar() {
                     break;
                 case 'type-drop':
                     this.typeDropOpened = false;
+                    break;
+                case 'account-drop':
+                    this.accountDropOpened = false;
                     break;
 
                 default:

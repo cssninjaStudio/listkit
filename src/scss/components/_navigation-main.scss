@@ -228,9 +228,51 @@
                 }
 
                 .navigation-link {
+                    position: relative;
                     display: inline-block;
                     text-align: center;
                     margin: 0 10px;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -4px;
+                        left: 2px;
+                        width: 50%;
+                        -webkit-transform-origin: right center;
+                        -ms-transform-origin: right center;
+                        transform-origin: right center;
+                        height: 3px;
+                        border-radius: 50px;
+                        background: $white;
+                        -webkit-transform: scale(0, 1);
+                        -ms-transform: scale(0, 1);
+                        transform: scale(0, 1);
+                        -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+
+                    //Hover state
+                    &:hover, &.is-active {
+                        color: $dark-text;
+
+                        &:before {
+                            -webkit-transform-origin: left center;
+                            -ms-transform-origin: left center;
+                            transform-origin: left center;
+                            -webkit-transform: scale(1, 1);
+                            -ms-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+                    }
+
+                    &.active {
+                        &:before {
+                            background: $white;
+                        }
+                    }
                 }
             }
 
@@ -238,6 +280,67 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
+
+                .account-drop {
+                    position: relative;
+                    z-index: 11;
+
+                    > button {
+                        border: none;
+                        outline: none;
+                        background: none;
+                        cursor: pointer;
+                        padding: 0;
+
+                        figure {
+                            pointer-events: none;
+                        }
+                    }
+
+                    .drop-menu {
+                        position: absolute;
+                        top: 45px;
+                        right: 0;
+                        width: 240px;
+
+                        .drop-menu-inner {
+                            position: relative;
+                            height: 100%;
+                            width: 100%;
+                            background: $white;
+                            padding: 1rem 0;
+                            border: 1px solid $border;
+                            border-radius: .825rem;
+                            box-shadow: $medium-box-shadow;
+
+                            .drop-menu-item {
+                                display: block;
+                                font-family: $font;
+                                padding: .5rem .75rem;
+                                margin: 0 .5rem;
+                                color: $light-text;
+                                border-radius: .5rem;
+                                transition: all .3s;
+
+                                &:hover {
+                                    background: lighten($fade-grey, 2%);
+                                    color: $dark-text;
+                                }
+
+                                &.is-heavy {
+                                    font-weight: 600;
+                                    color: $dark-text;
+                                }
+                            }
+
+                            hr {
+                                height: 1px;
+                                background: $border;
+                                margin: .75rem 0;
+                            }
+                        }
+                    }
+                }
             }
 
             .navigation-link {
@@ -248,11 +351,17 @@
                     height: 32px;
                     width: 32px;
                     color: $white;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    padding: 0;
                     font-size: 20px;
+                    cursor: pointer;
 
                     svg {
                         height: 18px;
                         width: 18px;
+                        pointer-events: none;
                     }
                 }
 
