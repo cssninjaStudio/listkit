@@ -1,19 +1,23 @@
 "use strict";
 
-const feather = require('feather-icons');
-import './store/store';
-import 'alpinejs';
-import { initPageLoader, pageloader } from './libs/components/pageloader';
-import { switchDemoImages, insertBgImages } from './libs/utils/utils';
-import { initNavbar } from './libs/components/navbar';
-import { initNavbarMobile } from './libs/components/navbar-mobile';
-import { initFeaturedHosts } from './libs/components/featured-hosts';
+const feather = require('feather-icons')
 
-window.initNavbar = initNavbar;
-window.initNavbarMobile = initNavbarMobile;
-window.initFeaturedHosts = initFeaturedHosts;
+import Alpine from 'alpinejs'
+window.Alpine = Alpine
+Alpine.store('app', {
+    isLoggedIn: false,
+})
+Alpine.start()
 
-const showPageloader = initPageLoader();
+import { env } from './libs/utils/constants'
+import './libs/components'
+import './libs/forms'
+import './libs/sections'
+import { initPageLoader } from './libs/components/pageloader/pageloader'
+import { switchDemoImages, insertBgImages, insertHrefs, insertPosters, initModals, initVideoPlayers } from './libs/utils/utils'
+
+const showPageloader = initPageLoader()
+//document.addEventListener('alpine:init', () => Alpine prefix('data-x-'))
 
 document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
@@ -22,10 +26,18 @@ document.onreadystatechange = function () {
         const changeImages = switchDemoImages();
 
         //Switch backgrounds
-        const changeBackgrounds = insertBgImages();
+        const changeBackgrounds = insertBgImages(env);
+        const changeHrefs = insertHrefs(env);
+        const changePosters = insertPosters(env);
 
         //Feather Icons
         const featherIcons = feather.replace();
+
+        //Modals
+        const modals = initModals();
+
+        //Video Players
+        const players = initVideoPlayers(env);
         
     }
 }

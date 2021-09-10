@@ -1,0 +1,583 @@
+---
+layout: default
+title: Guarantees
+---
+
+<!--Main Navbar-->
+{{> main-navigation-default}}
+
+<div class="hero is-big is-grey is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-12">
+          <div class="hero-text has-text-centered">
+            <div class="title-divider"></div>
+            <h1 class="title is-1 is-bold">Solid Warranties.</h1>
+            <p class="subtitle">
+              Explore events scheduled by members of the community and prepare
+              to have loads of fun.
+            </p>
+            <div class="has-text-centered">
+              <a class="button is-primary is-raised-hover mx-1">Explore Events</a>
+              <a class="button is-heavy mx-1">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pulled-hero-form">
+  <div class="container">
+    <form>
+      <div
+        class="card card-form card-form-horizontal"
+        x-data="initHeroCreateListingForm()"
+        x-init="initSelects()"
+      >
+        <div class="card-form-left">
+          <div class="head">
+            <h2 class="title is-5">
+              Tell us more about your potential services and offers
+            </h2>
+            <div class="field">
+              <div class="control">
+                <input class="input is-bigger" placeholder="Event name" />
+              </div>
+            </div>
+            <div class="field">
+              <div class="control has-caret">
+                <select class="input" data-choice-select>
+                  <option>Service type</option>
+                  <option>Physical event</option>
+                  <option>Online event</option>
+                  <option>Online classes</option>
+                  <option>Physical classes</option>
+                  <option>Flats</option>
+                  <option>Trips</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control has-caret">
+                <select class="input" data-choice-select>
+                  <option>Attendees</option>
+                  <option>1</option>
+                  <option>1-2</option>
+                  <option>2-10</option>
+                  <option>10-50</option>
+                  <option>50+</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-form-right">
+          <div class="field">
+            <div class="control">
+              <a class="button is-primary is-fullwidth is-raised-hover mx-1">Continue</a>
+            </div>
+          </div>
+          <a class="bottom-link">How do we assess your income?</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="boxed-video py-6">
+      <div class="video-player-container is-16by9">
+        <video
+          id="hero-player"
+          class="video-player"
+          playsinline
+          controls
+          data-poster="https://dummyimage.com/440x440/ededed/000000"
+          data-demo-poster="img/photo/content/video/poster-2g.jpg"
+        >
+          <source src="/img/video/meeting.mp4" type="video/mp4" />
+          <source src="/img/video/meeting.webm" type="video/webm" />
+        </video>
+      </div>
+
+      <div class="py-6">
+        <div class="boxed-text">
+          <h4 class="subtitle is-6 pb-2 text-primary">CUSTOMER SERVICE</h4>
+          <h2 class="title is-5 has-space">24/24 Dedicated Support</h2>
+          <p class="rem-125">
+            Running through an issue? Our support team is here to help.
+          </p>
+
+          <div class="columns is-multiline b-columns-third-tablet-p has-text-centered pt-6">
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/clock.svg" alt="">
+              </div>
+              <h4 class="title is-6 has-space">24/24 Support</h4>
+              <p class="stressed-1 is-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/laptop.svg" alt="">
+              </div>
+              <h4 class="title is-6 has-space">Knowledge base</h4>
+              <p class="stressed-1 is-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/refund.svg" alt="">
+              </div>
+              <h4 class="title is-6 has-space">Refund policy</h4>
+              <p class="stressed-1 is-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/report.svg" alt="">
+              </div>
+              <h4 class="title is-6 has-space">Built-in reports</h4>
+              <p class="stressed-1 is-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/calendar-2.svg" alt="">
+              </div>
+              <h4 class="title is-6 has-space">Assessments</h4>
+              <p class="stressed-1 is-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/chat.svg" alt="">
+              </div>
+              <h4 class="title is-6 has-space">Live chat</h4>
+              <p class="stressed-1 is-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comparison-table-wrapper mb-6">
+      <table class="has-text-centered">
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th class="">Listkit</th>
+            <th>Airkit</th>
+            <th>Groundkit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="has-text-left">Dynamic listings</td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+            <td class="has-text-centered">&mdash;</td>
+          </tr>
+          <tr>
+            <td class="has-text-left">Flat listings</td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="has-text-left">Event listings</td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <td class="has-text-left">Trip listings</td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <td class="has-text-left">Referrals</td>
+            <td>
+              <div class="check-wrap is-sm is-centered is-success">
+                <i data-feather="check"></i>
+              </div>
+            </td>
+            <td>&mdash;</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <td class="has-text-left">Platform commission</td>
+            <td>
+              <span class="rem-100 text-l2">5%</span>
+            </td>
+            <td>
+              <span class="rem-100 text-l2">12%</span>
+            </td>
+            <td>
+              <span class="rem-100 text-l2">8%</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="has-text-left">Pricing</td>
+            <td>
+              <span class="rem-100 text-l2">Free</span>
+            </td>
+            <td>
+              <span class="rem-100 text-l2">$8 /month</span>
+            </td>
+            <td><span class="rem-100 text-l2">$15 /month</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="py-6">
+      <div class="columns is-vcentered is-flex-tablet-p">
+        <div class="column is-5">
+          <i class="fas fa-2x fa-quote-left mb-4 text-secondary"></i>
+          <h4 class="title is-2 is-thin is-thin-mobile has-space">
+            Things weren't going so well before I knew Listkit. My classes were
+            often empty and I was about to resign.
+          </h4>
+          <p>
+            Brian's urban training facility was about to close its doors. But
+            fortunately, he was able to transition to online classes.
+          </p>
+          <div class="py-4">
+            <a class="button is-primary is-outlined is-raised-hover"
+              >Discover Brian's Story</a
+            >
+          </div>
+        </div>
+        <div class="column is-6 is-offset-1">
+          <img src="img/photo/content/people/square-13.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <!--Title-->
+    <div class="section-title has-text-centered py-6">
+      <div class="title-divider"></div>
+      <h1 class="title is-2 is-bold has-space">With Confidence</h1>
+    </div>
+
+    <div class="checked-features-grid py-6">
+      <div class="columns is-flex-tablet-p">
+        <!--Feature-->
+        <div class="column is-4">
+          <div class="svg-icon is-md mb-4">
+            <img class="mb-2" src="img/icons/custom/plant.svg" alt="">
+          </div>
+          <h4 class="title is-5">Schedule your offers and events 100% Free</h4>
+          <p class="stressed-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet.
+          </p>
+        </div>
+        <!--Feature-->
+        <div class="column is-4">
+          <div class="svg-icon is-md mb-4">
+            <img class="mb-2" src="img/icons/custom/laptop-mail.svg" alt="">
+          </div>
+          <h4 class="title is-5">Define your Terms</h4>
+          <p class="stressed-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet? Si
+            longus, levis dictata sunt
+          </p>
+        </div>
+        <!--Feature-->
+        <div class="column is-4">
+          <div class="svg-icon is-md mb-4">
+            <img class="mb-2" src="img/icons/custom/plane-globe.svg" alt="">
+          </div>
+          <h4 class="title is-5">
+            Start offering your service to interested people
+          </h4>
+          <p class="stressed-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet.
+          </p>
+          <a class="underlink my-4">Start listing your services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section is-light-grey">
+  <div class="container">
+    <!--Title-->
+    <div class="section-title has-text-centered py-6">
+      <div class="title-divider"></div>
+      <h1 class="title is-2 is-bold">24/24 Dedicated Support</h1>
+    </div>
+
+    <div class="py-6">
+      <img src="https://dummyimage.com/1280x680" data-demo-src="img/photo/content/people/support.jpg" alt="" />
+      <div class="columns mt-6">
+        <div class="column is-5">
+          <p class="stressed-1 mb-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet? Si
+            longus, levis dictata sunt. Non risu potius quam oratione eiciendum?
+          </p>
+          <p class="stressed-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet? Si
+            longus, levis dictata sunt. Non risu potius quam oratione eiciendum?
+          </p>
+          <a class="underlink my-4">See how you can start offering services</a>
+        </div>
+        <div class="column is-6 is-offset-1">
+          <!--Benefit-->
+          <div class="media-flex-center">
+            <div class="check-wrap">
+              <i data-feather="check"></i>
+            </div>
+            <div class="flex-meta">
+              <span>100% Backed events</span>
+              <span
+                >If one of your attendees cancels, you still keep the
+                earnings</span
+              >
+            </div>
+          </div>
+          <!--Benefit-->
+          <div class="media-flex-center">
+            <div class="check-wrap">
+              <i data-feather="check"></i>
+            </div>
+            <div class="flex-meta">
+              <span>Set your rules</span>
+              <span>Attendees and customer must follow the rules you set</span>
+            </div>
+          </div>
+          <!--Benefit-->
+          <div class="media-flex-center">
+            <div class="check-wrap">
+              <i data-feather="check"></i>
+            </div>
+            <div class="flex-meta">
+              <span>Breakage insurance</span>
+              <span
+                >We back you up with a breakage insurance for physical
+                events.</span
+              >
+            </div>
+          </div>
+          <!--Benefit-->
+          <div class="media-flex-center">
+            <div class="check-wrap">
+              <i data-feather="check"></i>
+            </div>
+            <div class="flex-meta">
+              <span>24/24 Support</span>
+              <span>Our support team is available 24/24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-6">
+      <div class="columns is-vcentered">
+        <div class="column is-4 is-offset-2">
+          <div class="">
+            <h4 class="title is-3 is-narrow">
+              Incredible experiences are waiting for you
+            </h4>
+          </div>
+        </div>
+        <div class="column is-4 is-offset-1">
+          <div class="">
+            <p class="stressed-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+              dolor, inquit, brevis est. Comprehensum, quod cognitum non habet?
+              Si longus, levis dictata sunt. Non risu potius quam oratione
+              eiciendum? Istic sum, inquit. Ita prorsus, inquam;
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <!--Title-->
+    <div class="section-title has-text-centered py-6">
+      <div class="title-divider"></div>
+      <h1 class="title is-2 is-bold">Frequent questions</h1>
+    </div>
+
+    <!--FAQ-->
+    <div class="py-6">
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <h4 class="title is-5 has-space">
+            Start offering your service to interested people
+          </h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet? Si
+            longus, levis dictata sunt. Non risu potius quam oratione eiciendum?
+          </p>
+          <a class="underlink my-4">See how you can start offering services</a>
+        </div>
+        <div class="column is-6 is-offset-1">
+          <div class="accordion" x-data="initAccordion()" x-init="setup()">
+            <div class="accordion-item">
+              <button id="accordion-button-1" aria-expanded="false">
+                <span class="accordion-title"
+                  >Can I offer more then a service?</span
+                ><span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                  viverra suspendisse potenti.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">Can I get paid with Cryptos?</span
+                ><span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                  viverra suspendisse potenti.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-3" aria-expanded="false">
+                <span class="accordion-title"
+                  >May I have more than one host account?</span
+                ><span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                  viverra suspendisse potenti.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-4" aria-expanded="false">
+                <span class="accordion-title">Can I sell trip packages?</span
+                ><span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                  viverra suspendisse potenti.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-5" aria-expanded="false">
+                <span class="accordion-title">How much is the commission?</span
+                ><span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                  viverra suspendisse potenti.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--CTA Section-->
+    <div class="my-6">
+      <div
+        class="background-cta"
+        data-background="https://dummyimage.com/1920x1080"
+        data-demo-background="https://images.pexels.com/photos/3765134/pexels-photo-3765134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      >
+        <div class="columns">
+          <div class="column is-4">
+            <h4 class="title is-3 is-bold text-inverted has-space">
+              Start earning real money by helping others
+            </h4>
+            <p class="text-inverted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+              dolor, inquit, brevis est. Comprehensum, quod cognitum non habet?
+            </p>
+
+            <div class="py-4">
+              <a class="button is-primary is-raised-hover">Host an Event</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

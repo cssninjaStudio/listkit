@@ -3,7 +3,8 @@ const del = require('del');
 const options = require("./config");
 const browserSync = require('browser-sync').create();
 
-const sass = require('gulp-sass');
+//const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const bourbon = require('node-bourbon').includePaths;
 const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
@@ -19,6 +20,8 @@ const browserify = require("browserify");
 const babelify = require("babelify");
 const source = require("vinyl-source-stream");
 const nodepath = 'node_modules/';
+
+//sass.compiler = require('sass');
 
 //Note : Webp still not supported in major browsers including forefox
 //const webp = require('gulp-webp'); //For converting images to WebP format
@@ -94,6 +97,11 @@ function concatCssPlugins() {
   console.log("\n\t" + logSymbols.info, "Compiling Plugin styles..\n");
   return src([
     nodepath + 'simplebar/dist/simplebar.min.css',
+    nodepath + 'line-awesome/dist/line-awesome/css/line-awesome.min.css',
+    nodepath + 'lightgallery.js/dist/css/lightgallery.min.css',
+    nodepath + 'plyr/dist/plyr.css',
+    nodepath + 'lightgallery.js/dist/css/lg-transitions.min.css',
+    nodepath + 'choices.js/public/assets/styles/choices.min.css',
     nodepath + 'codemirror/lib/codemirror.css',
     nodepath + 'codemirror/theme/shadowfox.css',
     'src/assets/vendor/css/*',
@@ -147,6 +155,14 @@ function javascriptBuild() {
   );
 }
 
+function copyFonts() {
+  console.log("\n\t" + logSymbols.info, "Copying fonts.\n");
+  return src([
+    'src/fonts/*',
+  ])
+    .pipe(dest('dist/fonts'))
+    .pipe(browserSync.stream());
+}
 
 function watchFiles() {
   //watch('src/**/*.html', compileHTML);
@@ -168,7 +184,7 @@ exports.setup = series(setupBulma);
 exports.default = series(
   devClean, // Clean Dist Folder
   resetPages,
-  parallel(concatCssPlugins, compileSASS, compileSCSS, javascriptBuild, devImages, compileHTML),
+  parallel(copyFonts, concatCssPlugins, compileSCSS, javascriptBuild, devImages, compileHTML),
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );

@@ -1,0 +1,670 @@
+---
+layout: default
+title: Careers
+---
+
+<!--Main Navbar-->
+{{> main-navigation-light}}
+
+<div
+  class="hero is-big is-grey is-bold"
+  data-background="https://dummyimage.com/1920x1080"
+  data-demo-background="/img/photo/bg/team-happy.jpg"
+>
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <div class="card card-form careers-card-form">
+            <div class="hero-text">
+              <h1 class="title is-1 is-bold">Join a great team.</h1>
+              <p class="subtitle is-left">
+                At Listkit, we're a great family of developers and business
+                people. Wanna join us?
+              </p>
+              <div class="">
+                <a class="button is-primary is-raised-hover">View Job Offers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="py-6">
+      <div class="boxed-text">
+        <h4 class="subtitle is-6 pb-2 text-primary">WHO WE ARE</h4>
+        <h2 class="title is-3 is-bold">We're a dynamic team of hardworkers.</h2>
+        <p class="stressed-1 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de
+          hominis summo bono quaeritur; Res enim concurrent contrariae. Vide,
+          quantum, inquam, fallare, Torquate. Duo Reges: constructio interrete.
+        </p>
+        <p class="stressed-1 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de
+          hominis summo bono quaeritur; Res enim concurrent contrariae. Vide,
+          quantum, inquam, fallare, Torquate. Duo Reges: constructio interrete.
+          Inquit, dasne adolescenti veniam? Maximus dolor, inquit, brevis est.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de
+          hominis summo bono quaeritur; Res enim concurrent contrariae.
+        </p>
+        <p class="stressed-1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc de
+          hominis summo bono quaeritur; Res enim concurrent contrariae. Vide,
+          quantum, inquam, fallare, Torquate. Duo Reges: constructio interrete.
+          Inquit, dasne adolescenti veniam?
+        </p>
+      </div>
+    </div>
+
+    <div class="py-6" x-data="initCareerTabs()">
+      <div x-show="activeTab === 'tab-1'" class="columns is-vcentered">
+        <div class="column is-5 is-offset-1 b-centered-tablet-p">
+          <h4 class="subtitle is-6 pb-2 text-primary">BE CREATIVE</h4>
+          <h2 class="title is-3 is-bold is-spaced">We value creators.</h2>
+          <p class="subtitle is-left text-l2">
+            We believe that creativity is everything you need to grow a
+            business. The more you'll be creative, the more we'll be wanting
+            you.
+          </p>
+        </div>
+        <div class="column is-5">
+          <img class="careers-image" src="img/illustrations/stories/18.svg" alt="" />
+        </div>
+      </div>
+
+      <div x-show="activeTab === 'tab-2'" class="columns is-vcentered">
+        <div class="column is-5 is-offset-1 b-centered-tablet-p">
+          <h4 class="subtitle is-6 pb-2 text-primary">WORK TOGETHER</h4>
+          <h2 class="title is-3 is-bold is-spaced">We value collaboration.</h2>
+          <p class="subtitle is-left text-l2">
+            Collaboration is also one of the most important traits of modern
+            business. Working together strenghtens the business.
+          </p>
+        </div>
+        <div class="column is-5">
+          <img class="careers-image" src="img/illustrations/stories/19.svg" alt="" />
+        </div>
+      </div>
+
+      <div x-show="activeTab === 'tab-3'" class="columns is-vcentered">
+        <div class="column is-5 is-offset-1 b-centered-tablet-p">
+          <h4 class="subtitle is-6 pb-2 text-primary">HAVE A LIFE</h4>
+          <h2 class="title is-3 is-bold is-spaced">We value Free Time.</h2>
+          <p class="subtitle is-left text-l2">
+            Having some free time with our families and our friends is one of
+            our core values. Free time creates more efficiency at work.
+          </p>
+        </div>
+        <div class="column is-5">
+          <img class="careers-image" src="img/illustrations/stories/20.svg" alt="" />
+        </div>
+      </div>
+
+      <div x-show="activeTab === 'tab-4'" class="columns is-vcentered">
+        <div class="column is-5 is-offset-1 b-centered-tablet-p">
+          <h4 class="subtitle is-6 pb-2 text-primary">CLIMB THE LADDER</h4>
+          <h2 class="title is-3 is-bold is-spaced">We have Career Plans.</h2>
+          <p class="subtitle is-left text-l2">
+            Working with us is a very exciting journey. After short time, you'll
+            be regularly given new responsabilities.
+          </p>
+        </div>
+        <div class="column is-5">
+          <img class="careers-image" src="img/illustrations/stories/21.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="careers-switcher">
+        <div class="careers-switcher-inner">
+          <a
+            @click.prevent="switchTabs($event)"
+            data-tab="tab-1"
+            :class="{
+            'is-active': activeTab === 'tab-1',
+          }"
+          >
+            <span>1.</span>
+            <span>Creators</span>
+          </a>
+          <a
+            @click.prevent="switchTabs($event)"
+            data-tab="tab-2"
+            :class="{
+            'is-active': activeTab === 'tab-2',
+          }"
+          >
+            <span>2.</span>
+            <span>Collaboration</span>
+          </a>
+          <a
+            @click.prevent="switchTabs($event)"
+            data-tab="tab-3"
+            :class="{
+            'is-active': activeTab === 'tab-3',
+          }"
+          >
+            <span>3.</span>
+            <span>Free Time</span>
+          </a>
+          <a
+            @click.prevent="switchTabs($event)"
+            data-tab="tab-4"
+            :class="{
+            'is-active': activeTab === 'tab-4',
+          }"
+          >
+            <span>4.</span>
+            <span>Career Plans</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="boxed-video-lg py-6">
+      <div class="video-player-container is-16by9">
+        <video
+          id="hero-player"
+          class="video-player"
+          playsinline
+          controls
+          data-poster="https://dummyimage.com/440x440/ededed/000000"
+          data-demo-poster="img/photo/content/video/poster-2e.jpg"
+        >
+          <source src="/img/video/meeting.mp4" type="video/mp4" />
+          <source src="/img/video/meeting.webm" type="video/webm" />
+        </video>
+      </div>
+
+      <div class="pt-6">
+        <div class="boxed-text-lg">
+          <h4 class="subtitle is-6 pb-2 text-primary">WORKING WITH US</h4>
+          <h2 class="title is-5 has-space">A professional experience</h2>
+          <p class="rem-125">
+            Starting to work with us will immediately throw you in a formidable
+            journey.
+          </p>
+
+          <div
+            class="
+              columns
+              is-multiline
+              b-columns-third-tablet-p
+              has-text-centered
+              pt-6
+            "
+          >
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/money.svg" alt="" />
+              </div>
+              <h4 class="title is-6 has-space">Clean wages</h4>
+              <p class="stressed-1 is-sm mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/bars.svg" alt="" />
+              </div>
+              <h4 class="title is-6 has-space">Monthly bonus</h4>
+              <p class="stressed-1 is-sm mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/training.svg" alt="" />
+              </div>
+              <h4 class="title is-6 has-space">Training</h4>
+              <p class="stressed-1 is-sm mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img
+                  class="mb-2"
+                  src="img/icons/custom/certificate.svg"
+                  alt=""
+                />
+              </div>
+              <h4 class="title is-6 has-space">Certification</h4>
+              <p class="stressed-1 is-sm mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img
+                  class="mb-2"
+                  src="img/icons/custom/calendar-3.svg"
+                  alt=""
+                />
+              </div>
+              <h4 class="title is-6 has-space">Time off</h4>
+              <p class="stressed-1 is-sm mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <!--Feature-->
+            <div class="column is-4">
+              <div class="svg-icon mb-4 is-centered">
+                <img class="mb-2" src="img/icons/custom/contract.svg" alt="" />
+              </div>
+              <h4 class="title is-6 has-space">Negociation</h4>
+              <p class="stressed-1 is-sm mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-6">
+      <div class="image-grid-wrap">
+        <div class="image-grid">
+          <div class="image-row">
+            <div
+              class="f-1 has-background-image"
+              data-background="https://dummyimage.com/800x600"
+              data-demo-background="/img/photo/content/masonry/1.jpeg"
+            ></div>
+            <div
+              class="f-2 has-background-image"
+              data-background="https://dummyimage.com/800x600"
+              data-demo-background="/img/photo/content/masonry/2.jpeg"
+            ></div>
+            <div
+              class="f-1 has-background-image"
+              data-background="https://dummyimage.com/800x600"
+              data-demo-background="/img/photo/content/masonry/3.jpeg"
+            ></div>
+            <div
+              class="f-3 has-background-image"
+              data-background="https://dummyimage.com/800x600"
+              data-demo-background="/img/photo/content/masonry/4.jpeg"
+            ></div>
+            <div
+              class="f-3 has-background-image"
+              data-background="https://dummyimage.com/800x600"
+              data-demo-background="/img/photo/content/masonry/5.jpeg"
+            ></div>
+            <div
+              class="f-3 has-background-image"
+              data-background="https://dummyimage.com/800x600"
+              data-demo-background="/img/photo/content/masonry/6.jpeg"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns b-columns-half-tablet-p">
+      <div class="column is-5 is-offset-1">
+        <div class="">
+          <h4 class="title is-5 has-space">Come visit us</h4>
+          <p class="stressed-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet? Si
+            longus, levis dictata sunt. Non risu potius quam oratione eiciendum?
+            Istic sum, inquit. Ita prorsus, inquam;
+          </p>
+        </div>
+      </div>
+      <div class="column is-5">
+        <div class="">
+          <h4 class="title is-5 has-space">Internships</h4>
+          <p class="stressed-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet? Si
+            longus, levis dictata sunt. Non risu potius quam oratione eiciendum?
+            Istic sum, inquit. Ita prorsus, inquam;
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="py-6">
+      <div class="career-jobs-wrapper" x-data="initJobTabs()">
+        <header class="career-jobs-header">
+          <div class="nav">
+            <a @click.prevent="switchTabs($event)" data-tab="all" :class="{'is-current': activeTab === 'all'}">All Jobs</a>
+            <a @click.prevent="switchTabs($event)" data-tab="full" :class="{'is-current': activeTab === 'full'}">Full-time</a>
+            <a @click.prevent="switchTabs($event)" data-tab="part" :class="{'is-current': activeTab === 'part'}">Part-time</a>
+          </div>
+        </header>
+
+        <ul class="listing-timeline">
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'full'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/illustrator.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/photoshop.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">UX Designer</span>
+                  <span class="job-info">
+                    <span>Junior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$30k</span>
+                  </span>
+                </div>
+                <span class="job-type is-full-time">Full-Time</span>
+              </li>
+            </a>
+          </template>
+          
+
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'part'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/photoshop.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/illustrator.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">Product Designer</span>
+                  <span class="job-info">
+                    <span>Senior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$40k</span>
+                  </span>
+                </div>
+                <span class="job-type is-part-time">Part-Time</span>
+              </li>
+            </a>
+          </template>
+
+          <li class="date">Today</li>
+
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'full'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/js.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/reactjs.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">Frontend Developer</span>
+                  <span class="job-info">
+                    <span>Senior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$60k</span>
+                  </span>
+                </div>
+                <span class="job-type is-full-time">Full-Time</span>
+              </li>
+            </a>
+          </template>
+          
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'full'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/html5.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/js.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">UI Designer</span>
+                  <span class="job-info">
+                    <span>Senior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$50k</span>
+                  </span>
+                </div>
+                <span class="job-type is-full-time">Full-Time</span>
+              </li>
+            </a>
+          </template>
+
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'full'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/nodejs.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/reactjs.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">Fullstack Developer</span>
+                  <span class="job-info">
+                    <span>Senior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$80k</span>
+                  </span>
+                </div>
+                <span class="job-type is-full-time">Full-Time</span>
+              </li>
+            </a>
+          </template>
+
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'part'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/illustrator.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/js.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">UX Designer</span>
+                  <span class="job-info">
+                    <span>Junior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$25k</span>
+                  </span>
+                </div>
+                <span class="job-type is-part-time">Part-Time</span>
+              </li>
+            </a>
+          </template>
+          
+
+          <li class="date">Jan 28th</li>
+
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'full'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/vuejs.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/nodejs.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">Fullstack Developer</span>
+                  <span class="job-info">
+                    <span>Junior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$30k</span>
+                  </span>
+                </div>
+                <span class="job-type is-full-time">Full-Time</span>
+              </li>
+            </a>
+          </template>
+
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'full'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/illustrator.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/photoshop.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">UX Designer</span>
+                  <span class="job-info">
+                    <span>Junior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$30k</span>
+                  </span>
+                </div>
+                <span class="job-type is-full-time">Full-Time</span>
+              </li>
+            </a>
+          </template>
+
+          <!--Job listing-->
+          <template x-if="activeTab === 'all' || activeTab === 'part'">
+            <a href="#">
+              <li class="listing">
+                <div class="image-wrapper">
+                  <img
+                    class="image-icon"
+                    src="/img/icons/stacks/photoshop.svg"
+                    alt=""
+                  />
+                  <img
+                    class="image-badge"
+                    src="/img/icons/stacks/illustrator.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="info">
+                  <span class="job-title">Product Designer</span>
+                  <span class="job-info">
+                    <span>Senior</span> 
+                    <span>&bull;</span>
+                    <span>Remote</span> 
+                    <span>&bull;</span>
+                    <span>$40k</span>
+                  </span>
+                </div>
+                <span class="job-type is-part-time">Part-Time</span>
+              </li>
+            </a>
+          </template>
+
+          <li class="date">Jan 27th</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section is-light-grey">
+  <div class="container">
+    <div class="py-6">
+      <h4 class="title is-3 is-thin has-space has-text-centered">
+        Join a memorable company
+      </h4>
+
+      <div class="subscription-field">
+        <div class="field">
+          <div class="control">
+            <input
+              type="text"
+              class="input"
+              placeholder="Email address..."
+            />
+            <button class="button is-primary">Contact Me</button>
+          </div>
+          <p class="py-1">Start by adding your professional address</p>
+        </div>
+      </div>
+
+      <div class="subscription-text">
+        <h4 class="title is-6 has-space">
+          Want to learn more?
+        </h4>
+        <p>Shoot us a message and we'll get back to you</p>
+        <a class="underlink mt-4">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</div>

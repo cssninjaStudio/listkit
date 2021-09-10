@@ -1,0 +1,1491 @@
+---
+layout: default
+title: Events
+---
+
+<!--Main Navbar-->
+{{> main-navigation-light}}
+
+<div
+  class="hero is-fullheight is-grey is-bold has-form"
+  data-background="https://dummyimage.com/1920x1080"
+  data-demo-background="/img/photo/bg/sea.png"
+>
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <div class="hero-text is-light">
+            <h1 class="title is-1 is-bold">Explore Events.</h1>
+            <p class="subtitle is-left">
+              Explore events scheduled by members of the community and prepare
+              to have loads of fun.
+            </p>
+            <div class="">
+              <a class="button is-primary mx-1">Explore Events</a>
+              <a class="button is-heavy mx-1">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div
+            class="card card-form"
+            x-data="initHeroCreateListingForm()"
+            x-init="initSelects()"
+          >
+            <div class="head">
+              <h2 class="title is-5">
+                Start making real money by helping real people
+              </h2>
+              <form>
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-bigger" placeholder="Event name" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control has-caret">
+                    <select class="input" data-choice-select>
+                      <option>Service type</option>
+                      <option>Physical event</option>
+                      <option>Online event</option>
+                      <option>Online classes</option>
+                      <option>Physical classes</option>
+                      <option>Flats</option>
+                      <option>Trips</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control has-caret">
+                    <select class="input" data-choice-select>
+                      <option>Attendees</option>
+                      <option>1</option>
+                      <option>1-2</option>
+                      <option>2-10</option>
+                      <option>10-50</option>
+                      <option>50+</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <a class="button is-primary is-fullwidth mx-1">Continue</a>
+                  </div>
+                </div>
+                <a class="bottom-link">How do we assess your income?</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div>
+      <div class="more-listings">
+        <!--Title-->
+        <h4 class="title is-5 is-narrow">Popular events</h4>
+
+        <!--Scheduled events carousel-->
+        <div class="scheduled-listings" x-data="initMoreListings()">
+          <div class="scheduled-listings-inner glide more-events-glide">
+            <div class="glide__track" data-glide-el="track">
+              <!--Carousel-->
+              <ul class="glide__slides">
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/80.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,11</span>
+                        <span class="px-2">·</span>
+                        <span>Madrid, Spain</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Automotive fans weekly meetup</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $60 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/100.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,98</span>
+                        <span class="px-2">·</span>
+                        <span>Los Angeles, CA</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Make your own candy for your family</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $39 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/101.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,87</span>
+                        <span class="px-2">·</span>
+                        <span>Miami, FL</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Meditation for stressed urban people</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $15 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/102.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,75</span>
+                        <span class="px-2">·</span>
+                        <span>Ottawa, Canada</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Learn my daily routine for skin care</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $29 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/103.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,89</span>
+                        <span class="px-2">·</span>
+                        <span>Marseille, France</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Role playing game sessions for kids</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $45 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/104.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,99</span>
+                        <span class="px-2">·</span>
+                        <span>Seoul, South Korea</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Become a professional game developer</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $99 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/105.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,78</span>
+                        <span class="px-2">·</span>
+                        <span>Brussels, Belgium</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Learn vocals with a professional singer</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $62 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/106.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,84</span>
+                        <span class="px-2">·</span>
+                        <span>New York, NY</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Mobile development for newbies crash course</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $49 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/107.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,54</span>
+                        <span class="px-2">·</span>
+                        <span>Berlin, Germany</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Learn product design with Michael Haggen</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $99 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <i data-feather="arrow-left"></i>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <i data-feather="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="upcoming-listings-wrapper">
+        <!--Title-->
+        <h4 class="title is-5 is-narrow">Events starting soon</h4>
+
+        <div class="upcoming-listings" x-data="initUpcomingListings()">
+          <div class="upcoming-listings-inner glide upcoming-events-glide">
+            <div class="glide__track" data-glide-el="track">
+              <!--Carousel-->
+              <ul class="glide__slides">
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/108.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,94</span>
+                        <span class="px-2">·</span>
+                        <span>London, UK</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Lifestyle sessions with Emily Watson</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $25 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >2:30 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >3:30 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/109.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,94</span>
+                        <span class="px-2">·</span>
+                        <span>Rome, Italy</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Intelligent mind games for children</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $22 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/110.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,75</span>
+                        <span class="px-2">·</span>
+                        <span>Dublin, Ireland</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Traditional Irish cooking sessions</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $19 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >2:30 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/111.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,99</span>
+                        <span class="px-2">·</span>
+                        <span>New York, NY</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Personal coaching to improve your life quality</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $26 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >2:30 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >3:30 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/112.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,46</span>
+                        <span class="px-2">·</span>
+                        <span>Boston, MA</span>
+                      </div>
+                      <p class="listing-name">
+                        <a
+                          >Tips and tricks for an efficient daily house
+                          cleaning</a
+                        >
+                      </p>
+                      <p class="listing-price">
+                        Starting from $12 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/113.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,78</span>
+                        <span class="px-2">·</span>
+                        <span>Dublin, Ireland</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Brewing your own homemade and delicious beer</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $24 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >2:30 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/114.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,99</span>
+                        <span class="px-2">·</span>
+                        <span>Paris, France</span>
+                      </div>
+                      <p class="listing-name">
+                        <a
+                          >Become a talented VR and augmented reality
+                          developer</a
+                        >
+                      </p>
+                      <p class="listing-price">
+                        Starting from $89 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >2:30 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >3:30 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/115.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,99</span>
+                        <span class="px-2">·</span>
+                        <span>San Diego, CA</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Group story telling and reading for children</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $14 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="upcoming-listing">
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="upcoming-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/9.jpg"
+                    ></div>
+                    <div class="upcoming-listing-content">
+                      <div class="upcoming-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,99</span>
+                        <span class="px-2">·</span>
+                        <span>Berlin, Germany</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Greta's make up group sessions</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $16 <small>/person</small>
+                      </p>
+                      <div class="buttons mt-2">
+                        <a class="button is-primary is-small is-outlined"
+                          >2:00 pm</a
+                        >
+                        <a class="button is-primary is-small is-outlined"
+                          >2:30 pm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <i data-feather="arrow-left"></i>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <i data-feather="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="more-listings">
+        <!--Title-->
+        <h4 class="title is-5 is-narrow">Best rated events</h4>
+
+        <!--Scheduled events carousel-->
+        <div class="scheduled-listings" x-data="initBestRatedListings()">
+          <div class="scheduled-listings-inner glide best-rated-events-glide">
+            <div class="glide__track" data-glide-el="track">
+              <!--Carousel-->
+              <ul class="glide__slides">
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/4.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,72</span>
+                        <span class="px-2">·</span>
+                        <span>Nazare, Portugal</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Learn advanced surfing techniques with a pro</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $54 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/1.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,72</span>
+                        <span class="px-2">·</span>
+                        <span>New York, NY</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Cooking afternoon with Mary and Anne</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $12 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/2.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,87</span>
+                        <span class="px-2">·</span>
+                        <span>Miami, FL</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Introduction to using internet for kids</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $8 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/3.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,54</span>
+                        <span class="px-2">·</span>
+                        <span>Canaca, Brazil</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Incredible 4 days group jungle trekk</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $125 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/5.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,89</span>
+                        <span class="px-2">·</span>
+                        <span>Toronto, Canada</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Learn multiple forms of meditation</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $16 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/6.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,61</span>
+                        <span class="px-2">·</span>
+                        <span>Paris, France</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Learning acoustic guitar basics for kids</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $24 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/7.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,97</span>
+                        <span class="px-2">·</span>
+                        <span>Madrid, Spain</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Learn advanced skateboard figures</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $38 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/8.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,84</span>
+                        <span class="px-2">·</span>
+                        <span>Paris, France</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Mastering black & white photogaphy</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $29 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/events/carousel/9.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,99</span>
+                        <span class="px-2">·</span>
+                        <span>Berlin, Germany</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Greta's make up group sessions</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $16 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <i data-feather="arrow-left"></i>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <i data-feather="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="listing-categories-wrapper">
+        <!--Title-->
+        <h4 class="title is-5 is-narrow">Best deals</h4>
+
+        <!--Scheduled events carousel-->
+        <div class="listing-categories" x-data="initListingCategories()">
+          <div class="listing-categories-inner glide categories-events-glide">
+            <div class="glide__track" data-glide-el="track">
+              <!--Carousel-->
+              <ul class="glide__slides">
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div
+                    class="listing-category"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/10.jpg"
+                  >
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                      <div>
+                        <h3 class="title is-4 is-narrow is-inverted">Manual</h3>
+                        <p class="text-inverted">
+                          Learn to use your hands and build nice stuff
+                        </p>
+                      </div>
+                      <div>
+                        <a class="button is-default is-smaller">View All</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div
+                    class="listing-category"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/18.jpg"
+                  >
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                      <div>
+                        <h3 class="title is-4 is-narrow is-inverted">Trips</h3>
+                        <p class="text-inverted">
+                          Book an incredible trip in a dream destination
+                        </p>
+                      </div>
+                      <div>
+                        <a class="button is-default is-smaller">View All</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div
+                    class="listing-category"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/27.jpg"
+                  >
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                      <div>
+                        <h3 class="title is-4 is-narrow is-inverted">Music</h3>
+                        <p class="text-inverted">
+                          Learn to play music with confirmed professionals
+                        </p>
+                      </div>
+                      <div>
+                        <a class="button is-default is-smaller">View All</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div
+                    class="listing-category"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/46.jpg"
+                  >
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                      <div>
+                        <h3 class="title is-4 is-narrow is-inverted">Exploration</h3>
+                        <p class="text-inverted">
+                          Pack up and take off for incredible adventures
+                        </p>
+                      </div>
+                      <div>
+                        <a class="button is-default is-smaller">View All</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <i data-feather="arrow-left"></i>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <i data-feather="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="more-listings">
+        <!--Title-->
+        <h4 class="title is-5 is-narrow">Suggested events</h4>
+
+        <!--Scheduled events carousel-->
+        <div class="scheduled-listings" x-data="initSuggestedListings()">
+          <div class="scheduled-listings-inner glide suggested-events-glide">
+            <div class="glide__track" data-glide-el="track">
+              <!--Carousel-->
+              <ul class="glide__slides">
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/44.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,88</span>
+                        <span class="px-2">·</span>
+                        <span>Lima, Peru</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Harcore hiking and survival trip</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $790 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/47.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,87</span>
+                        <span class="px-2">·</span>
+                        <span>Dakhla, Morocco</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Surfing meetup at the Dakhla surfing club</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $990 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/49.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,95</span>
+                        <span class="px-2">·</span>
+                        <span>Merzouga, Morocco</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Group trekking and camping in Merzouga</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $1500 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/39.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,91</span>
+                        <span class="px-2">·</span>
+                        <span>Rio de Janeiro, Brazil</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Your first lesson of deltaplane flying</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $325 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/29.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,89</span>
+                        <span class="px-2">·</span>
+                        <span>Toronto, Canada</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>The automotive fans annual meetup and show</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $69 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/2.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,89</span>
+                        <span class="px-2">·</span>
+                        <span>Paris, France</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Personalized shopping session with Kaori</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $125 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/1.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,97</span>
+                        <span class="px-2">·</span>
+                        <span>Tokyo, Japan</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Mount Fuji visit and hiking for beginners</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $490 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/23.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,99</span>
+                        <span class="px-2">·</span>
+                        <span>New York, NY</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Shoe shopping with Melissa Gartner</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $249 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!--Carousel item-->
+                <li class="glide__slide">
+                  <div class="scheduled-listing">
+                    <div
+                      class="scheduled-listing-image"
+                      data-background="https://dummyimage.com/640x960"
+                      data-demo-background="/img/photo/content/9.jpg"
+                    >
+                      <div class="action-bar">
+                        <button class="button wishlist-button">
+                          <i data-feather="heart"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="scheduled-listing-content">
+                      <div class="scheduled-listing-rating">
+                        <i data-feather="star"></i>
+                        <span>4,89</span>
+                        <span class="px-2">·</span>
+                        <span>Lisbon, Portugal</span>
+                      </div>
+                      <p class="listing-name">
+                        <a>Management crash course for startup teams</a>
+                      </p>
+                      <p class="listing-price">
+                        Starting from $500 <small>/person</small>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <i data-feather="arrow-left"></i>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <i data-feather="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-6">
+      <div class="buttons is-centered">
+        <a class="button is-primary is-raised-hover">Load More Events</a>
+      </div>
+    </div>
+  </div>
+</div>

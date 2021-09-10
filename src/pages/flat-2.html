@@ -1,0 +1,1484 @@
+---
+layout: default
+title: Flat
+---
+
+<!--Docked main Navbar-->
+{{> main-navigation-docked}}
+
+<!--Listing scroll nav-->
+{{> listing-navigation}}
+
+<!--Mobile Navbar-->
+{{> mobile-main-navigation}}
+
+<!--Mobile subnavigation-->
+{{> mobile-sub-navigation}}
+
+<!--Event Wrapper-->
+<div id="presentation" class="section has-navbar-padding" data-listing="flat">
+  <div class="container">
+    <div class="listing-title">
+      <div class="left">
+        <h2 class="title is-bold is-4">
+          Incredible riad in the heart of Marrakech
+        </h2>
+        <div>
+          <a>
+            <i data-feather="star"></i>
+            <span>4,97 (329)</span>
+          </a>
+
+          <a>Marrakech, Morocco</a>
+        </div>
+      </div>
+      <div class="right">
+        <a class="modal-trigger" data-modal="listing-share-modal">
+          <i data-feather="share-2"></i>
+          <span>Share</span>
+        </a>
+        <a class="modal-trigger" data-modal="listing-wishlist-modal">
+          <i data-feather="heart"></i>
+          <span>Save</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="lightgallery" class="listing-cover-wrapper is-4" x-data="initCover()">
+      <a
+        class="listing-cover has-background-image"
+        data-background="https://dummyimage.com/940x650"
+        data-demo-background="/img/photo/content/flat/16.jpeg"
+        href="https://dummyimage.com/940x650"
+        data-demo-href="/img/photo/content/flat/16.jpeg"
+        data-fancybox="images"
+        data-caption="All you need is a laptop to get started!"
+      ></a>
+      <a
+        class="listing-cover has-background-image"
+        data-background="https://dummyimage.com/940x650"
+        data-demo-background="/img/photo/content/flat/17.jpeg"
+        href="https://dummyimage.com/940x650"
+        data-demo-href="/img/photo/content/flat/17.jpeg"
+        data-fancybox="images"
+        data-caption="You'll also need some sketching tools and some paper."
+      ></a>
+      <div class="listing-cover is-container">
+        <a
+          class="listing-subcover has-background-image"
+          data-background="https://dummyimage.com/940x650"
+          data-demo-background="/img/photo/content/flat/18.jpeg"
+          href="https://dummyimage.com/940x650"
+          data-demo-href="/img/photo/content/flat/18.jpeg"
+          data-fancybox="images"
+          data-caption="We'll do some code review together..."
+        ></a>
+        <a
+          class="listing-subcover has-background-image"
+          data-background="https://dummyimage.com/940x650"
+          data-demo-background="/img/photo/content/flat/19.jpeg"
+          href="https://dummyimage.com/940x650"
+          data-demo-href="/img/photo/content/flat/19.jpeg"
+          data-fancybox="images"
+          data-caption="And you'll get some homework to keep practicing at home."
+        ></a>
+      </div>
+      <a
+        class="button all-photos-button"
+        href="https://dummyimage.com/940x650"
+        data-demo-href="/img/photo/content/flat/16.jpeg"
+        data-fancybox="images"
+        data-caption="After that, you'll be ready to build wonderful things!"
+        >Show All 6 Photos</a
+      >
+    </div>
+
+    <div class="listing-details">
+      <div class="columns">
+        <div class="column is-7">
+          <div class="listing-subtitle">
+            <div class="left">
+              <h3 class="title is-5 is-narrow">
+                This flat is being offered by Bilal
+              </h3>
+              <p>
+                <span>10 people max.</span>
+                <span class="px-1">·</span>
+                <span>8 rooms</span>
+                <span class="px-1">·</span>
+                <span>6 beds</span>
+                <span class="px-1">·</span>
+                <span>4 bathrooms</span>
+              </p>
+            </div>
+            <div class="right">
+              <a>
+                <img
+                  src="https://dummyimage.com/150x150"
+                  data-demo-src="/img/photo/avatar/1.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="listing-features">
+            <div class="listing-feature">
+              <i class="la la-igloo"></i>
+              <div class="meta">
+                <span>Entire home</span>
+                <span> Entire residential home to yourself</span>
+              </div>
+            </div>
+            <div class="listing-feature">
+              <i class="la la-broom"></i>
+              <div class="meta">
+                <span> Committed to Enhanced Clean</span>
+                <span>This hosts commits to our enhanced cleaning policy.</span>
+              </div>
+            </div>
+            <div class="listing-feature">
+              <i class="la la-certificate"></i>
+              <div class="meta">
+                <span>Outstanding reviews</span>
+                <span>This host has received a lot of positive reviews. </span>
+              </div>
+            </div>
+            <div class="listing-feature">
+              <i class="la la-book-open"></i>
+              <div class="meta">
+                <span>Basic rules</span>
+                <span
+                  >There are some basic rules you need to observe.
+                  <a
+                    class="underlink modal-trigger"
+                    data-modal="listing-rules-modal-flat"
+                    >Learn More</a
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="listing-feature">
+              <i class="la la-calendar"></i>
+              <div class="meta">
+                <span>Cancellation</span>
+                <span>Your attendance to this event can be cancelled.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="listing-content" x-data="initListingContent()">
+            <h3 class="title is-5">About this flat</h3>
+            <div class="translate-block">
+              <span>Translate now</span>
+              <i class="la la-language"></i>
+            </div>
+
+            <div x-show="isDescriptionExpanded === false">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Murenam
+                te accusante defenderem. Ipse Epicurus fortasse redderet, ut
+                Sextus Peducaeus, Sex. Torquatus, is qui consul cum Cn. Quis
+                Aristidem non mortuum diligit? Satis est ad hoc responsum. Sint
+                ista Graecorum; Facillimum id quidem est, inquam. Non enim iam
+                stirpis bonum quaeret, sed animalis.
+              </p>
+
+              <p>
+                Duo Reges: constructio interrete. Immo alio genere; De vacuitate
+                doloris eadem sententia erit. Tollenda est atque extrahenda
+                radicitus.
+              </p>
+
+              <p>
+                Quod equidem non reprehendo; Restinguet citius, si ardentem
+                acceperit. Et nemo nimium beatus est; Qui ita affectus, beatum
+                esse numquam probabis;
+              </p>
+            </div>
+
+            <div x-show="isDescriptionExpanded === true">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Murenam
+                te accusante defenderem. Ipse Epicurus fortasse redderet, ut
+                Sextus Peducaeus, Sex. Torquatus, is qui consul cum Cn. Quis
+                Aristidem non mortuum diligit? Satis est ad hoc responsum. Sint
+                ista Graecorum; Facillimum id quidem est, inquam. Non enim iam
+                stirpis bonum quaeret, sed animalis.
+              </p>
+
+              <p>
+                Duo Reges: constructio interrete. Immo alio genere; De vacuitate
+                doloris eadem sententia erit. Tollenda est atque extrahenda
+                radicitus.
+              </p>
+
+              <p>
+                Quod equidem non reprehendo; Restinguet citius, si ardentem
+                acceperit. Et nemo nimium beatus est; Qui ita affectus, beatum
+                esse numquam probabis;
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Murenam
+                te accusante defenderem. Ipse Epicurus fortasse redderet, ut
+                Sextus Peducaeus, Sex. Torquatus, is qui consul cum Cn. Quis
+                Aristidem non mortuum diligit? Satis est ad hoc responsum. Sint
+                ista Graecorum; Facillimum id quidem est, inquam. Non enim iam
+                stirpis bonum quaeret, sed animalis.
+              </p>
+
+              <p>
+                Quod equidem non reprehendo; Restinguet citius, si ardentem
+                acceperit. Et nemo nimium beatus est; Qui ita affectus, beatum
+                esse numquam probabis;
+              </p>
+            </div>
+
+            <a
+              x-show="isDescriptionExpanded === false"
+              @click.prevent="toggleListingDescription()"
+              class="underlink"
+              >Read more</a
+            >
+            <a
+              x-show="isDescriptionExpanded === true"
+              @click.prevent="toggleListingDescription()"
+              class="underlink"
+              >Read less</a
+            >
+          </div>
+
+          <div class="listing-participation">
+            <h3 class="title is-5 is-narrow">House standards</h3>
+            <div class="participation-boxes">
+              <div class="columns is-flex-tablet-p">
+                <div class="column is-4">
+                  <div class="participation-box">
+                    <i class="las la-shield-alt"></i>
+                    <h4>Reinforced security</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Murenam te accusante defenderem. Ipse Epicurus fortasse
+                      redderet, ut Sextus Peducaeus, Sex.
+                    </p>
+                    <a
+                      class="colorlink modal-trigger"
+                      data-modal="listing-security-modal"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="participation-box">
+                    <i class="las la-broom"></i>
+                    <h4>Daily Cleaning</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Murenam te accusante defenderem. Ipse Epicurus fortasse
+                      redderet, ut Sextus Peducaeus, Sex.
+                    </p>
+                    <a
+                      class="colorlink modal-trigger"
+                      data-modal="listing-cleaning-modal"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="participation-box">
+                    <i class="las la-concierge-bell"></i>
+                    <h4>Conciergerie</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Murenam te accusante defenderem. Ipse Epicurus fortasse
+                      redderet, ut Sextus Peducaeus, Sex.
+                    </p>
+                    <a
+                      class="colorlink modal-trigger"
+                      data-modal="listing-concierge-modal"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="listing-amenities">
+            <h3 class="title is-5 is-narrow">House amenities</h3>
+            <div class="amenities-list">
+              <div class="amenities-item">
+                <div class="icon-container">
+                  <i class="las la-fire-extinguisher"></i>
+                </div>
+                <span>Fire detection</span>
+              </div>
+              <div class="amenities-item">
+                <div class="icon-container">
+                  <i class="las la-door-open"></i>
+                </div>
+                <span>Private entry</span>
+              </div>
+              <div class="amenities-item">
+                <div class="icon-container">
+                  <i class="las la-swimming-pool"></i>
+                </div>
+                <span>Swimming pool</span>
+              </div>
+              <div class="amenities-item">
+                <div class="icon-container">
+                  <i class="las la-wifi"></i>
+                </div>
+                <span>Wi-Fi</span>
+              </div>
+              <div class="amenities-item">
+                <div class="icon-container">
+                  <i class="las la-laptop"></i>
+                </div>
+                <span>Workspace</span>
+              </div>
+              <div class="amenities-item">
+                <div class="icon-container">
+                  <i class="las la-tv"></i>
+                </div>
+                <span>Television</span>
+              </div>
+            </div>
+
+            <div class="group-action">
+              <button class="button is-heavy modal-trigger" data-modal="listing-amenities-modal">See all 12 amenities</button>
+            </div>
+          </div>
+
+          <div class="listing-calendar" x-data="initListingCalendar()">
+            <h3 class="title is-5 is-narrow">Select check-in date</h3>
+            <div class="listing-calendar-inner">
+              <input type="text" class="static-datepicker-start" />
+              <input type="text" class="static-datepicker-end" />
+            </div>
+          </div>
+        </div>
+
+        <!--Sticky form-->
+        <div class="column is-4 is-offset-1">
+          <div class="sticky-outer">
+            <div class="sticky-wrapper">
+              <div class="sticky-wrapper-inner">
+                <!--Booking form-->
+                <div
+                  class="card booking-card"
+                  x-data="initBookingForm()"
+                  @click.away="closeBookingPanel()"
+                >
+                  <div class="head is-flex">
+                    <span>$349 <small>/per night</small></span>
+                    <div class="rating">
+                      <a>
+                        <i data-feather="star"></i>
+                        <span>4,97 (329)</span>
+                      </a>
+                    </div>
+                  </div>
+                  <!--Dual picker wrapper-->
+                  <div class="dual-picker-wrapper">
+                    <!--Dual picker date-->
+                    <div
+                      x-show="bookingFormExpanded === true"
+                      class="dual-picker-panel"
+                      :class="{
+                        'is-compressed': participantsFormActive,
+                        '': !participantsFormActive
+                      }"
+                    >
+                      <div
+                        x-show="dateFormActive === true"
+                        class="dual-picker-panel-inner"
+                      >
+                        <h4 class="dual-picker-panel-title">Add some dates</h4>
+                        <!--Calendars-->
+                        <div class="booking-calendars">
+                          <input
+                            type="text"
+                            class="event-datepicker-start"
+                            @click="getDateValue($event)"
+                          />
+                          <input
+                            type="text"
+                            class="event-datepicker-end"
+                            @click="getDateValue($event)"
+                          />
+                          <!--Actions-->
+                          <div class="calendar-actions">
+                            <button class="button is-light">Clear Dates</button>
+                            <button class="button is-primary is-raised-hover">
+                              Save Dates
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Dual picker participants-->
+                      <div
+                        x-show="participantsFormActive === true"
+                        class="dual-picker-panel-inner"
+                      >
+                        <div class="participants-selector">
+                          <div class="type-block">
+                            <div class="meta">
+                              <span>Adults</span>
+                              <span>18 years +</span>
+                            </div>
+                            <div class="action">
+                              <div class="spinner">
+                                <button class="is-inactive">
+                                  <i data-feather="minus"></i>
+                                </button>
+                                <input value="1" />
+                                <button><i data-feather="plus"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="type-block">
+                            <div class="meta">
+                              <span>Kids</span>
+                              <span>From 2 to 18 years</span>
+                            </div>
+                            <div class="action">
+                              <div class="spinner">
+                                <button class="is-inactive">
+                                  <i data-feather="minus"></i>
+                                </button>
+                                <input value="0" />
+                                <button><i data-feather="plus"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="type-block">
+                            <div class="meta">
+                              <span>Babies</span>
+                              <span>less than 2 years</span>
+                            </div>
+                            <div class="action">
+                              <div class="spinner">
+                                <button class="is-inactive">
+                                  <i data-feather="minus"></i>
+                                </button>
+                                <input value="0" />
+                                <button class="is-inactive">
+                                  <i data-feather="plus"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="participants-actions">
+                            <button class="button is-primary is-raised-hover">
+                              Save Changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Dual picker-->
+                    <div class="dual-picker">
+                      <div
+                        class="field"
+                        @click="openDatesPanel()"
+                        :class="{
+                          'is-active': dateFormActive,
+                          '': !dateFormActive
+                        }"
+                      >
+                        <i data-feather="chevron-down"></i>
+                        <label>Dates</label>
+                        <div class="control">
+                          <input
+                            type="text"
+                            class="input"
+                            placeholder="Pick a date"
+                            :value="dateValue"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="field"
+                        @click="openParticipantsPanel()"
+                        :class="{
+                          'is-active': participantsFormActive,
+                          '': !participantsFormActive
+                        }"
+                      >
+                        <i data-feather="chevron-down"></i>
+                        <label>People</label>
+                        <div class="control">
+                          <input
+                            type="text"
+                            class="input"
+                            placeholder="Add people"
+                            :value="dateValue"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group-toggle">
+                    <span>Book for a private event</span>
+                    <div class="ninja-toggle">
+                      <input id="group-toggle" type="checkbox" />
+                      <label for="group-toggle" class="no-margin">
+                        <span class="track">
+                          <span class="track-inner"></span>
+                          <span class="track-knob">
+                            <i class="inactive" data-feather="circle"></i>
+                            <i class="active" data-feather="check"></i>
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="book-action mt-4">
+                    <a
+                      href="#"
+                      class="button is-primary is-raised-hover is-fullwidth"
+                      >Check Availability</a
+                    >
+                  </div>
+                </div>
+                <a class="report-link">
+                  <i data-feather="flag"></i>
+                  <span>Report this listing</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="comments" class="host-comments">
+      <h4 class="title is-5 is-narrow">
+        <i data-feather="star"></i>
+        <span>4,97 (329 comments)</span>
+      </h4>
+      <!--Reviews-->
+      <div class="reviews">
+        <!--Review-->
+        <div class="review-item">
+          <div class="review-item-inner">
+            <div class="review-category">
+              <span>Cleanliness</span>
+            </div>
+            <div class="review-rating">
+              <progress class="progress is-micro" value="86" max="100">
+                86%
+              </progress>
+              <span class="rating-value">4.3</span>
+            </div>
+          </div>
+        </div>
+        <!--Review-->
+        <div class="review-item">
+          <div class="review-item-inner">
+            <div class="review-category">
+              <span>Accuracy</span>
+            </div>
+            <div class="review-rating">
+              <progress class="progress is-micro" value="84" max="100">
+                84%
+              </progress>
+              <span class="rating-value">4.2</span>
+            </div>
+          </div>
+        </div>
+        <!--Review-->
+        <div class="review-item">
+          <div class="review-item-inner">
+            <div class="review-category">
+              <span>Communication</span>
+            </div>
+            <div class="review-rating">
+              <progress class="progress is-micro" value="90" max="100">
+                90%
+              </progress>
+              <span class="rating-value">4.5</span>
+            </div>
+          </div>
+        </div>
+        <!--Review-->
+        <div class="review-item">
+          <div class="review-item-inner">
+            <div class="review-category">
+              <span>Location</span>
+            </div>
+            <div class="review-rating">
+              <progress class="progress is-micro" value="94" max="100">
+                94%
+              </progress>
+              <span class="rating-value">4.7</span>
+            </div>
+          </div>
+        </div>
+        <!--Review-->
+        <div class="review-item">
+          <div class="review-item-inner">
+            <div class="review-category">
+              <span>Check-in</span>
+            </div>
+            <div class="review-rating">
+              <progress class="progress is-micro" value="90" max="100">
+                90%
+              </progress>
+              <span class="rating-value">4.5</span>
+            </div>
+          </div>
+        </div>
+        <!--Review-->
+        <div class="review-item">
+          <div class="review-item-inner">
+            <div class="review-category">
+              <span>Value</span>
+            </div>
+            <div class="review-rating">
+              <progress class="progress is-micro" value="86" max="100">
+                20%
+              </progress>
+              <span class="rating-value">4.3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comments">
+        <div class="columns is-multiline b-columns-half-tablet-p">
+          <!--Comment-->
+          <div class="column is-6">
+            <div class="comment">
+              <div class="comment-head">
+                <a>
+                  <img
+                    src="https://dummyimage.com/150x150"
+                    data-demo-src="/img/photo/avatar/3.jpeg"
+                    alt=""
+                  />
+                </a>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">Noriko</h4>
+                  <span>January 2021</span>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+                dolor, inquit, brevis est. Comprehensum, quod cognitum non
+                habet? Si longus, levis dictata sunt. Non risu potius quam
+                oratione eiciendum? Istic sum, inquit. Ita prorsus, inquam.
+              </p>
+            </div>
+          </div>
+          <!--Comment-->
+          <div class="column is-6">
+            <div class="comment">
+              <div class="comment-head">
+                <a>
+                  <img
+                    src="https://dummyimage.com/150x150"
+                    data-demo-src="/img/photo/avatar/27.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">Michael</h4>
+                  <span>January 2021</span>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+                dolor, inquit, brevis est. Comprehensum, quod cognitum non
+                habet? Si longus, levis dictata sunt.
+              </p>
+            </div>
+          </div>
+          <!--Comment-->
+          <div class="column is-6">
+            <div class="comment">
+              <div class="comment-head">
+                <a>
+                  <img
+                    src="https://dummyimage.com/150x150"
+                    data-demo-src="/img/photo/avatar/29.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">Christina</h4>
+                  <span>January 2021</span>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+                dolor, inquit, brevis est.
+              </p>
+            </div>
+          </div>
+          <!--Comment-->
+          <div class="column is-6">
+            <div class="comment">
+              <div class="comment-head">
+                <a>
+                  <img
+                    src="https://dummyimage.com/150x150"
+                    data-demo-src="/img/photo/avatar/19.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">Eliott</h4>
+                  <span>December 2020</span>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+                dolor, inquit, brevis est. Comprehensum, quod cognitum non
+                habet? Si longus, levis dictata sunt. Non risu potius quam
+                oratione eiciendum? Istic sum, inquit.
+              </p>
+            </div>
+          </div>
+          <!--Comment-->
+          <div class="column is-6">
+            <div class="comment">
+              <div class="comment-head">
+                <a>
+                  <img
+                    src="https://dummyimage.com/150x150"
+                    data-demo-src="/img/photo/avatar/11.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">Christina</h4>
+                  <span>December 2020</span>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+                dolor, inquit, brevis est. Comprehensum, quod cognitum non
+                habet? Si longus, levis dictata sunt.
+              </p>
+            </div>
+          </div>
+          <!--Comment-->
+          <div class="column is-6">
+            <div class="comment">
+              <div class="comment-head">
+                <a>
+                  <img
+                    src="https://dummyimage.com/150x150"
+                    data-demo-src="/img/photo/avatar/12.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">Amanda</h4>
+                  <span>December 2020</span>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+                dolor, inquit, brevis est. Comprehensum, quod cognitum non
+                habet? Si longus, levis dictata sunt.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments-action">
+          <button class="button is-heavy modal-trigger" data-modal="comments-modal">See all 179 comments</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="listing-map" class="host-map">
+      <h4 class="title is-5 is-narrow">Where you’ll be</h4>
+
+      <div
+        class="listing-map-wrapper"
+        x-data="initListingMap()"
+        x-init="initMainMap()"
+      >
+        <div class="listing-map-inner">
+          <div
+            id="main-map"
+            class="listing-map"
+            data-long="-7.986997876080006"
+            data-lat="31.62629343059408"
+          ></div>
+          <span class="listing-map-badge">Exact location after booking</span>
+        </div>
+        <div class="listing-map-content">
+          <h4 class="title is-5 is-narrow">Marrakech, Morocco</h4>
+          <p>
+            The house is located in the north end of the old town. It's a 5
+            minute walk away from one of our favourite restaurants, La Ferme
+            that serves delicious food. It is only a short walk from Le Jardin ,
+            La Terr…
+          </p>
+          <div class="location-action">
+            <button class="button is-heavy modal-trigger" data-modal="listing-map-modal">More on Location</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="host" class="listing-host is-boxed">
+      <div class="left">
+        <div class="host-header">
+          <a>
+            <img
+              src="https://dummyimage.com/150x150"
+              data-demo-src="/img/photo/avatar/1.jpg"
+              alt=""
+            />
+          </a>
+          <div class="meta">
+            <h4 class="title is-5 is-narrow">Get to know your host, Bilal</h4>
+            <span>Member since 2017</span>
+          </div>
+        </div>
+        <div class="host-stats">
+          <p>
+            <i data-feather="star"></i>
+            <span>329 comments</span>
+          </p>
+          <p>
+            <i data-feather="shield"></i>
+            <span>Verified host</span>
+          </p>
+        </div>
+        <div class="host-bio">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+            dolor, inquit, brevis est. Comprehensum, quod cognitum non habet? Si
+            longus, levis dictata sunt. Non risu potius quam oratione eiciendum?
+            Istic sum, inquit. Ita prorsus, inquam;
+          </p>
+
+          <p>
+            Duo Reges: constructio interrete. Non risu potius quam oratione
+            eiciendum? At ille pellit, qui permulcet sensum voluptate. Num quid
+            tale Democritus? Quae cum dixisset paulumque institisset, Quid est?
+          </p>
+
+          <p>
+            Nihil ad rem! Ne sit sane; Sic enim censent, oportunitatis esse
+            beate vivere.
+          </p>
+
+          <p>
+            Egone quaeris, inquit, quid sentiam? Nunc omni virtuti vitium
+            contrario nomine opponitur. Cur post Tarentum ad Archytam?
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="host-action">
+          <div class="host-languages">
+            <p>
+              Bilal speaks English, Français, and Deutsch and usually responds
+              within an hour.
+            </p>
+          </div>
+          <button class="button is-heavy">Ask Bilal a question</button>
+          <div class="disclaimer">
+            <i class="las la-shield-alt"></i>
+            <span
+              >To secure your payments, never contact a host outside of Listkit.
+              <a class="underlink">Learn more</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="availability" class="listing-dates">
+      <h4 class="title is-5">Choose from the available dates</h4>
+      <div class="dates-head">
+        <div class="meta">
+          <h4>Book for a private event</h4>
+          <p>Available slots: 3</p>
+        </div>
+        <div class="ninja-toggle">
+          <input id="bottom-group-toggle" type="checkbox" />
+          <label for="bottom-group-toggle" class="no-margin">
+            <span class="track">
+              <span class="track-inner"></span>
+              <span class="track-knob">
+                <i class="inactive" data-feather="circle"></i>
+                <i class="active" data-feather="check"></i>
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!--Available dates carousel wrapper-->
+      <div class="available-dates" x-data="initListingDates()">
+        <div class="available-dates-inner glide available-dates-glide">
+          <div class="glide__track" data-glide-el="track">
+            <!--Available dates carousel-->
+            <ul class="glide__slides">
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="available-date">
+                  <div class="top">
+                    <h4>September, Fri 15</h4>
+                    <span>Available</span>
+                    <a>Book for a private event</a>
+                  </div>
+                  <div class="bottom">
+                    <span>$349 <small>/night</small></span>
+                    <button
+                      class="button is-xsmaller is-primary is-raised-hover"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="available-date">
+                  <div class="top">
+                    <h4>September, Sat 16</h4>
+                    <span>Available</span>
+                    <a>Book for a private event</a>
+                  </div>
+                  <div class="bottom">
+                    <span>$349 <small>/night</small></span>
+                    <button
+                      class="button is-xsmaller is-primary is-raised-hover"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="available-date">
+                  <div class="top">
+                    <h4>September, Sun 17</h4>
+                    <span>Available</span>
+                    <a>Book for a private event</a>
+                  </div>
+                  <div class="bottom">
+                    <span>$349 <small>/night</small></span>
+                    <button
+                      class="button is-xsmaller is-primary is-raised-hover"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="available-date">
+                  <div class="top">
+                    <h4>September, Mon 18</h4>
+                    <span>Available</span>
+                    <a>Book for a private event</a>
+                  </div>
+                  <div class="bottom">
+                    <span>$349 <small>/night</small></span>
+                    <button
+                      class="button is-xsmaller is-primary is-raised-hover"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="available-date">
+                  <div class="top">
+                    <h4>September, Tue 19</h4>
+                    <span>Available</span>
+                    <a>Book for a private event</a>
+                  </div>
+                  <div class="bottom">
+                    <span>$349 <small>/night</small></span>
+                    <button
+                      class="button is-xsmaller is-primary is-raised-hover"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="available-date">
+                  <div class="top">
+                    <h4>September, Wed 20</h4>
+                    <span>Available</span>
+                    <a>Book for a private event</a>
+                  </div>
+                  <div class="bottom">
+                    <span>$349 <small>/night</small></span>
+                    <button
+                      class="button is-xsmaller is-primary is-raised-hover"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <i data-feather="arrow-left"></i>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <i data-feather="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Guidelines section-->
+    <div class="listing-guidelines">
+      <!--Title-->
+      <h4 class="title is-5">What you should know</h4>
+
+      <div class="guidelines-content">
+        <div class="columns b-columns-half-tablet-p">
+          <!--Guideline column-->
+          <div class="column is-4">
+            <div class="guidelines-item">
+              <h4 class="title is-6">House rules</h4>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-clock"></i>
+                </div>
+                <span>Check-in: 2:00 PM - 10:00 PM</span>
+              </div>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-clock"></i>
+                </div>
+                <span>Check-out: 12:00 PM</span>
+              </div>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-paw"></i>
+                </div>
+                <span>No pets</span>
+              </div>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-glass-cheers"></i>
+                </div>
+                <span>No parties</span>
+              </div>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-smoking"></i>
+                </div>
+                <span>Smoking allowed</span>
+              </div>
+              <a class="underlink modal-trigger" data-modal="listing-rules-modal-flat"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <!--Guideline column-->
+          <div class="column is-4">
+            <div class="guidelines-item">
+              <h4 class="title is-6">Health & safety</h4>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-first-aid"></i>
+                </div>
+                <span>COVID-19-related guidelines apply</span>
+              </div>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-fire-extinguisher"></i>
+                </div>
+                <span>Fire alarm</span>
+              </div>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-fire-alt"></i>
+                </div>
+                <span>Carbon monoxide alarm</span>
+              </div>
+              <div class="guidelines-block">
+                <div class="icon-container">
+                  <i class="las la-video"></i>
+                </div>
+                <span>Security cameras</span>
+              </div>
+              <a class="underlink modal-trigger" data-modal="listing-health-rules-modal"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <!--Guideline column-->
+          <div class="column is-4">
+            <div class="guidelines-item">
+              <h4 class="title is-6">Cancellation terms</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maximus
+                dolor, inquit, brevis est. Comprehensum, quod cognitum non
+                habet? Si longus, levis dictata sunt.
+              </p>
+              <a
+                class="underlink modal-trigger"
+                data-modal="listing-cancellation-modal"
+                >Learn more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--More events section-->
+    <div class="more-listings">
+      <!--Title-->
+      <h4 class="title is-5">More scheduled events</h4>
+
+      <!--Scheduled events carousel-->
+      <div class="scheduled-listings" x-data="initMoreListings()">
+        <div class="scheduled-listings-inner glide more-events-glide">
+          <div class="glide__track" data-glide-el="track">
+            <!--Carousel-->
+            <ul class="glide__slides">
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/19.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>3,72</span>
+                      <span class="px-2">·</span>
+                      <span>Marbella, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a>Cosy and classy house for your parties in Marbella</a>
+                    </p>
+                    <p class="listing-price">
+                      Starting from $210 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/20.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,69</span>
+                      <span class="px-2">·</span>
+                      <span>Fuengirola, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a>Outstanding beach house for your family vacations</a>
+                    </p>
+                    <p class="listing-price">
+                      Starting from $140 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/21.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,87</span>
+                      <span class="px-2">·</span>
+                      <span>Torremolinos, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a>Incredible beach house with a large swimming pool</a>
+                    </p>
+                    <p class="listing-price">
+                      Starting from $195 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/22.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,12</span>
+                      <span class="px-2">·</span>
+                      <span>Malaga, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a>Lone beach house with barbecue and all conveniences</a>
+                    </p>
+                    <p class="listing-price">
+                      Starting from $90 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/23.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,55</span>
+                      <span class="px-2">·</span>
+                      <span>Malaga, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a
+                        >Personal palace located on the beach for a family
+                        trip</a
+                      >
+                    </p>
+                    <p class="listing-price">
+                      Starting from $210 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/24.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,61</span>
+                      <span class="px-2">·</span>
+                      <span>Benalmadena, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a>Piloti beach house for friends or family trips</a>
+                    </p>
+                    <p class="listing-price">
+                      Starting from $150 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/25.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,97</span>
+                      <span class="px-2">·</span>
+                      <span>Marbella, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a>Classy house on a cliff with all conveniences</a>
+                    </p>
+                    <p class="listing-price">
+                      Starting from $260 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/26.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,65</span>
+                      <span class="px-2">·</span>
+                      <span>Torremolinos, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a>Incredible loft green house for a group of tourists</a>
+                    </p>
+                    <p class="listing-price">
+                      Starting from $190 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <!--Carousel item-->
+              <li class="glide__slide">
+                <div class="scheduled-listing">
+                  <div
+                    class="scheduled-listing-image"
+                    data-background="https://dummyimage.com/640x960"
+                    data-demo-background="/img/photo/content/events/carousel/27.jpg"
+                  >
+                    <div class="action-bar">
+                      <button class="button wishlist-button">
+                        <i data-feather="heart"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="scheduled-listing-content">
+                    <div class="scheduled-listing-rating">
+                      <i data-feather="star"></i>
+                      <span>4,99</span>
+                      <span class="px-2">·</span>
+                      <span>Malaga, Spain</span>
+                    </div>
+                    <p class="listing-name">
+                      <a
+                        >Modern ranch near the see for a friends or family
+                        trip</a
+                      >
+                    </p>
+                    <p class="listing-price">
+                      Starting from $230 <small>/night</small>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <i data-feather="arrow-left"></i>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <i data-feather="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Rules modal-->
+{{> rules-modal-flat}}
+
+<!--Health rules modal-->
+{{> health-rules-modal}}
+
+<!--Cancellation modal-->
+{{> cancellation-modal}}
+
+<!--Share modal-->
+{{> share-modal}}
+
+<!--Whishlist modal-->
+{{> wishlist-modal}}
+
+<!--Security modal-->
+{{> flat-security-modal}}
+
+<!--Cleaning modal-->
+{{> cleaning-modal}}
+
+<!--Concierge modal-->
+{{> concierge-modal}}
+
+<!--Amenities modal-->
+{{> amenities-modal}}
+
+<!--Comments modal-->
+{{> comments-modal}}
+
+<!--Map modal-->
+{{> map-modal}}

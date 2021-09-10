@@ -1,22 +1,25 @@
-<div class="mobile-sub-navigation">
+<div class="mobile-sub-navigation" x-data="initNavbarBottom()" x-on:scroll.window="scroll()" :class="{
+        '': isBottomNavActive,
+        'is-dismissed': !isBottomNavActive
+    }">
     <div class="mobile-sub-navigation--inner">
         <div class="sub-links">
-            <a class="sub-link">
+            <a class="sub-link is-active">
                 <div>
-                    <ion-icon name="telescope-outline"></ion-icon>
+                    <i data-feather="compass"></i>
                     <span>Explore</span>
                 </div>
             </a>
             <a class="sub-link">
                 <div>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <i data-feather="heart"></i>
                     <span>Wishlist</span>
                 </div>
             </a>
             <a class="sub-link">
                 <div>
-                    <ion-icon name="person-circle-outline"></ion-icon>
-                    <span>Sign In</span>
+                    <i data-feather="message-circle"></i>
+                    <span>Messages</span>
                 </div>
             </a>
         </div>

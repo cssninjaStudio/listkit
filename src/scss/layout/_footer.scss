@@ -9,9 +9,13 @@
 ========================================================================== */
 
 .main-footer {
+    position: relative;
     padding-bottom: 0 !important;
     padding-top: 4rem !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background: $light-white;
+    z-index: 1;
 
     .footer-head {
         display: flex;
@@ -136,6 +140,43 @@
                 svg {
                     height: 20px;
                     width: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .main-footer {
+        .footer-head {
+            flex-direction: column;
+            text-align: center;
+
+            .head-text {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .footer-copyright {
+            flex-direction: column;
+            text-align: center;
+
+            .social-links {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .main-footer {
+        .columns {
+            &.footer-body {
+                .column {
+                    &.is-4 {
+                        max-width: 380px;
+                    }
                 }
             }
         }

@@ -1,0 +1,1814 @@
+---
+layout: default
+title: Flats
+---
+
+<!--Docked main Navbar-->
+{{> main-navigation-fixed}}
+
+<!--Mobile Navbar-->
+{{> mobile-main-navigation}} 
+
+<!--Mobile subnavbar-->
+{{> mobile-sub-navigation}}
+
+<div class="dual-container">
+  <div class="dual-container-left">
+    <div class="left-header">
+      <h4>More than 400 flats</h4>
+      <h2 class="title is-3 is-narrow">Discover flats near you</h2>
+      <div class="filters py-4">
+        <div class="buttons">
+          <button class="button is-small is-rounded">Flexible cancellation</button>
+          <button class="button is-small is-rounded is-active">
+            Entire flat
+          </button>
+          <button class="button is-small is-rounded">Price</button>
+          <button class="button is-small is-rounded is-active">
+            Instant booking
+          </button>
+          <button class="button is-small is-rounded">More Filters</button>
+        </div>
+      </div>
+      <p>Before booking, please make sure to check our <a class="underlink mx-2">Covid-19 travel guide</a></p>
+    </div>
+
+    <!--Carousel offers-->
+    <div class="left-offers">
+      <div>
+        <div class="flat-carousels-wrapper" x-data="initFlatCarousels()">
+
+          <!--Title-->
+          <h4 class="title is-5 is-narrow">From your last trip</h4>
+
+          <!--Scheduled events carousel-->
+          <div class="flats">
+            <div class="flats-inner glide flat-carousel">
+              <div class="glide__track" data-glide-el="track">
+                <!--Carousel-->
+                <ul class="glide__slides">
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="0">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/19.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>3,72</span>
+                          <span class="px-2">·</span>
+                          <span>Marbella, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Cosy and classy house for your parties in Marbella</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $210 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="1">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/20.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,69</span>
+                          <span class="px-2">·</span>
+                          <span>Fuengirola, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Outstanding beach house for your family vacations</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $140 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="2">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/21.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,87</span>
+                          <span class="px-2">·</span>
+                          <span>Torremolinos, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Incredible beach house with a large swimming pool</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $195 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="3">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/22.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,12</span>
+                          <span class="px-2">·</span>
+                          <span>Malaga, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Lone beach house with barbecue and all conveniences</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $90 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="4">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/23.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,55</span>
+                          <span class="px-2">·</span>
+                          <span>Malaga, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Personal palace located on the beach for a family trip</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $210 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="5">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/24.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,61</span>
+                          <span class="px-2">·</span>
+                          <span>Benalmadena, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Piloti beach house for friends or family trips</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $150 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="6">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/25.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,97</span>
+                          <span class="px-2">·</span>
+                          <span>Marbella, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Classy house on a cliff with all conveniences</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $260 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="7">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/26.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,65</span>
+                          <span class="px-2">·</span>
+                          <span>Torremolinos, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Incredible loft green house for a group of tourists</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $190 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="8">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/27.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,99</span>
+                          <span class="px-2">·</span>
+                          <span>Malaga, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Modern ranch near the see for a friends or family trip</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $230 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <i data-feather="arrow-left"></i>
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  <i data-feather="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Title-->
+          <h4 class="title is-5 is-narrow">Suggested flats</h4>
+
+          <!--Scheduled events carousel-->
+          <div class="flats">
+            <div class="flats-inner glide flat-carousel">
+              <div class="glide__track" data-glide-el="track">
+                <!--Carousel-->
+                <ul class="glide__slides">
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="9">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/10.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,72</span>
+                          <span class="px-2">·</span>
+                          <span>Nazare, Portugal</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Outstanding beach side villa with swimming pool</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $180 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="10">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/11.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,38</span>
+                          <span class="px-2">·</span>
+                          <span>New York, NY</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Superb luxury house in the outskirts of New York</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $240 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="11">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/12.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,87</span>
+                          <span class="px-2">·</span>
+                          <span>Miami, FL</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Cosy indoor for a perfect family weekend</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $95 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="12">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/16.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,26</span>
+                          <span class="px-2">·</span>
+                          <span>Copacabana, Brazil</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Modern villa in the heart of Copacabana</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $165 <small>/person</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="13">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/13.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,89</span>
+                          <span class="px-2">·</span>
+                          <span>Toronto, Canada</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Multifunctionnal studio for a few days stay</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $105 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="14">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/14.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,88</span>
+                          <span class="px-2">·</span>
+                          <span>Paris, France</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Very classy apartment in the heart of Paris XVIe</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $245 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="15">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/15.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,55</span>
+                          <span class="px-2">·</span>
+                          <span>Madrid, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Nice and cosy apartment near the Prado Museum</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $190 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="16">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/17.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>3,84</span>
+                          <span class="px-2">·</span>
+                          <span>Paris, France</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Ideal and perfectly decorated studio</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $80 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="17">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/18.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,99</span>
+                          <span class="px-2">·</span>
+                          <span>Berlin, Germany</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Nice and cosy beach house with all conveniences</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $220 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <i data-feather="arrow-left"></i>
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  <i data-feather="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Title-->
+          <h4 class="title is-5 is-narrow">You might also like</h4>
+
+          <!--Scheduled events carousel-->
+          <div class="flats">
+            <div class="flats-inner glide flat-carousel">
+              <div class="glide__track" data-glide-el="track">
+                <!--Carousel-->
+                <ul class="glide__slides">
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="18">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/28.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,81</span>
+                          <span class="px-2">·</span>
+                          <span>Torremolinos, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Very classy residence, private pool and all conveniences</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $180 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="19">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/29.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,72</span>
+                          <span class="px-2">·</span>
+                          <span>Benalmadena, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Incredible loft house with pool and conveniences</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $240 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="20">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/30.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,81</span>
+                          <span class="px-2">·</span>
+                          <span>Benalmadena, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Jet set beach house near Benalmadena puerto</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $310 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="21">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/31.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,74</span>
+                          <span class="px-2">·</span>
+                          <span>Fuengirola, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Beautiful traditional house in the heart of Fuengirola</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $145 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="22">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/32.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,89</span>
+                          <span class="px-2">·</span>
+                          <span>Torremolinos, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Modern duplex apartment in the center of Torremolinos</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $190 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="23">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/33.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,21</span>
+                          <span class="px-2">·</span>
+                          <span>Malaga, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Nice and modern villa in the outskirts of Malaga</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $130 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="24">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/34.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,97</span>
+                          <span class="px-2">·</span>
+                          <span>Torremolinos, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Incredible modern decorated apartment in the town center</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $160 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="25">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/35.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,84</span>
+                          <span class="px-2">·</span>
+                          <span>Benalmadena, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Nice and cosy apartment in the center of Benalmadena</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $150 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Carousel item-->
+                  <li class="glide__slide map-popup-item" data-location="26">
+                    <div class="flat">
+                      <div
+                        class="flat-image map-popup-trigger"
+                        data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/36.jpg"
+                      >
+                        <div class="action-bar">
+                          <button class="button wishlist-button">
+                            <i data-feather="heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="flat-content">
+                        <div class="flat-rating">
+                          <i data-feather="star"></i>
+                          <span>4,99</span>
+                          <span class="px-2">·</span>
+                          <span>Fuengirola, Spain</span>
+                        </div>
+                        <p class="flat-name">
+                          <a>Impressive beach house right in front of the sea</a>
+                        </p>
+                        <p class="flat-price">
+                          Starting from $280 <small>/night</small>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left"
+                  data-glide-dir="<"
+                >
+                  <i data-feather="arrow-left"></i>
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right"
+                  data-glide-dir=">"
+                >
+                  <i data-feather="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-4">
+        <!--Title-->
+        <h4 class="title is-5">Other locations</h4>
+
+        <!--Featured categories-->
+        <div class="columns is-multiline slide-columns">
+          <!--Featured Category-->
+          <div class="column is-4">
+            <a class="media-flex-center">
+              <figure class="image is-64x64">
+                <img
+                  class="is-rounded-md"
+                  src="https://dummyimage.com/150x150"
+                  data-demo-src="/img/icons/locations/1.svg"
+                />
+              </figure>
+              <div class="flex-meta">
+                <span class="is-block">Egypt</span>
+                <span class="is-block">23 flats</span>
+              </div>
+            </a>
+          </div>
+
+          <!--Featured Category-->
+          <div class="column is-4">
+            <a class="media-flex-center">
+              <figure class="image is-64x64">
+                <img
+                  class="is-rounded-md"
+                  src="https://dummyimage.com/150x150"
+                  data-demo-src="/img/icons/locations/2.svg"
+                />
+              </figure>
+              <div class="flex-meta">
+                <span class="is-block">Belgium</span>
+                <span class="is-block">48 flats</span>
+              </div>
+            </a>
+          </div>
+
+          <!--Featured Category-->
+          <div class="column is-4">
+            <a class="media-flex-center">
+              <figure class="image is-64x64">
+                <img
+                  class="is-rounded-md"
+                  src="https://dummyimage.com/150x150"
+                  data-demo-src="/img/icons/locations/4.svg"
+                />
+              </figure>
+              <div class="flex-meta">
+                <span class="is-block">Morocco</span>
+                <span class="is-block">12 flats</span>
+              </div>
+            </a>
+          </div>
+
+          <!--Featured Category-->
+          <div class="column is-4">
+            <a class="media-flex-center">
+              <figure class="image is-64x64">
+                <img
+                  class="is-rounded-md"
+                  src="https://dummyimage.com/150x150"
+                  data-demo-src="/img/icons/locations/3.svg"
+                />
+              </figure>
+              <div class="flex-meta">
+                <span class="is-block">Scotland</span>
+                <span class="is-block">19 flats</span>
+              </div>
+            </a>
+          </div>
+
+          <!--Featured Category-->
+          <div class="column is-4">
+            <a class="media-flex-center">
+              <figure class="image is-64x64">
+                <img
+                  class="is-rounded-md"
+                  src="https://dummyimage.com/150x150"
+                  data-demo-src="/img/icons/locations/5.svg"
+                />
+              </figure>
+              <div class="flex-meta">
+                <span class="is-block">Costa del Sol</span>
+                <span class="is-block">91 flats</span>
+              </div>
+            </a>
+          </div>
+
+          <!--Featured Category-->
+          <div class="column is-4">
+            <a class="media-flex-center">
+              <figure class="image is-64x64">
+                <img
+                  class="is-rounded-md"
+                  src="https://dummyimage.com/150x150"
+                  data-demo-src="/img/icons/locations/6.svg"
+                />
+              </figure>
+              <div class="flex-meta">
+                <span class="is-block">Grand Canyon</span>
+                <span class="is-block">15 flats</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flat-list py-6">
+      <!--Title-->
+      <h4 class="title is-5">More than 400 flats</h4>
+
+      <!--List-->
+      <div class="flat-list-inner">
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="27">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/37.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Torremolinos, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Great apartment in the center of the town</a>
+              </p>
+              <p class="list-item-details">
+                <span>2 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$130/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,93</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="28">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/38.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Benalmadena, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Luxuous apartment with all conveniences</a>
+              </p>
+              <p class="list-item-details">
+                <span>4 people</span>
+                <span class="px-1">·</span>
+                <span>5 rooms</span>
+                <span class="px-1">·</span>
+                <span>3 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$210/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,67</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="29">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/39.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Benalmadena, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Nice and cosy house in the center of the town</a>
+              </p>
+              <p class="list-item-details">
+                <span>5 people</span>
+                <span class="px-1">·</span>
+                <span>4 rooms</span>
+                <span class="px-1">·</span>
+                <span>3 beds</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$180/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,47</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="30">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/40.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Fuengirola, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Nice studio for and ideal trip in Fuengirola</a>
+              </p>
+              <p class="list-item-details">
+                <span>2 people</span>
+                <span class="px-1">·</span>
+                <span>2 rooms</span>
+                <span class="px-1">·</span>
+                <span>1 bed</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$110/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,69</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="31">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/41.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Mijas, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Vegetal house in the outskirts of Mijas</a>
+              </p>
+              <p class="list-item-details">
+                <span>6 people</span>
+                <span class="px-1">·</span>
+                <span>5 rooms</span>
+                <span class="px-1">·</span>
+                <span>3 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$240/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,78</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="32">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/42.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Malaga, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Incredible garden house in the center of Malaga</a>
+              </p>
+              <p class="list-item-details">
+                <span>4 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$210/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,77</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="33">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/43.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Torremolinos, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Sea facing villa with a private pool</a>
+              </p>
+              <p class="list-item-details">
+                <span>2 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$160/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,21</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="34">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/44.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Fuengirola, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Magnificent garden house in the outskirts of the city</a>
+              </p>
+              <p class="list-item-details">
+                <span>4 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>4 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$130/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,22</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="35">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/45.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Malaga, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Great post colonial house in the center of Malaga</a>
+              </p>
+              <p class="list-item-details">
+                <span>8 people</span>
+                <span class="px-1">·</span>
+                <span>5 rooms</span>
+                <span class="px-1">·</span>
+                <span>4 beds</span>
+                <span class="px-1">·</span>
+                <span>3 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$310/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,87</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="36">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/46.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Mijas, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Hobbit-like house in the outskirts of Mijas</a>
+              </p>
+              <p class="list-item-details">
+                <span>2 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>1 bed</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$175/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,92</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="37">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/47.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Benalmadena, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Nice family house in the close suburbs</a>
+              </p>
+              <p class="list-item-details">
+                <span>4 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>3 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$160/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,89</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="38">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/48.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Malaga, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Cosy family house for an ideal nature trip</a>
+              </p>
+              <p class="list-item-details">
+                <span>5 people</span>
+                <span class="px-1">·</span>
+                <span>5 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$200/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="39">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/49.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Torremolinos, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Very cute beach house with all conveniences</a>
+              </p>
+              <p class="list-item-details">
+                <span>4 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$140/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="40">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/50.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Torremolinos, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Nice residence in the center with private pool</a>
+              </p>
+              <p class="list-item-details">
+                <span>3 people</span>
+                <span class="px-1">·</span>
+                <span>2 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$110/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,49</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="41">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/51.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Fuengirola, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Luxury house in the center of Fuengirola</a>
+              </p>
+              <p class="list-item-details">
+                <span>8 people</span>
+                <span class="px-1">·</span>
+                <span>6 rooms</span>
+                <span class="px-1">·</span>
+                <span>4 beds</span>
+                <span class="px-1">·</span>
+                <span>3 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$280/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,94</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="42">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/52.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Fuengirola, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Cosy house in the center of Fuengirola</a>
+              </p>
+              <p class="list-item-details">
+                <span>7 people</span>
+                <span class="px-1">·</span>
+                <span>5 rooms</span>
+                <span class="px-1">·</span>
+                <span>3 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$240/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,87</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="43">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/53.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Benalmadena, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Nice little house close to the beach and the center</a>
+              </p>
+              <p class="list-item-details">
+                <span>4 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$160/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,38</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="44">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/54.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Benalmadena, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Garden villa with barbecue and private pool</a>
+              </p>
+              <p class="list-item-details">
+                <span>5 people</span>
+                <span class="px-1">·</span>
+                <span>3 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>2 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$190/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,59</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="45">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/55.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Torremolinos, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Post colonial house with a private pool and tennis court</a>
+              </p>
+              <p class="list-item-details">
+                <span>8 people</span>
+                <span class="px-1">·</span>
+                <span>6 rooms</span>
+                <span class="px-1">·</span>
+                <span>5 beds</span>
+                <span class="px-1">·</span>
+                <span>3 bathrooms</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$360/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,92</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List item-->
+        <div class="flat-list-item map-popup-item" data-location="46">
+          <div class="action-bar">
+            <button class="button wishlist-button">
+              <i data-feather="heart"></i>
+            </button>
+          </div>
+          <div
+            class="list-item-image  map-popup-trigger"
+            data-background="https://dummyimage.com/640x960" data-demo-background="/img/photo/content/events/carousel/56.jpg"
+          ></div>
+          <div class="list-item-content">
+            <div class="list-item-info">
+              <div class="list-item-precontent">
+                <span>Malaga, Spain</span>
+              </div>
+              <p class="list-item-name">
+                <a>Downtown private residence near to the town center</a>
+              </p>
+              <p class="list-item-details">
+                <span>4 people</span>
+                <span class="px-1">·</span>
+                <span>2 rooms</span>
+                <span class="px-1">·</span>
+                <span>2 beds</span>
+                <span class="px-1">·</span>
+                <span>1 bathroom</span>
+              </p>
+            </div>
+            <div class="list-item-amount">
+              <span>$160/night</span>
+              <div class="list-item-rating">
+                <i data-feather="star"></i>
+                <span>4,43</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="pagination map-pagination is-centered is-rounded mt-4 mb-6" role="navigation" aria-label="pagination">
+      <a class="pagination-previous">Previous</a>
+      <a class="pagination-next">Next page</a>
+      <ul class="pagination-list">
+        <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+        <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+        <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+        <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+        <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <div
+    class="dual-container-right"
+    id="places-map"
+    x-data="initFlatsMap()"
+    data-long="-4.501974124414064" data-lat="36.62256952621055"
+  ></div>
+</div>

@@ -4,38 +4,27 @@
 SCSS Imports
 ========================================================================== */
 
-@import "_overrides/initial-variables";
-@import "../sass/sass/utilities/functions";
-@import "_overrides/derived-variables";
-@import "../sass/sass/utilities/animations";
-@import "../sass/sass/utilities/mixins";
-@import "../sass/sass/utilities/controls";
-
-@import "../sass/sass/base/all";
-@import "../sass/sass/elements/all";
-@import "../sass/sass/form/all";
-@import "../sass/sass/components/all";
-@import "../sass/sass/grid/all";
-@import "../sass/sass/layout/all";
-@import "../sass/sass/helpers/all";
-@import "../sass/sass/extensions/all";
-
+//1. Base
 @import "abstracts/variables";
 @import "abstracts/brands";
 @import "abstracts/shadows";
 @import "abstracts/typography";
 @import "abstracts/animations";
+
+//2. Bulma
+@import "../sass/bulma";
+
+//3. Custom Helpers
 @import "abstracts/helpers";
 
-@import "layout/hero";
-@import "layout/footer";
-@import "layout/section";
+//4. Layout
+@import "layout/all";
 
-@import "elements/button";
-@import "elements/form";
+//5. Elements
+@import "elements/all";
 
-@import "components/navigation-main";
-@import "components/datepicker";
-@import "components/flex";
-@import "components/switch";
-@import "components/glide";
+//6. Components
+@import "components/all";
+
+//7. Sections
+@import "sections/all";
