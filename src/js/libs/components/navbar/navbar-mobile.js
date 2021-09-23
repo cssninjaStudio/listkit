@@ -88,12 +88,12 @@ export function initNavbarMobile() {
           e.target.innerHTML = "Next";
         }
 
-        console.log(this.activeWizardStep);
+        //console.log(this.activeWizardStep);
       }, 800);
     },
 
     wizardBack(e) {
-      console.log(e.target);
+      //console.log(e.target);
       e.target.classList.add("is-loading");
       setTimeout(() => {
         e.target.classList.remove("is-loading");

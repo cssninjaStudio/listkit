@@ -1,3 +1,15 @@
+/*! _hero.scss | ListKit | Css ninja 2021-2022 */
+
+/*
+    1. Hero base styles
+    2. Media Queries
+*/
+
+
+/* ==========================================================================
+1. Hero base styles
+========================================================================== */
+
 .hero {
   position: relative;
 
@@ -7,7 +19,9 @@
 
   &.is-big {
     min-height: 85vh;
+  }
 
+  &.is-big, &.is-fullheight {
     .hero-body {
       display: flex;
       align-items: center;
@@ -49,6 +63,17 @@
   }
 
   .hero-body {
+
+    .columns {
+      &.pushed-columns {
+        padding-top: 6rem;
+      }
+
+      &.pushed-columns-lg {
+        padding-top: 8rem;
+      }
+    }
+
     .hero-text {
       z-index: 2;
 
@@ -63,8 +88,24 @@
         min-width: 165px;
       }
     }
+
+    .hero-illustration {
+      display: block;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .hero-wide-illustration {
+      display: block;
+      max-width: 940px;
+      margin: 0 auto;
+    }
   }
 }
+
+/* ==========================================================================
+2. Media Queries
+========================================================================== */
 
 @media only screen and (max-width: 767px) {
   .hero {
@@ -100,6 +141,18 @@
         }
       }
     }
+
+    &.is-centered-mobile {
+      .hero-body {
+        .hero-text {
+          text-align: center;
+
+          .buttons {
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -122,6 +175,23 @@
         .hero-text {
           text-align: center;
           //padding-top: 3.5rem;
+        }
+      }
+    }
+
+    &.is-centered-tablet-p {
+      .hero-body {
+        .hero-text {
+          text-align: center;
+
+          .subtitle {
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+
+          .buttons {
+            justify-content: center;
+          }
         }
       }
     }

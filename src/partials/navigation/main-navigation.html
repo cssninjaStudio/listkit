@@ -63,7 +63,10 @@
           <div class="navigation-link">
             <a href="host.html">Host Events</a>
           </div>
-          <button class="navigation-link is-icon mx-4 modal-trigger" data-modal="languages-modal">
+          <button
+            class="navigation-link is-icon mx-4 modal-trigger"
+            data-modal="languages-modal"
+          >
             <i data-feather="globe"></i>
           </button>
           <div class="account-drop">
@@ -115,15 +118,15 @@
                   >Settings</a
                 >
                 <a
-                  href="schedule.html"
+                  href="account-schedule.html"
                   x-show="$store.app.isLoggedIn === true"
                   class="drop-menu-item"
                   >Schedule</a
                 >
                 <hr />
-                <a class="drop-menu-item">Host Event</a>
-                <a class="drop-menu-item">Explore Events</a>
-                <a class="drop-menu-item">Help</a>
+                <a href="host.html" class="drop-menu-item">Host Event</a>
+                <a href="events.html" class="drop-menu-item">Explore Events</a>
+                <a href="how.html" class="drop-menu-item">Help</a>
                 <a
                   x-show="$store.app.isLoggedIn === true"
                   class="drop-menu-item"

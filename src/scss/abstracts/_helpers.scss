@@ -3,7 +3,10 @@
 /*
     1. Spacing helpers
     2. Color helpers
-    3. Dark helpers
+    3. Rounded helpers
+    4. Responsive Display
+    5. Responsive Flex
+    6. Scroll helpers
 */
 
 /* ==========================================================================
@@ -136,7 +139,7 @@ $colorz: (
 }
 
 /* ==========================================================================
-8. Rounded helpers
+3. Rounded helpers
 ========================================================================== */
 
 .is-rounded-md {
@@ -148,7 +151,7 @@ $colorz: (
 }
 
 /* ==========================================================================
-8. Responsive Display
+4. Responsive Display
 ========================================================================== */
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -261,7 +264,7 @@ $colorz: (
 }
 
 /* ==========================================================================
-9. Responsive Flex
+5. Responsive Flex
 ========================================================================== */
 
 @media only screen and (max-width: 767px) {
@@ -329,9 +332,8 @@ $colorz: (
   }
 }
 
-
 /* ==========================================================================
-10. Scroll helpers
+6. Scroll helpers
 ========================================================================== */
 
 .has-slimscroll {
@@ -339,26 +341,25 @@ $colorz: (
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
-      width: 6px !important;
+    width: 6px !important;
   }
 
   &::-webkit-scrollbar-thumb {
-      border-radius: 10px !important;
-      background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 10px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
   }
 }
 
 .has-slimscroll-sm {
   &::-webkit-scrollbar {
-      width: 3px !important;
+    width: 3px !important;
   }
 
   &::-webkit-scrollbar-thumb {
-      border-radius: 10px !important;
-      background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 10px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
   }
 }
-
 
 .overflow-x-hidden {
   overflow-x: hidden !important;

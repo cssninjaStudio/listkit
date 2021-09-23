@@ -1,11 +1,13 @@
 /*! _auth.scss | ListKit | Css ninja 2021-2022 */
 
 /*
-    1. Login
+    1. Auth Nav
+    2. Setting item
+    3. Auth wrapper
 */
 
 /* ==========================================================================
-1. Login
+1. Auth Nav
 ========================================================================== */
 
 .auth-nav {
@@ -19,36 +21,41 @@
   align-items: center;
   padding: 0 20px;
 
-  .left, .right {
-      display: flex;
-      align-items: center;
-      width: 20%;
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    width: 20%;
   }
 
   .right {
-      justify-content: flex-end;
+    justify-content: flex-end;
 
-      .dark-mode {
-          transform: scale(0.7);
-      }
+    .dark-mode {
+      transform: scale(0.7);
+    }
   }
 
   .center {
-      flex-grow: 2;
+    flex-grow: 2;
 
-      a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-          img {
-              display: block;
-              width: 100%;
-              max-width: 50px;
-          }
+      img {
+        display: block;
+        width: 100%;
+        max-width: 50px;
       }
+    }
   }
 }
+
+/* ==========================================================================
+2. Setting item
+========================================================================== */
 
 .setting-item {
   display: flex;
@@ -61,6 +68,10 @@
     margin-left: 8px;
   }
 }
+
+/* ==========================================================================
+3. Auth wrapper
+========================================================================== */
 
 .auth-wrapper {
   overflow: hidden !important;
@@ -232,6 +243,16 @@
           margin-top: 10px;
         }
       }
+    }
+  }
+
+  .signup-image-wrap {
+    width: 100%;
+
+    img {
+      display: block;
+      max-height: 610px;
+      margin: 0 auto;
     }
   }
 }

@@ -1,27 +1,32 @@
-<div class="mobile-sub-navigation" x-data="initNavbarBottom()" x-on:scroll.window="scroll()" :class="{
+<div
+  class="mobile-sub-navigation"
+  x-data="initNavbarBottom()"
+  x-on:scroll.window="scroll()"
+  :class="{
         '': isBottomNavActive,
         'is-dismissed': !isBottomNavActive
-    }">
-    <div class="mobile-sub-navigation--inner">
-        <div class="sub-links">
-            <a class="sub-link is-active">
-                <div>
-                    <i data-feather="compass"></i>
-                    <span>Explore</span>
-                </div>
-            </a>
-            <a class="sub-link">
-                <div>
-                    <i data-feather="heart"></i>
-                    <span>Wishlist</span>
-                </div>
-            </a>
-            <a class="sub-link">
-                <div>
-                    <i data-feather="message-circle"></i>
-                    <span>Messages</span>
-                </div>
-            </a>
+    }"
+>
+  <div class="mobile-sub-navigation--inner">
+    <div class="sub-links">
+      <a class="sub-link is-active">
+        <div>
+          <i data-feather="compass"></i>
+          <span>Explore</span>
         </div>
+      </a>
+      <a class="sub-link">
+        <div>
+          <i data-feather="heart"></i>
+          <span>Wishlist</span>
+        </div>
+      </a>
+      <a class="sub-link">
+        <div>
+          <i data-feather="message-circle"></i>
+          <span>Messages</span>
+        </div>
+      </a>
     </div>
+  </div>
 </div>

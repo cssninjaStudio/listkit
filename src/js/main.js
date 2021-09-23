@@ -3,10 +3,20 @@
 const feather = require('feather-icons')
 
 import Alpine from 'alpinejs'
+import intersect from '@alpinejs/intersect'
+import Fern from '@ryangjchandler/fern'
+//Prefix alpine special attributes to pass W3C validation
+//document.addEventListener('alpine:init', () => Alpine.prefix('data-x-'))
 window.Alpine = Alpine
-Alpine.store('app', {
+//Init intersect plugin
+Alpine.plugin(intersect)
+//Init Fern plugin
+Alpine.plugin(Fern)
+//Init Fern persisted store
+Alpine.persistedStore('app', {
     isLoggedIn: false,
 })
+
 Alpine.start()
 
 import { env } from './libs/utils/constants'
@@ -14,16 +24,19 @@ import './libs/components'
 import './libs/forms'
 import './libs/sections'
 import { initPageLoader } from './libs/components/pageloader/pageloader'
+import { initLazyLoading } from './libs/utils/lazyload';
 import { switchDemoImages, insertBgImages, insertHrefs, insertPosters, initModals, initVideoPlayers } from './libs/utils/utils'
 
 const showPageloader = initPageLoader()
-//document.addEventListener('alpine:init', () => Alpine prefix('data-x-'))
 
 document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
 
         //Switch demo images
         const changeImages = switchDemoImages();
+
+        //Lazy Loading
+        const lazy = initLazyLoading();
 
         //Switch backgrounds
         const changeBackgrounds = insertBgImages(env);

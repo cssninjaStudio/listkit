@@ -4,7 +4,7 @@ export function initCareerTabs() {
     switchTabs(e) {
       const target = e.target.getAttribute('data-tab');
       this.activeTab = target;
-      console.log(this.activeTab);
+      //console.log(this.activeTab);
     }
   }
 }
@@ -15,7 +15,7 @@ export function initJobTabs() {
     switchTabs(e) {
       const target = e.target.getAttribute('data-tab');
       this.activeTab = target;
-      console.log(this.activeTab);
+      //console.log(this.activeTab);
     }
   }
 }

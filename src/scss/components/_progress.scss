@@ -13,26 +13,26 @@
   margin-bottom: 0;
 
   &::-webkit-progress-value {
-      border-radius: 50px;
+    border-radius: 50px;
   }
 
   &::-moz-progress-bar {
-      border-radius: 50px;
+    border-radius: 50px;
   }
 
   &::-ms-fill {
-      border-radius: 50px;
+    border-radius: 50px;
   }
 
   &.is-smaller {
-      height: .5rem !important;
+    height: 0.5rem !important;
   }
 
   &.is-tiny {
-      height: .35rem !important;
+    height: 0.35rem !important;
   }
 
   &.is-micro {
-    height: .2rem !important;
-}
+    height: 0.2rem !important;
+  }
 }

@@ -4,29 +4,24 @@
     1. Section base styles
 */
 
-
 /* ==========================================================================
 1. Section base styles
 ========================================================================== */
 
 .section {
-    &.is-dark {
-        background: $dark-sidebar;
-    }
+  &.is-dark {
+    background: $dark-sidebar;
+  }
 
-    &.is-light-grey {
-        background: $widget-grey;
-    }
+  &.is-light-grey {
+    background: $widget-grey;
+  }
 
-    &.has-navbar-padding {
-        padding-top: 7.5rem;
-    }
+  &.has-navbar-padding {
+    padding-top: 7.5rem;
+  }
 
-    &.app-section {
-        padding-top: 7.5rem;
-    }
+  &.app-section {
+    padding-top: 7.5rem;
+  }
 }
-
-
-
-

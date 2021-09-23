@@ -5,6 +5,7 @@
     1. Titles
     2. Links
     3. Typography Helpers
+    4. Media Queries
 */
 
 /* ==========================================================================
@@ -93,6 +94,18 @@ p {
   &.is-inverted {
     color: $white;
   }
+
+  &.stressed {
+    color: $light-text;
+  }
+
+  &.stressed-1 {
+    color: $medium-text;
+  }
+
+  &.stressed-2 {
+    color: $dark-text;
+  }
 }
 
 .subtitle {
@@ -125,6 +138,18 @@ p {
 
   &.is-inverted {
     color: $white !important;
+  }
+
+  &.stressed {
+    color: $light-text;
+  }
+
+  &.stressed-1 {
+    color: $medium-text;
+  }
+
+  &.stressed-2 {
+    color: $dark-text;
   }
 }
 
@@ -291,6 +316,10 @@ p {
 .rem-125 {
   font-size: 1.25rem;
 }
+
+/* ==========================================================================
+4. Media Queries
+========================================================================== */
 
 @media only screen and (max-width: 767px) {
   .section-title {

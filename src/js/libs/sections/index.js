@@ -1,3 +1,6 @@
+//Demo
+import { initRenderDemos } from "./demo/landing-demos";
+
 //Events
 import { initListingNavbar } from "./listing/listing-navbar";
 import { initListingDates } from "./listing/listing-dates";
@@ -23,6 +26,12 @@ import { initFeaturedHosts } from "./hosts/featured-hosts";
 
 //Careers
 import { initCareerTabs, initJobTabs } from "./careers/career-tabs";
+
+//Contact
+import { initContactMap } from "./contact/contact-map";
+
+//Demo
+window.initRenderDemos = initRenderDemos;
 
 //Events
 window.initListingNavbar = initListingNavbar;
@@ -50,3 +59,6 @@ window.initJobTabs = initJobTabs;
 
 //Testimonials
 window.initTestimonials = initTestimonials;
+
+//Contact
+window.initContactMap = initContactMap;

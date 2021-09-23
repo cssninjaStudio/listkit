@@ -20,7 +20,7 @@ export function initBackToTop() {
       let scrollHeight = document.body.scrollHeight - 700;
       let progress = pathLength - (scrollValue * pathLength) / scrollHeight;
       progressPath.style.strokeDashoffset = progress;
-      console.log(scrollValue);
+      //console.log(scrollValue);
     },
     scroll() {
       this.updateProgress();

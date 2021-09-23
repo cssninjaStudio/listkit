@@ -8,19 +8,26 @@ title: Account
 
 <div class="section app-section">
   <div class="container">
-    <div class="account-wrapper">
-      <div class="account-title">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-          <ul>
-            <li><a href="#">Account</a></li>
-            <li class="is-active">
-              <a href="#" aria-current="page">Personal info</a>
-            </li>
-          </ul>
-        </nav>
+    <nav class="breadcrumb account-breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="account-main.html">Account</a></li>
+        <li class="is-active">
+          <a href="account-personal.html" aria-current="page">Personal Info</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="account-header">
+      <img
+        class="header-avatar"
+        src="https://dummyimage.com/150x150"
+        data-demo-src="/img/photo/avatar/19.jpg"
+        alt=""
+      />
+      <div class="header-meta">
         <h2 class="title is-3 is-bold">Personal Info</h2>
-        <h4 class="subtitle is-5">
-          Welcome Jane Doe, it's nice to see you again
+        <h4 class="subtitle is-5 stressed-1">
+          Edit and manage your personal details
         </h4>
       </div>
     </div>
@@ -32,7 +39,7 @@ title: Account
             <div class="mb-4">
               <h2 class="title is-5 is-bold">General</h2>
               <h4 class="subtitle is-6">
-                Lorem ipsum sit dolor amet is a dummy text
+                Your general information and details
               </h4>
             </div>
 
@@ -40,7 +47,7 @@ title: Account
             <article class="media">
               <div class="media-content">
                 <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">Danny Michalovski</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -49,8 +56,8 @@ title: Account
             <!--Setting block-->
             <article class="media">
               <div class="media-content">
-                <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">Gender</span>
+                <span class="is-block">Male</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -59,8 +66,8 @@ title: Account
             <!--Setting block-->
             <article class="media">
               <div class="media-content">
-                <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">Email Address</span>
+                <span class="is-block">dannymichalov@gmail.com</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -69,8 +76,8 @@ title: Account
             <!--Setting block-->
             <article class="media">
               <div class="media-content">
-                <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">Birthdate</span>
+                <span class="is-block">October 12, 1979</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -82,15 +89,15 @@ title: Account
             <div class="mt-6 mb-4">
               <h2 class="title is-5 is-bold">Additional Info</h2>
               <h4 class="subtitle is-6">
-                Lorem ipsum sit dolor amet is a dummy text
+                some additional details that we need
               </h4>
             </div>
 
             <!--Setting block-->
             <article class="media">
               <div class="media-content">
-                <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">Phone Number</span>
+                <span class="is-block">(+1) 555 551 54984</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -99,8 +106,8 @@ title: Account
             <!--Setting block-->
             <article class="media">
               <div class="media-content">
-                <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">ID Document</span>
+                <span class="is-block">Successfully uploaded</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -109,8 +116,8 @@ title: Account
             <!--Setting block-->
             <article class="media">
               <div class="media-content">
-                <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">Location</span>
+                <span class="is-block">San Francisco, CA</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -119,8 +126,8 @@ title: Account
             <!--Setting block-->
             <article class="media">
               <div class="media-content">
-                <span class="is-block">Full Name</span>
-                <span class="is-block">Dan Michalovski</span>
+                <span class="is-block">Emergency</span>
+                <span class="is-block">Your emergency infos</span>
               </div>
               <div class="media-right">
                 <a class="default-link">Edit</a>
@@ -129,48 +136,53 @@ title: Account
           </div>
         </div>
         <div class="column is-4 is-offset-1">
-          <!--Help-->
-          <a href="" class="card is-block mb-5">
-            <div class="card-content">
-              <div class="svg-icon">
-                <img class="mb-2" src="img/icons/custom/plant.svg" alt="" />
-              </div>
-              <h3 class="title is-6 has-space">
-                <span class="icon-text">
-                  <span>Personal Info </span>
-                  <span class="icon">
-                    <i data-feather="chevron-right"></i>
+          <!--Categories-->
+          <div class="account-categories">
+            <!--Category-->
+            <a href="account-personal.html" class="card mb-5">
+              <div class="card-content">
+                <div class="svg-icon">
+                  <img class="mb-2" src="img/icons/custom/shield.svg" alt="" />
+                </div>
+                <h3 class="title is-6 has-space">
+                  <span class="icon-text">
+                    <span>Account & Security</span>
+                    <span class="icon">
+                      <i data-feather="chevron-right"></i>
+                    </span>
                   </span>
-                </span>
-              </h3>
-              <p class="stressed-1 is-md">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. De
-                quibus cupio scire quid sentias. Tollenda est atque extrahenda
-                radicitus.
-              </p>
-            </div>
-          </a>
-          <!--Help-->
-          <a href="" class="card is-block">
-            <div class="card-content">
-              <div class="svg-icon">
-                <img class="mb-2" src="img/icons/custom/plant.svg" alt="" />
+                </h3>
+                <p class="stressed-1 is-md">
+                  Update your password and secure your account. You can also
+                  enable two-factor authentication.
+                </p>
               </div>
-              <h3 class="title is-6 has-space">
-                <span class="icon-text">
-                  <span>Personal Info </span>
-                  <span class="icon">
-                    <i data-feather="chevron-right"></i>
+            </a>
+            <!--Category-->
+            <a href="account-personal.html" class="card">
+              <div class="card-content">
+                <div class="svg-icon">
+                  <img
+                    class="mb-2"
+                    src="img/icons/custom/credit-card.svg"
+                    alt=""
+                  />
+                </div>
+                <h3 class="title is-6 has-space">
+                  <span class="icon-text">
+                    <span>Payments</span>
+                    <span class="icon">
+                      <i data-feather="chevron-right"></i>
+                    </span>
                   </span>
-                </span>
-              </h3>
-              <p class="stressed-1 is-md">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. De
-                quibus cupio scire quid sentias. Tollenda est atque extrahenda
-                radicitus.
-              </p>
-            </div>
-          </a>
+                </h3>
+                <p class="stressed-1 is-md">
+                  View your payments and your transactions. Also view coupon
+                  codes, gift cards and tax reports.
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>

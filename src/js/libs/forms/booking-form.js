@@ -7,7 +7,7 @@ export function initBookingForm() {
         dateValue: '',
         getDateValue(e){
             this.dateValue = e.target.getAttribute('data-value');
-            console.log('DATE: ', this.dateValue);
+            //console.log('DATE: ', this.dateValue);
         },
 
         bookingFormExpanded: false,

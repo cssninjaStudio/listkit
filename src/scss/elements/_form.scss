@@ -3,6 +3,7 @@
 /*
     1. Field
     2. Input
+    3. Custom Toggle
 */
 
 /* ==========================================================================
@@ -61,7 +62,8 @@
 
   .input {
     box-shadow: none;
-    border-radius: .55rem;
+    font-family: $font;
+    border-radius: 0.55rem;
     transition: all 0.3s;
 
     &:active,
@@ -80,13 +82,34 @@
 }
 
 .input {
-    &.is-bigger {
-        height: 46px;
-    }
+  &.is-bigger {
+    height: 46px;
+  }
+}
+
+.textarea {
+  box-shadow: none;
+  font-family: $font;
+  border-radius: 0.55rem;
+  transition: all 0.3s;
+
+  &:active,
+  &.is-active {
+    border-color: $border;
+  }
+
+  &:hover {
+    box-shadow: $light-box-shadow;
+  }
+
+  &:focus {
+    box-shadow: $light-box-shadow;
+    border-color: $border;
+  }
 }
 
 /* ==========================================================================
-2. Custom Toggle
+3. Custom Toggle
 ========================================================================== */
 
 .ninja-toggle {

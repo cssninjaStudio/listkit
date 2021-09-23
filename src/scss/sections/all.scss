@@ -4,13 +4,16 @@
 Barrel file
 ========================================================================== */
 
+@import "./landing";
 @import "./features";
 @import "./listing";
-@import "./flat";
-@import "./trip";
 @import "./form";
 @import "./cta";
 @import "./map";
 @import "./pricing";
 @import "./testimonials";
+@import "./blog";
+@import "./account";
+@import "./contact";
+@import "./help";
 @import "./auth";

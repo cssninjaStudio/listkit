@@ -3,7 +3,7 @@ export function initListingContent() {
         isDescriptionExpanded: false,
         toggleListingDescription() {
             this.isDescriptionExpanded = !this.isDescriptionExpanded;
-            console.log('clicked');
+            //console.log('clicked');
         }
     }
 }

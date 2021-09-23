@@ -4,7 +4,11 @@
     1. Base
     2. Modal icon list
     3. Modal text block
-    4. Media queries
+    4. Modal wishlist
+    5. Check cards
+    6. Comments modal
+    7. Map Modal
+    8. Media queries
 */
 
 /* ==========================================================================
@@ -352,7 +356,7 @@
       }
 
       .comment {
-        margin-bottom: .75rem;
+        margin-bottom: 0.75rem;
 
         .comment-head {
           display: flex;
@@ -407,7 +411,7 @@
       min-width: 100%;
       min-height: 260px;
       overflow: hidden;
-      border-radius: .65rem;
+      border-radius: 0.65rem;
 
       .mapboxgl-canvas {
         width: 100% !important;
@@ -421,7 +425,7 @@
 
       .instructions {
         line-height: 1.2;
-        font-size: .9rem;
+        font-size: 0.9rem;
         color: $medium-text;
       }
     }
@@ -429,7 +433,7 @@
 }
 
 /* ==========================================================================
-4. Media queries
+8. Media queries
 ========================================================================== */
 
 @media screen and (max-width: 767px) {

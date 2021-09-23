@@ -35,13 +35,13 @@
 
 .progress-wrap::after {
   position: absolute;
-  font-family: 'Font Awesome 5 Free';
-  content: '\f062';
+  font-family: "Font Awesome 5 Free";
+  content: "\f062";
   font-weight: 900;
   text-align: center;
   line-height: 46px;
   font-size: 16px;
-  color: rgba($primary, 0.8); /* --- Pijl kleur --- */
+  color: rgba($primary, 0.8);
   left: 0;
   top: 0;
   height: 46px;
@@ -59,14 +59,14 @@
 
 .progress-wrap::before {
   position: absolute;
-  font-family: 'Font Awesome 5 Free';
-  content: '\f062';
+  font-family: "Font Awesome 5 Free";
+  content: "\f062";
   font-weight: 900;
   text-align: center;
   line-height: 46px;
   font-size: 16px;
   opacity: 0;
-  background: $primary; /* --- Pijl hover kleur --- */
+  background: $primary;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   left: 0;
@@ -97,32 +97,33 @@
 }
 
 @keyframes border-transform {
-  0%,100% {
-      border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   }
 
   14% {
-      border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
   }
 
   28% {
-      border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
   }
 
   42% {
-      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
   }
 
   56% {
-      border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
   }
 
   70% {
-      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
   }
 
   84% {
-      border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
   }
 }
 

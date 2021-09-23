@@ -23,6 +23,17 @@
     margin: 0 auto;
   }
 
+  &.is-xs {
+    height: 24px;
+    width: 24px;
+    min-width: 24px;
+
+    svg {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
   &.is-sm {
     height: 34px;
     width: 34px;

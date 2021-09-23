@@ -23,8 +23,9 @@ title: Careers
                 At Listkit, we're a great family of developers and business
                 people. Wanna join us?
               </p>
-              <div class="">
-                <a class="button is-primary is-raised-hover">View Job Offers</a>
+              <div class="buttons">
+                <a class="button is-primary is-raised-hover mx-1">View Jobs</a>
+                <a class="button is-heavy mx-1">Learn More</a>
               </div>
             </div>
           </div>
@@ -74,7 +75,11 @@ title: Careers
           </p>
         </div>
         <div class="column is-5">
-          <img class="careers-image" src="img/illustrations/stories/18.svg" alt="" />
+          <img
+            class="careers-image"
+            src="img/illustrations/stories/18.svg"
+            alt=""
+          />
         </div>
       </div>
 
@@ -88,7 +93,11 @@ title: Careers
           </p>
         </div>
         <div class="column is-5">
-          <img class="careers-image" src="img/illustrations/stories/19.svg" alt="" />
+          <img
+            class="careers-image"
+            src="img/illustrations/stories/19.svg"
+            alt=""
+          />
         </div>
       </div>
 
@@ -102,7 +111,11 @@ title: Careers
           </p>
         </div>
         <div class="column is-5">
-          <img class="careers-image" src="img/illustrations/stories/20.svg" alt="" />
+          <img
+            class="careers-image"
+            src="img/illustrations/stories/20.svg"
+            alt=""
+          />
         </div>
       </div>
 
@@ -116,7 +129,11 @@ title: Careers
           </p>
         </div>
         <div class="column is-5">
-          <img class="careers-image" src="img/illustrations/stories/21.svg" alt="" />
+          <img
+            class="careers-image"
+            src="img/illustrations/stories/21.svg"
+            alt=""
+          />
         </div>
       </div>
 
@@ -338,9 +355,24 @@ title: Careers
       <div class="career-jobs-wrapper" x-data="initJobTabs()">
         <header class="career-jobs-header">
           <div class="nav">
-            <a @click.prevent="switchTabs($event)" data-tab="all" :class="{'is-current': activeTab === 'all'}">All Jobs</a>
-            <a @click.prevent="switchTabs($event)" data-tab="full" :class="{'is-current': activeTab === 'full'}">Full-time</a>
-            <a @click.prevent="switchTabs($event)" data-tab="part" :class="{'is-current': activeTab === 'part'}">Part-time</a>
+            <a
+              @click.prevent="switchTabs($event)"
+              data-tab="all"
+              :class="{'is-current': activeTab === 'all'}"
+              >All Jobs</a
+            >
+            <a
+              @click.prevent="switchTabs($event)"
+              data-tab="full"
+              :class="{'is-current': activeTab === 'full'}"
+              >Full-time</a
+            >
+            <a
+              @click.prevent="switchTabs($event)"
+              data-tab="part"
+              :class="{'is-current': activeTab === 'part'}"
+              >Part-time</a
+            >
           </div>
         </header>
 
@@ -364,9 +396,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">UX Designer</span>
                   <span class="job-info">
-                    <span>Junior</span> 
+                    <span>Junior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$30k</span>
                   </span>
@@ -375,7 +407,6 @@ title: Careers
               </li>
             </a>
           </template>
-          
 
           <!--Job listing-->
           <template x-if="activeTab === 'all' || activeTab === 'part'">
@@ -396,9 +427,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">Product Designer</span>
                   <span class="job-info">
-                    <span>Senior</span> 
+                    <span>Senior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$40k</span>
                   </span>
@@ -429,9 +460,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">Frontend Developer</span>
                   <span class="job-info">
-                    <span>Senior</span> 
+                    <span>Senior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$60k</span>
                   </span>
@@ -440,7 +471,7 @@ title: Careers
               </li>
             </a>
           </template>
-          
+
           <!--Job listing-->
           <template x-if="activeTab === 'all' || activeTab === 'full'">
             <a href="#">
@@ -460,9 +491,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">UI Designer</span>
                   <span class="job-info">
-                    <span>Senior</span> 
+                    <span>Senior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$50k</span>
                   </span>
@@ -491,9 +522,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">Fullstack Developer</span>
                   <span class="job-info">
-                    <span>Senior</span> 
+                    <span>Senior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$80k</span>
                   </span>
@@ -522,9 +553,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">UX Designer</span>
                   <span class="job-info">
-                    <span>Junior</span> 
+                    <span>Junior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$25k</span>
                   </span>
@@ -533,7 +564,6 @@ title: Careers
               </li>
             </a>
           </template>
-          
 
           <li class="date">Jan 28th</li>
 
@@ -556,9 +586,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">Fullstack Developer</span>
                   <span class="job-info">
-                    <span>Junior</span> 
+                    <span>Junior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$30k</span>
                   </span>
@@ -587,9 +617,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">UX Designer</span>
                   <span class="job-info">
-                    <span>Junior</span> 
+                    <span>Junior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$30k</span>
                   </span>
@@ -618,9 +648,9 @@ title: Careers
                 <div class="info">
                   <span class="job-title">Product Designer</span>
                   <span class="job-info">
-                    <span>Senior</span> 
+                    <span>Senior</span>
                     <span>&bull;</span>
-                    <span>Remote</span> 
+                    <span>Remote</span>
                     <span>&bull;</span>
                     <span>$40k</span>
                   </span>
@@ -647,11 +677,7 @@ title: Careers
       <div class="subscription-field">
         <div class="field">
           <div class="control">
-            <input
-              type="text"
-              class="input"
-              placeholder="Email address..."
-            />
+            <input type="text" class="input" placeholder="Email address..." />
             <button class="button is-primary">Contact Me</button>
           </div>
           <p class="py-1">Start by adding your professional address</p>
@@ -659,9 +685,7 @@ title: Careers
       </div>
 
       <div class="subscription-text">
-        <h4 class="title is-6 has-space">
-          Want to learn more?
-        </h4>
+        <h4 class="title is-6 has-space">Want to learn more?</h4>
         <p>Shoot us a message and we'll get back to you</p>
         <a class="underlink mt-4">Contact Us</a>
       </div>

@@ -1,0 +1,222 @@
+---
+layout: default
+title: Schedule
+---
+
+<!--Main Navbar-->
+{{> main-navigation-default}}
+
+<div class="section app-section">
+  <div class="container">
+    <div class="account-header">
+      <img
+        class="header-avatar"
+        src="https://dummyimage.com/150x150"
+        data-demo-src="/img/photo/avatar/19.jpg"
+        alt=""
+      />
+      <div class="header-meta">
+        <h2 class="title is-3 is-bold">Schedule</h2>
+        <h4 class="subtitle is-5 stressed-1">Your planned events and trips</h4>
+      </div>
+    </div>
+
+    <div class="account-schedule py-6" x-data="{activeTab: 'scheduled'}">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <ul>
+            <li
+              class="is-active"
+              :class="{'is-active': activeTab === 'scheduled'}"
+            >
+              <a @click.prevent="activeTab = 'scheduled'">Scheduled</a>
+            </li>
+            <li :class="{'is-active': activeTab === 'completed'}">
+              <a @click.prevent="activeTab = 'completed'">Complete</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content-wrap">
+          <!--Scheduled-->
+          <div
+            x-show.transition="activeTab === 'scheduled'"
+            class="tab-content"
+          >
+            <div class="tab-placeholder">
+              <p class="mb-5">
+                <span
+                  >We'll be there to help you when you plan your next trip or
+                  event.</span
+                >
+                <a class="underlink ml-2">Learn more</a>
+              </p>
+              <img src="img/illustrations/account/city.svg" alt="" />
+            </div>
+          </div>
+
+          <!--Scheduled-->
+          <div
+            x-show.transition="activeTab === 'completed'"
+            class="tab-content"
+          >
+            <div class="tab-info mb-5">
+              <p>
+                <span>Have some feedback about some of your last trips?</span>
+                <a class="underlink ml-2">Let us know</a>
+              </p>
+            </div>
+            <div class="schedule-items">
+              <div class="columns is-multiline">
+                <!--Item-->
+                <div class="column is-4">
+                  <div class="card trip-card">
+                    <a class="card-image">
+                      <div class="card-price">$149 /night</div>
+                      <img
+                        src="https://dummyimage.com/800x533"
+                        data-demo-src="img/photo/content/16.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="card-content">
+                      <a class="card-content-inner is-smaller">
+                        <div class="left">
+                          <img
+                            src="https://dummyimage.com/150x150"
+                            data-demo-src="/img/photo/avatar/47.jpg"
+                            alt=""
+                          />
+                          <div class="meta">
+                            <span>Taghazout, Morocco</span>
+                            <span>Private surfing trip in Taghazout</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--Item-->
+                <div class="column is-4">
+                  <div class="card trip-card">
+                    <a class="card-image">
+                      <div class="card-price">$329 /night</div>
+                      <img
+                        src="https://dummyimage.com/800x533"
+                        data-demo-src="img/photo/content/18.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="card-content">
+                      <a class="card-content-inner is-smaller">
+                        <div class="left">
+                          <img
+                            src="https://dummyimage.com/150x150"
+                            data-demo-src="/img/photo/avatar/21.jpg"
+                            alt=""
+                          />
+                          <div class="meta">
+                            <span>Marbella, Spain</span>
+                            <span
+                              >Classy hotel trip in the heart of Marbella</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--Item-->
+                <div class="column is-4">
+                  <div class="card trip-card">
+                    <a class="card-image">
+                      <div class="card-price">$190 /night</div>
+                      <img
+                        src="https://dummyimage.com/800x533"
+                        data-demo-src="img/photo/content/21.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="card-content">
+                      <a class="card-content-inner is-smaller">
+                        <div class="left">
+                          <img
+                            src="https://dummyimage.com/150x150"
+                            data-demo-src="/img/photo/avatar/45.jpg"
+                            alt=""
+                          />
+                          <div class="meta">
+                            <span>Rio de Janeiro, Brazil</span>
+                            <span
+                              >Relaxing trip with the see and the coconuts</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--Item-->
+                <div class="column is-4">
+                  <div class="card trip-card">
+                    <a class="card-image">
+                      <div class="card-price">$220 /night</div>
+                      <img
+                        src="https://dummyimage.com/800x533"
+                        data-demo-src="img/photo/content/19.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="card-content">
+                      <a class="card-content-inner is-smaller">
+                        <div class="left">
+                          <img
+                            src="https://dummyimage.com/150x150"
+                            data-demo-src="/img/photo/avatar/44.jpg"
+                            alt=""
+                          />
+                          <div class="meta">
+                            <span>Albufeira, Portugal</span>
+                            <span>Stunning private luxury mansion</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--Item-->
+                <div class="column is-4">
+                  <div class="card trip-card">
+                    <a class="card-image">
+                      <div class="card-price">$359 /night</div>
+                      <img
+                        src="https://dummyimage.com/800x533"
+                        data-demo-src="img/photo/content/51.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="card-content">
+                      <a class="card-content-inner is-smaller">
+                        <div class="left">
+                          <img
+                            src="https://dummyimage.com/150x150"
+                            data-demo-src="/img/photo/avatar/17.jpg"
+                            alt=""
+                          />
+                          <div class="meta">
+                            <span>Balanga, Mauritius</span>
+                            <span>Dream like house archipel</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

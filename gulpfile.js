@@ -21,8 +21,6 @@ const babelify = require("babelify");
 const source = require("vinyl-source-stream");
 const nodepath = 'node_modules/';
 
-//sass.compiler = require('sass');
-
 //Note : Webp still not supported in major browsers including forefox
 //const webp = require('gulp-webp'); //For converting images to WebP format
 //const replace = require('gulp-replace'); //For Replacing img formats to webp in html

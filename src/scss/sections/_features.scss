@@ -4,7 +4,16 @@
     1. Featured events
     2. Featured categories
     3. Featured hosts
-    4. Media Queries
+    4. Trip Cards
+    5. Vertical grid
+    6. Triple boxes
+    7. Boxed Section
+    8. Boxed content
+    9. Careers switcher
+    10. Image Grid
+    11. Career Jobs
+    12. CSS Chart
+    13. Media Queries
 */
 
 /* ==========================================================================
@@ -29,9 +38,6 @@
       font-size: 1.1rem;
       color: $white;
       max-width: 520px;
-    }
-
-    .links {
     }
   }
 
@@ -180,7 +186,6 @@
 ========================================================================== */
 
 .featured-categories {
-
   &.is-spaced {
     margin-top: 2rem;
 
@@ -986,7 +991,7 @@
 
     .date {
       display: inline-block;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
       width: 100px;
       background-color: $white;
       border: 1px solid $border;
@@ -1060,7 +1065,7 @@
           color: $medium-text;
 
           span {
-            margin-right: .25rem;
+            margin-right: 0.25rem;
           }
         }
       }
@@ -1073,7 +1078,7 @@
         align-items: center;
         font-family: $font;
         font-weight: 500;
-        font-size: .9rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
 
         &.is-full-time {
@@ -1109,13 +1114,12 @@
 
 @media only screen and (max-width: 767px) {
   .career-jobs-wrapper {
-
     .career-jobs-header {
       .nav {
         justify-content: center;
 
         a {
-          margin: 0 .5rem;
+          margin: 0 0.5rem;
         }
       }
     }
@@ -1142,9 +1146,131 @@
   }
 }
 
+/* ==========================================================================
+12. CSS Chart
+========================================================================== */
+
+.line-chart-css {
+  height: 270px;
+  background: $primary;
+  border-radius: 1rem;
+  box-shadow: $primary-box-shadow;
+  margin: 0 1rem;
+
+  .graph {
+    padding: 2rem 1rem 1rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: $white;
+    font-size: 80%;
+
+    span {
+      display: block;
+      position: absolute;
+      bottom: 3rem;
+      left: 2.5rem;
+      height: 0;
+      border-top: 2px solid;
+      transform-origin: left center;
+
+      > span {
+        left: 100%;
+        bottom: 0;
+      }
+    }
+  }
+
+  [data-value="25"] {
+    width: 75px;
+    transform: rotate(-45deg);
+  }
+  [data-value="8"] {
+    width: 24px;
+    transform: rotate(65deg);
+  }
+  [data-value="13"] {
+    width: 39px;
+    transform: rotate(-45deg);
+  }
+  [data-value="5"] {
+    width: 15px;
+    transform: rotate(50deg);
+  }
+  [data-value="23"] {
+    width: 69px;
+    transform: rotate(-70deg);
+  }
+  [data-value="12"] {
+    width: 36px;
+    transform: rotate(75deg);
+  }
+  [data-value="15"] {
+    width: 45px;
+    transform: rotate(-45deg);
+  }
+
+  [data-value]:before {
+    content: "";
+    position: absolute;
+    display: block;
+    right: -4px;
+    bottom: -3px;
+    padding: 4px;
+    background: $white;
+    border-radius: 50%;
+  }
+
+  [data-value="23"]:after {
+    content: "+" attr(data-value) "%";
+    position: absolute;
+    right: -2.7rem;
+    top: -2rem;
+    padding: 0.3rem 0.5rem;
+    background: $dark;
+    border-radius: 0.5rem;
+    transform: rotate(45deg);
+  }
+
+  [class^="grid-"] {
+    position: absolute;
+    left: 0;
+    bottom: 0rem;
+    width: 100%;
+    padding: 1rem 1rem 0 2.5rem;
+    height: 80%;
+  }
+
+  .grid-x {
+    height: 2.5rem;
+    bottom: 0.5rem;
+  }
+
+  .grid-y li {
+    height: 25%;
+    border-top: 1px solid lighten($primary, 12%);
+  }
+
+  [data-gridY]:before {
+    content: attr(data-gridY);
+    display: inline-block;
+    width: 2rem;
+    text-align: right;
+    line-height: 0;
+    position: relative;
+    left: -2.5rem;
+    top: -0.65rem;
+  }
+
+  .grid-x li {
+    width: 33%;
+    float: left;
+    text-align: center;
+  }
+}
 
 /* ==========================================================================
-4. Media Queries
+13. Media Queries
 ========================================================================== */
 
 @media only screen and (max-width: 767px) {
@@ -1259,121 +1385,4 @@
 .boxed-features {
   max-width: 940px;
   margin: 0 auto;
-}
-
-/******************************************
-↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-ESTILOS PROPIOS DE LOS GRÄFICOS
-↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ 
-GRAFICO LINEAL
-******************************************/
-
-.line-chart-css {
-  height: 270px;
-  background: $primary;
-  border-radius: 1rem;
-  box-shadow: $primary-box-shadow;
-  margin: 0 1rem;
-}
-
-.grafico {
-  padding: 2rem 1rem 1rem;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  color: #fff;
-  font-size: 80%;
-}
-.grafico span {
-  display: block;
-  position: absolute;
-  bottom: 3rem;
-  left: 2.5rem;
-  height: 0;
-  border-top: 2px solid;
-  transform-origin: left center;
-}
-.grafico span > span {
-  left: 100%;
-  bottom: 0;
-}
-[data-valor="25"] {
-  width: 75px;
-  transform: rotate(-45deg);
-}
-[data-valor="8"] {
-  width: 24px;
-  transform: rotate(65deg);
-}
-[data-valor="13"] {
-  width: 39px;
-  transform: rotate(-45deg);
-}
-[data-valor="5"] {
-  width: 15px;
-  transform: rotate(50deg);
-}
-[data-valor="23"] {
-  width: 69px;
-  transform: rotate(-70deg);
-}
-[data-valor="12"] {
-  width: 36px;
-  transform: rotate(75deg);
-}
-[data-valor="15"] {
-  width: 45px;
-  transform: rotate(-45deg);
-}
-
-[data-valor]:before {
-  content: "";
-  position: absolute;
-  display: block;
-  right: -4px;
-  bottom: -3px;
-  padding: 4px;
-  background: #fff;
-  border-radius: 50%;
-}
-[data-valor="23"]:after {
-  content: "+" attr(data-valor) "%";
-  position: absolute;
-  right: -2.7rem;
-  top: -2rem;
-  padding: 0.3rem 0.5rem;
-  background: $dark;
-  border-radius: 0.5rem;
-  transform: rotate(45deg);
-}
-[class^="eje-"] {
-  position: absolute;
-  left: 0;
-  bottom: 0rem;
-  width: 100%;
-  padding: 1rem 1rem 0 2.5rem;
-  height: 80%;
-}
-.eje-x {
-  height: 2.5rem;
-  bottom: 0.5rem;
-}
-.eje-y li {
-  height: 25%;
-  border-top: 1px solid lighten($primary, 12%);
-}
-[data-ejeY]:before {
-  content: attr(data-ejeY);
-  display: inline-block;
-  width: 2rem;
-  text-align: right;
-  line-height: 0;
-  position: relative;
-  left: -2.5rem;
-  top: -0.65rem;
-}
-.eje-x li {
-  width: 33%;
-  float: left;
-  text-align: center;
 }

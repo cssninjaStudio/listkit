@@ -151,7 +151,6 @@
   }
 }
 
-
 /* ==========================================================================
 2. Map Popup
 ========================================================================== */
@@ -200,23 +199,22 @@
     border-radius: 0.5rem;
 
     .map-box-location {
-
       .map-box-header {
         .location-pic {
           position: relative;
 
           .rating-badge {
             position: absolute;
-            top: .25rem;
-            left: .25rem;
+            top: 0.25rem;
+            left: 0.25rem;
             display: flex;
             align-items: center;
             font-family: $font;
             font-weight: 500;
             color: $dark-text;
             background: $white;
-            border-radius: .25rem;
-            padding: .25rem .75rem .25rem .25rem;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.75rem 0.25rem 0.25rem;
             border: 1px solid $border;
             box-shadow: $light-box-shadow;
 
@@ -232,7 +230,7 @@
           img {
             width: 100%;
             max-height: 100px;
-            border-radius: .25rem;
+            border-radius: 0.25rem;
             object-fit: cover;
           }
         }
@@ -242,14 +240,14 @@
         padding: 0.5rem 0;
 
         .location-meta {
-          margin-bottom: .25rem;
+          margin-bottom: 0.25rem;
 
           span {
             display: block;
 
             &:first-child {
               font-family: $font;
-              font-size: .85rem;
+              font-size: 0.85rem;
               font-weight: 600;
               color: $dark-text;
               line-height: 1.2;
@@ -262,7 +260,7 @@
         }
 
         p {
-          font-size: .85rem;
+          font-size: 0.85rem;
           line-height: 1.4;
           color: $medium-text;
 
@@ -275,14 +273,13 @@
   }
 }
 
-
 /* ==========================================================================
 3. Map pagination
 ========================================================================== */
 
 .map-pagination {
-
-  .pagination-previous, .pagination-next {
+  .pagination-previous,
+  .pagination-next {
     font-family: $font;
   }
 
@@ -296,7 +293,6 @@
     }
   }
 }
-
 
 /* ==========================================================================
 4. Media Queries
@@ -328,7 +324,6 @@
     }
   }
 }
-
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .map-block {

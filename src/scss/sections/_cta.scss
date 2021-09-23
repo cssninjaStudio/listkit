@@ -3,7 +3,8 @@
 /*
     1. Boxed CTA
     2. Background CTA
-    3. Media Queries
+    3. CTA block
+    4. Media Queries
 */
 
 /* ==========================================================================
@@ -112,7 +113,6 @@
   }
 }
 
-//@at-root
 .text-cta {
   text-align: center;
 
@@ -129,7 +129,77 @@
 }
 
 /* ==========================================================================
-3. Media Queries
+3. CTA block
+========================================================================== */
+
+.cta-block {
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid $border;
+
+  &.no-border {
+    padding-bottom: 2rem;
+    border-bottom: none;
+  }
+
+  &.is-box {
+    padding: 3rem 2rem;
+    background: $white;
+    border-radius: 8px;
+    box-shadow: $light-box-shadow;
+    border: 1px solid $border;
+    justify-content: space-between;
+  }
+
+  .head-text {
+    h3 {
+      font-family: $font;
+      font-size: 1.8rem;
+      color: $dark-text;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: $light-text;
+    }
+  }
+
+  .head-action {
+    .buttons {
+      .button {
+        &.action-button {
+          height: 36px;
+          min-width: 140px;
+        }
+
+        &.chat-button {
+          background: transparent;
+          border: none;
+          outline: none;
+          box-shadow: none;
+          color: $primary;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-block {
+    flex-direction: column;
+    text-align: center;
+
+    .head-text {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+/* ==========================================================================
+4. Media Queries
 ========================================================================== */
 
 @media only screen and (max-width: 767px) {
