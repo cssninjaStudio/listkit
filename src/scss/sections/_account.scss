@@ -29,6 +29,20 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .account-header {
+    flex-direction: column;
+    text-align: center;
+
+    .header-avatar {
+      height: 80px;
+      width: 80px;
+      min-width: 80px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
 /* ==========================================================================
 2. Account categories
 ========================================================================== */

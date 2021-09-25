@@ -511,7 +511,7 @@
 
         .right {
           .navigation-link {
-            &.is-host {
+            &.is-host, &.is-icon {
               display: none;
             }
           }

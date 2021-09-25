@@ -176,7 +176,7 @@
 
         .center {
           position: fixed;
-          top: 65px;
+          top: 64px;
           left: 0;
           display: none;
           width: 100%;
@@ -189,8 +189,8 @@
           }
 
           .landing-link {
-            padding-top: .75rem;
-            padding-bottom: .75rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
           }
 
           .button {
@@ -207,6 +207,22 @@
 
           .navbar-burger {
             display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .landing-navigation {
+    .landing-navigation-inner {
+      .container {
+        .right {
+          .button {
+            display: flex !important;
+            opacity: 1 !important;
+            pointer-events: all !important;
           }
         }
       }
@@ -504,6 +520,14 @@
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .landing-boxed-features {
+    .card {
+      padding: 1rem;
+    }
+  }
+}
+
 /* ==========================================================================
 5. Demo section
 ========================================================================== */
@@ -689,6 +713,59 @@
           font-weight: 500;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .landing-features {
+    position: relative;
+    overflow: hidden;
+
+    .long-screenshot {
+      position: absolute;
+      top: 0;
+      right: -130px;
+      z-index: 0;
+    }
+
+    .landing-feature {
+      position: relative;
+      flex-direction: column;
+      padding: 1.5rem;
+      background: $white;
+      border: 1px solid $border;
+      border-radius: 0.65rem;
+      box-shadow: $light-box-shadow;
+      margin-bottom: 2rem;
+      z-index: 1;
+    }
+
+    .py-8 {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .landing-features {
+    .long-screenshot {
+      position: sticky;
+      top: 110px;
+    }
+
+    .py-8 {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .landing-features {
+    .long-screenshot {
+      position: sticky;
+      top: 110px;
     }
   }
 }

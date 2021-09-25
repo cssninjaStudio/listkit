@@ -297,6 +297,11 @@ $colorz: (
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+  .b-columns-flex-tablet-p {
+    display: flex;
+  }
+
   .b-columns-half-tablet-p {
     display: flex;
     flex-wrap: wrap;

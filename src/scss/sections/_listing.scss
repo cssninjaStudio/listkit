@@ -574,6 +574,7 @@
         border-radius: 50%;
         height: 32px;
         width: 32px;
+        min-width: 32px;
         margin-right: 0.75rem;
 
         svg {
@@ -602,6 +603,7 @@
         align-items: center;
         height: 32px;
         width: 32px;
+        min-width: 32px;
         margin-right: 0.75rem;
         font-size: 2rem;
 
@@ -1503,6 +1505,7 @@
         align-items: center;
         height: 32px;
         width: 32px;
+        min-width: 32px;
         margin-right: 0.5rem;
         font-size: 1.75rem;
 
@@ -1742,7 +1745,7 @@
           }
 
           .upcoming-listing-content {
-            .event-name {
+            .listing-name {
               a {
                 color: $primary;
               }
@@ -1838,13 +1841,55 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .upcoming-listings-wrapper {
+    .upcoming-listings {
+      .upcoming-listings-inner {
+        .upcoming-listing {
+          .action-bar {
+            .button {
+              display: none;
+            }
+          }
+
+          .upcoming-listing-content {
+            .buttons {
+              .button:nth-child(3) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .upcoming-listings-wrapper {
+    .upcoming-listings {
+      .upcoming-listings-inner {
+        .upcoming-listing {
+          .upcoming-listing-content {
+            .buttons {
+              .button:nth-child(3) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* ==========================================================================
 18. Media Queries
 ========================================================================== */
 
 @media only screen and (max-width: 767px) {
-  .event-nav {
-    .event-nav-inner {
+  .listing-nav {
+    .listing-nav-inner {
       padding: 0 0.75rem;
 
       .left {
@@ -1859,7 +1904,7 @@
     }
   }
 
-  .event-title {
+  .listing-title {
     flex-direction: column;
 
     .left {
@@ -1871,7 +1916,7 @@
     }
   }
 
-  .event-cover-wrapper {
+  .listing-cover-wrapper {
     height: 220px;
 
     .all-photos-button {
@@ -1879,7 +1924,7 @@
       top: 12px !important;
     }
 
-    .event-cover {
+    .listing-cover {
       &:not(:first-child) {
         display: none !important;
       }
@@ -1891,8 +1936,9 @@
     }
   }
 
-  .event-subtitle {
+  .listing-subtitle {
     flex-direction: row-reverse;
+    align-items: flex-start;
 
     .left {
       padding-left: 1rem;
@@ -1903,7 +1949,7 @@
     }
   }
 
-  .event-requirements {
+  .listing-requirements {
     .requirements-list {
       .requirements-item {
         .icon-container {
@@ -1913,7 +1959,7 @@
     }
   }
 
-  .event-host {
+  .listing-host {
     .host-header {
       > a img {
         min-width: 56px;
@@ -1930,7 +1976,7 @@
     }
   }
 
-  .event-map-wrapper {
+  .listing-map-wrapper {
     .location-action {
       .button {
         width: 100%;
@@ -1938,7 +1984,7 @@
     }
   }
 
-  .event-dates {
+  .listing-dates {
     .available-dates {
       .glide__arrows {
         display: none;
@@ -1950,9 +1996,43 @@
     }
   }
 
-  .more-events {
+  .listing-calendar {
+    .listing-calendar-inner {
+      flex-direction: column;
+
+      .qs-datepicker-container + .qs-datepicker-container {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .listing-host {
+    &.is-boxed {
+      flex-direction: column;
+
+      .left, .right {
+        width: 100%;
+      }
+    }
+  }
+
+  .host-comments .reviews {
+    .review-item {
+      width: calc(100% - 1rem);
+    }
+  }
+
+  .more-listings {
     > .title {
       margin-bottom: 0 !important;
+    }
+  }
+
+  .listing-guidelines {
+    .guidelines-content {
+      .guidelines-item {
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -1991,13 +2071,13 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .event-nav {
-    .event-nav-inner {
+  .listing-nav {
+    .listing-nav-inner {
       padding: 0 1.5rem;
     }
   }
 
-  .event-benefits {
+  .listing-benefits {
     .benefits {
       .benefit {
         svg {
@@ -2209,7 +2289,7 @@ Dual container layout
           }
 
           .flat-content {
-            .event-name {
+            .listing-name {
               a {
                 color: $primary;
               }
@@ -2321,7 +2401,7 @@ Dual container layout
       }
 
       .list-item-content {
-        .event-name {
+        .listing-name {
           a {
             color: $primary;
           }
@@ -2439,6 +2519,57 @@ Dual container layout
         border-radius: 0.5rem;
         padding: 0.25rem 0.75rem;
       }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .dual-container {
+    flex-direction: column;
+
+    .dual-container-left {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      .left-header {
+        .title {
+          font-size: 1.75rem;
+        }
+      }
+    }
+
+    .dual-container-right {
+      display: none;
+    }
+  }
+
+  .flat-list {
+    .flat-list-item {
+      .action-bar {
+        .button {
+          display: none;
+        }
+      }
+
+      .list-item-image {
+        width: 140px;
+      }
+    }     
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .dual-container {
+    flex-direction: column;
+
+    .dual-container-left {
+      width: 100%;
+    }
+
+    .dual-container-right {
+      display: none;
     }
   }
 }

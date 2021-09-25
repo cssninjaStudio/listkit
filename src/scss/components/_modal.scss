@@ -439,10 +439,29 @@
 @media screen and (max-width: 767px) {
   .modal {
     .modal-content {
+      overflow: initial;
+
       .card {
+
+        .card-header {
+          padding: 1rem;
+        }
+
         .card-content {
           padding-left: 1rem;
           padding-right: 1rem;
+
+          .comments-modal-content {
+            .reviews {
+              .review-item {
+                width: calc(100% - 1rem);
+
+                .review-item-inner {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
         }
       }
     }

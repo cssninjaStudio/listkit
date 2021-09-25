@@ -139,5 +139,10 @@ export function initNavbarLight() {
 
     megamenuOpened: false,
     openedMegamenu: "megamenu-1",
+
+    logout() {
+      this.$store.app.isLoggedIn = false;
+      window.location.href = "/";
+    },
   };
 }

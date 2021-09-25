@@ -704,7 +704,6 @@
 
 @media only screen and (max-width: 767px) {
   .main-navigation {
-    //display: none;
     position: absolute;
     z-index: 11;
 
@@ -714,6 +713,12 @@
 
       .main-navigation--menu-inner {
         padding: 0 1rem;
+
+        .center {
+          .search-fold {
+            max-width: 250px;
+          }
+        }
 
         .right {
           .navigation-link {
@@ -1246,6 +1251,7 @@
     align-items: center;
     background: $white;
     border-top: 1px solid $border-md;
+    border-radius: 1rem 1rem 0 0;
     padding: 0 24px;
 
     .sub-links {
