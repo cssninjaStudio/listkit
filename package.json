@@ -1,7 +1,7 @@
 {
   "name": "liskit",
   "version": "1.0.0",
-  "description": "ListKit - Bulma Listings Template",
+  "description": "ListKit - Multipurpose Listing Template",
   "main": "gulpfile.js",
   "dependencies": {
     "@alpinejs/intersect": "^3.4.0",

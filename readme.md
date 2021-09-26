@@ -1,6 +1,6 @@
-# ListKit
+# ListKit 1.0.0
 
-Listing Template
+Multipurpose Listing Template
 
 ## Usage
 
@@ -13,4 +13,3 @@ npm install
 npm run dev
 ```
 
-# Configuration
