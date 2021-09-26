@@ -225,8 +225,8 @@ title: Event
               </p>
             </div>
 
-            <a x-show="isDescriptionExpanded === false" @click.prevent="toggleListingDescription()" class="underlink">Read more</a>
-            <a x-show="isDescriptionExpanded === true" @click.prevent="toggleListingDescription()" class="underlink">Read less</a>
+            <a x-show="isDescriptionExpanded === false" x-on:click.prevent="toggleListingDescription()" class="underlink">Read more</a>
+            <a x-show="isDescriptionExpanded === true" x-on:click.prevent="toggleListingDescription()" class="underlink">Read less</a>
           </div>
 
           <div class="listing-participation">
@@ -304,7 +304,7 @@ title: Event
             <div class="sticky-wrapper">
               <div class="sticky-wrapper-inner">
                 <!--Booking form-->
-                <div class="card booking-card" x-data="initBookingForm()"  @click.away="closeBookingPanel()"> 
+                <div class="card booking-card" x-data="initBookingForm()"  x-on:click.away="closeBookingPanel()"> 
                   <div class="head">
                     <span>Starting from $45 <small>per person</small></span>
                     <a href="#availability" class="scroll-link">See all prices</a>
@@ -320,8 +320,8 @@ title: Event
                         <h4 class="dual-picker-panel-title">Add some dates</h4>
                         <!--Calendars-->
                         <div class="booking-calendars">
-                          <input type="text" class="event-datepicker-start" @click="getDateValue($event)">
-                          <input type="text" class="event-datepicker-end" @click="getDateValue($event)">
+                          <input type="text" class="event-datepicker-start" x-on:click="getDateValue($event)">
+                          <input type="text" class="event-datepicker-end" x-on:click="getDateValue($event)">
                           <!--Actions-->
                           <div class="calendar-actions">
                             <button class="button is-light">Clear Dates</button>
@@ -379,7 +379,7 @@ title: Event
                     </div>
                     <!--Dual picker-->
                     <div class="dual-picker">
-                      <div class="field" @click="openDatesPanel()" :class="{
+                      <div class="field" x-on:click="openDatesPanel()" :class="{
                           'is-active': dateFormActive,
                           '': !dateFormActive
                         }">
@@ -389,7 +389,7 @@ title: Event
                           <input type="text" class="input" placeholder="Pick a date" :value="dateValue"/>
                         </div>
                       </div>
-                      <div class="field" @click="openParticipantsPanel()" :class="{
+                      <div class="field" x-on:click="openParticipantsPanel()" :class="{
                           'is-active': participantsFormActive,
                           '': !participantsFormActive
                         }">

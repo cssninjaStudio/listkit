@@ -29,10 +29,10 @@ title: Schedule
               class="is-active"
               :class="{'is-active': activeTab === 'scheduled'}"
             >
-              <a @click.prevent="activeTab = 'scheduled'">Scheduled</a>
+              <a x-on:click.prevent="activeTab = 'scheduled'">Scheduled</a>
             </li>
             <li :class="{'is-active': activeTab === 'completed'}">
-              <a @click.prevent="activeTab = 'completed'">Complete</a>
+              <a x-on:click.prevent="activeTab = 'completed'">Complete</a>
             </li>
           </ul>
         </div>

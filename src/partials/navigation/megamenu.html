@@ -7,7 +7,7 @@
 >
   <!--Megamenu 1-->
   <div x-show="openedMegamenu === 'megamenu-1'" class="megamenu-inner">
-    <button class="close-button" @click="megamenuOpened = !megamenuOpened">
+    <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
       <i data-feather="arrow-left"></i>
     </button>
     <div class="container">
@@ -80,7 +80,7 @@
 
   <!--Megamenu 2-->
   <div x-show="openedMegamenu === 'megamenu-2'" class="megamenu-inner">
-    <button class="close-button" @click="megamenuOpened = !megamenuOpened">
+    <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
       <i data-feather="arrow-left"></i>
     </button>
     <div class="container">
@@ -146,7 +146,7 @@
 
   <!--Megamenu 3-->
   <div x-show="openedMegamenu === 'megamenu-3'" class="megamenu-inner">
-    <button class="close-button" @click="megamenuOpened = !megamenuOpened">
+    <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
       <i data-feather="arrow-left"></i>
     </button>
     <div class="container">

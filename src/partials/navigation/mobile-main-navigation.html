@@ -25,14 +25,14 @@
     </div>
     <a
       x-show="mobileSearchOpened"
-      @click="toggleMobileSearch()"
+      x-on:click="toggleMobileSearch()"
       class="cancel-link"
       >Cancel</a
     >
   </div>
 
   <div class="mobile-main-navigation--location">
-    <a class="near-link" @click="toggleMobileSearchPanel()">
+    <a class="near-link" x-on:click="toggleMobileSearchPanel()">
       <div class="near-icon">
         <i data-feather="map-pin"></i>
       </div>
@@ -53,34 +53,34 @@
       <div class="locations-group">
         <!--Item-->
         <div class="location-item">
-          <img src="https://dummyimage.com/150x150" alt="" />
+          <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/events/carousel/19.jpg" alt="" />
           <div class="meta">
-            <span>Place</span>
-            <span>Lorem ipsum sit dolor amet</span>
+            <span>Marbella, Spain</span>
+            <span>A great city with authenticity</span>
           </div>
         </div>
         <!--Item-->
         <div class="location-item">
-          <img src="https://dummyimage.com/150x150" alt="" />
+          <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/events/carousel/20.jpg" alt="" />
           <div class="meta">
-            <span>Place</span>
-            <span>Lorem ipsum sit dolor amet</span>
+            <span>Fuengirola, Spain</span>
+            <span>The best place for your holidays</span>
           </div>
         </div>
         <!--Item-->
         <div class="location-item">
-          <img src="https://dummyimage.com/150x150" alt="" />
+          <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/events/carousel/21.jpg" alt="" />
           <div class="meta">
-            <span>Place</span>
-            <span>Lorem ipsum sit dolor amet</span>
+            <span>Torremolinos</span>
+            <span>Ideal for families and children</span>
           </div>
         </div>
         <!--Item-->
         <div class="location-item">
-          <img src="https://dummyimage.com/150x150" alt="" />
+          <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/events/carousel/22.jpg" alt="" />
           <div class="meta">
-            <span>Place</span>
-            <span>Lorem ipsum sit dolor amet</span>
+            <span>Malaga, Spain</span>
+            <span>A big and living city</span>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@
   >
     <div class="mobile-search-panel--inner">
       <div class="panel-header">
-        <button class="close-button" @click="toggleMobileSearchPanel()">
+        <button class="close-button" x-on:click="toggleMobileSearchPanel()">
           <i data-feather="chevron-left"></i>
         </button>
       </div>
@@ -108,10 +108,10 @@
             <div class="radio-card">
               <input type="radio" name="topic_selection" checked />
               <div class="radio-card-inner">
-                <img src="https://dummyimage.com/150x150" alt="" />
+                <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/thumbs/square/15.jpg" alt="" />
                 <div class="meta">
                   <span>Everything</span>
-                  <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                  <span>Everything that you can book on Listkit.</span>
                 </div>
               </div>
             </div>
@@ -119,10 +119,10 @@
             <div class="radio-card">
               <input type="radio" name="topic_selection" />
               <div class="radio-card-inner">
-                <img src="https://dummyimage.com/150x150" alt="" />
+                <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/thumbs/square/7.jpg" alt="" />
                 <div class="meta">
                   <span>Events</span>
-                  <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                  <span>Events that you can search and book on listkit.</span>
                 </div>
               </div>
             </div>
@@ -130,10 +130,10 @@
             <div class="radio-card">
               <input type="radio" name="topic_selection" />
               <div class="radio-card-inner">
-                <img src="https://dummyimage.com/150x150" alt="" />
+                <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/thumbs/square/18.jpg" alt="" />
                 <div class="meta">
                   <span>Trips</span>
-                  <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                  <span>Trips and travel formulas available on Listkit.</span>
                 </div>
               </div>
             </div>
@@ -141,10 +141,10 @@
             <div class="radio-card">
               <input type="radio" name="topic_selection" />
               <div class="radio-card-inner">
-                <img src="https://dummyimage.com/150x150" alt="" />
+                <img src="https://dummyimage.com/150x150" data-demo-src="/img/photo/content/thumbs/square/13.jpg" alt="" />
                 <div class="meta">
                   <span>Flats</span>
-                  <span>Lorem ipsum sit dolor amet is a dummy text</span>
+                  <span>Flats and houses that you can rent on Listkit.</span>
                 </div>
               </div>
             </div>
@@ -157,10 +157,10 @@
           <div class="mobile-dates is-relative">
             <div class="month-selector">
               <div class="months">
-                <a class="month active">Jun</a>
-                <a class="month">Jul</a>
-                <a class="month">Aug</a>
-                <a class="month">Sep</a>
+                <a class="month active">Oct</a>
+                <a class="month">Nov</a>
+                <a class="month">Dec</a>
+                <a class="month">Jan</a>
               </div>
             </div>
 
@@ -333,13 +333,13 @@
     <div class="search-panel-buttons-inner">
       <button
         class="button h-button is-light is-bold"
-        @click="wizardBack($event)"
+        x-on:click="wizardBack($event)"
       >
         Previous
       </button>
       <button
         class="button h-button is-primary is-bold"
-        @click="wizardForward($event)"
+        x-on:click="wizardForward($event)"
       >
         Next
       </button>

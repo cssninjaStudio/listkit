@@ -83,7 +83,7 @@ export function initNavbarMobile() {
         if (this.activeWizardStep === 2) {
           e.target.innerHTML = "Search";
         } else if (this.activeWizardStep === 3) {
-          window.location.href = "/";
+          window.location.href = "/home-2.html";
         } else {
           e.target.innerHTML = "Next";
         }

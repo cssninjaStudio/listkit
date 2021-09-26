@@ -146,7 +146,7 @@ title: Careers
       <div class="careers-switcher">
         <div class="careers-switcher-inner">
           <a
-            @click.prevent="switchTabs($event)"
+            x-on:click.prevent="switchTabs($event)"
             data-tab="tab-1"
             :class="{
             'is-active': activeTab === 'tab-1',
@@ -156,7 +156,7 @@ title: Careers
             <span>Creators</span>
           </a>
           <a
-            @click.prevent="switchTabs($event)"
+            x-on:click.prevent="switchTabs($event)"
             data-tab="tab-2"
             :class="{
             'is-active': activeTab === 'tab-2',
@@ -166,7 +166,7 @@ title: Careers
             <span>Collaboration</span>
           </a>
           <a
-            @click.prevent="switchTabs($event)"
+            x-on:click.prevent="switchTabs($event)"
             data-tab="tab-3"
             :class="{
             'is-active': activeTab === 'tab-3',
@@ -176,7 +176,7 @@ title: Careers
             <span>Free Time</span>
           </a>
           <a
-            @click.prevent="switchTabs($event)"
+            x-on:click.prevent="switchTabs($event)"
             data-tab="tab-4"
             :class="{
             'is-active': activeTab === 'tab-4',
@@ -362,19 +362,19 @@ title: Careers
         <header class="career-jobs-header">
           <div class="nav">
             <a
-              @click.prevent="switchTabs($event)"
+              x-on:click.prevent="switchTabs($event)"
               data-tab="all"
               :class="{'is-current': activeTab === 'all'}"
               >All Jobs</a
             >
             <a
-              @click.prevent="switchTabs($event)"
+              x-on:click.prevent="switchTabs($event)"
               data-tab="full"
               :class="{'is-current': activeTab === 'full'}"
               >Full-time</a
             >
             <a
-              @click.prevent="switchTabs($event)"
+              x-on:click.prevent="switchTabs($event)"
               data-tab="part"
               :class="{'is-current': activeTab === 'part'}"
               >Part-time</a

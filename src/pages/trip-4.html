@@ -219,13 +219,13 @@ title: Trip
 
             <a
               x-show="isDescriptionExpanded === false"
-              @click.prevent="toggleListingDescription()"
+              x-on:click.prevent="toggleListingDescription()"
               class="underlink"
               >Read more</a
             >
             <a
               x-show="isDescriptionExpanded === true"
-              @click.prevent="toggleListingDescription()"
+              x-on:click.prevent="toggleListingDescription()"
               class="underlink"
               >Read less</a
             >
@@ -428,7 +428,7 @@ title: Trip
                 <div
                   class="card booking-card"
                   x-data="initBookingForm()"
-                  @click.away="closeBookingPanel()"
+                  x-on:click.away="closeBookingPanel()"
                 >
                   <div class="head">
                     <span>Starting from $920 <small>per person</small></span>
@@ -457,12 +457,12 @@ title: Trip
                           <input
                             type="text"
                             class="event-datepicker-start"
-                            @click="getDateValue($event)"
+                            x-on:click="getDateValue($event)"
                           />
                           <input
                             type="text"
                             class="event-datepicker-end"
-                            @click="getDateValue($event)"
+                            x-on:click="getDateValue($event)"
                           />
                           <!--Actions-->
                           <div class="calendar-actions">
@@ -538,7 +538,7 @@ title: Trip
                     <div class="dual-picker">
                       <div
                         class="field"
-                        @click="openDatesPanel()"
+                        x-on:click="openDatesPanel()"
                         :class="{
                           'is-active': dateFormActive,
                           '': !dateFormActive
@@ -557,7 +557,7 @@ title: Trip
                       </div>
                       <div
                         class="field"
-                        @click="openParticipantsPanel()"
+                        x-on:click="openParticipantsPanel()"
                         :class="{
                           'is-active': participantsFormActive,
                           '': !participantsFormActive

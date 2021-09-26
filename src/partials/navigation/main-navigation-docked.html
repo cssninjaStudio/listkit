@@ -1,7 +1,7 @@
 <div
   class="main-navigation is-docked is-scrolled"
   x-data="initNavbar()"
-  @click.away="foldSearch()"
+  x-on:click.away="foldSearch()"
   :class="{
         'is-expanded': searchExpanded,
         '': !searchExpanded
@@ -27,7 +27,7 @@
           <div class="navigation-link">
             <a>Flats</a>
           </div>
-          <div class="search-fold" @click="expandSearch()">
+          <div class="search-fold" x-on:click="expandSearch()">
             <span>Search events near you</span>
             <button class="mini-search-button">
               <i data-feather="search"></i>
@@ -47,8 +47,8 @@
           </button>
           <div class="account-drop">
             <button
-              @click="openDrop('account-drop')"
-              @click.away="closeDrop('account-drop')"
+              x-on:click="openDrop('account-drop')"
+              x-on:click.away="closeDrop('account-drop')"
             >
               <span class="image is-32x32">
                 <img
@@ -106,7 +106,7 @@
                 <a
                   x-show="$store.app.isLoggedIn === true"
                   class="drop-menu-item"
-                  @click="logout()"
+                  x-on:click="logout()"
                   >Logout</a
                 >
               </div>
@@ -118,11 +118,11 @@
   </div>
   <div class="main-navigation--search">
     <form id="search-form">
-      <div class="search-bar" @click.away="disableSearch()">
+      <div class="search-bar" x-on:click.away="disableSearch()">
         <div
           class="block-30"
-          @click.stop="openDrop('location-drop'), $refs.locationInput.focus()"
-          @click.away="closeDrop('location-drop')"
+          x-on:click.stop="openDrop('location-drop'), $refs.locationInput.focus()"
+          x-on:click.away="closeDrop('location-drop')"
           :class="{
                         'is-active': locationDropOpened,
                         '': !locationDropOpened
@@ -165,8 +165,8 @@
         </div>
         <div
           class="block-20"
-          @click="openDrop('start-date-drop'), $refs.startDateInput.focus()"
-          @click.away="closeDrop('start-date-drop')"
+          x-on:click="openDrop('start-date-drop'), $refs.startDateInput.focus()"
+          x-on:click.away="closeDrop('start-date-drop')"
           :class="{
                         'is-active': startDateDropOpened,
                         '': !startDateDropOpened
@@ -189,8 +189,8 @@
         </div>
         <div
           class="block-20"
-          @click="openDrop('end-date-drop'), $refs.endDateInput.focus()"
-          @click.away="closeDrop('end-date-drop')"
+          x-on:click="openDrop('end-date-drop'), $refs.endDateInput.focus()"
+          x-on:click.away="closeDrop('end-date-drop')"
           :class="{
                         'is-active': endDateDropOpened,
                         '': !endDateDropOpened
@@ -206,7 +206,7 @@
                 placeholder="Select a date"
               />
               <button
-                @click="$refs.endDateInput.value = ''"
+                x-on:click="$refs.endDateInput.value = ''"
                 type="reset"
                 class="clear-value"
               >
@@ -217,8 +217,8 @@
         </div>
         <div
           class="block-30"
-          @click="openDrop('type-drop'), $refs.typeInput.focus()"
-          @click.away="closeDrop('type-drop')"
+          x-on:click="openDrop('type-drop'), $refs.typeInput.focus()"
+          x-on:click.away="closeDrop('type-drop')"
           :class="{
                         'is-active': typeDropOpened,
                         '': !typeDropOpened

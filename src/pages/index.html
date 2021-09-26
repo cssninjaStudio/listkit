@@ -36,7 +36,7 @@ title: Listkit
       </div>
       <div class="right">
         <a class="button is-primary is-raised-hover mx-1">Buy Now</a>
-        <div class="navbar-burger" @click="openMobileMenu()">
+        <div class="navbar-burger" x-on:click="openMobileMenu()">
           <div class="menu-toggle">
             <div
               class="icon-box-toggle is-navbar"
@@ -73,8 +73,8 @@ title: Listkit
               to have loads of fun.
             </p>
             <div class="buttons">
-              <a class="button is-primary is-raised-hover mx-1">Explore</a>
-              <a class="button is-heavy mx-1">Learn More</a>
+              <a href="#demos" class="button is-primary is-raised-hover mx-1 scroll-link">Explore</a>
+              <a href="https://docs.cssninja.io" class="button is-heavy mx-1 scroll-link">Docs</a>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ title: Listkit
     </div>
 
     <!--Title-->
-    <div class="section-title has-text-centered pt-6">
+    <div id="premium-features" class="section-title has-text-centered pt-6">
       <div class="title-divider"></div>
       <h2 class="title is-2 is-bold is-narrow">Some premium features</h2>
     </div>

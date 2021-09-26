@@ -62,8 +62,8 @@
           </button>
           <div class="account-drop">
             <button
-              @click="openDrop('account-drop')"
-              @click.away="closeDrop('account-drop')"
+              x-on:click="openDrop('account-drop')"
+              x-on:click.away="closeDrop('account-drop')"
             >
               <span class="image is-32x32">
                 <img
@@ -121,7 +121,7 @@
                 <a
                   x-show="$store.app.isLoggedIn === true"
                   class="drop-menu-item"
-                  @click="logout()"
+                  x-on:click="logout()"
                   >Logout</a
                 >
               </div>
