@@ -96,6 +96,7 @@ function concatCssPlugins() {
   return src([
     nodepath + 'simplebar/dist/simplebar.min.css',
     nodepath + 'line-awesome/dist/line-awesome/css/line-awesome.min.css',
+    nodepath + '@fortawesome/fontawesome-free/css/all.min.css',
     nodepath + 'lightgallery.js/dist/css/lightgallery.min.css',
     nodepath + 'plyr/dist/plyr.css',
     nodepath + 'lightgallery.js/dist/css/lg-transitions.min.css',
