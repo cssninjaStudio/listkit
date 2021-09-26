@@ -8,7 +8,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Cosy and classy house for your parties in Marbella",
-          logo: "/img/photo/content/events/carousel/19.jpg",
+          logo: "img/photo/content/events/carousel/19.jpg",
           location: "Marbella, Spain",
           price: 210,
           rating: 3.72,
@@ -22,7 +22,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Outstanding beach house for your family vacations",
-          logo: "/img/photo/content/events/carousel/20.jpg",
+          logo: "img/photo/content/events/carousel/20.jpg",
           location: "Fuengirola, Spain",
           price: 140,
           rating: 4.69,
@@ -36,7 +36,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Outstanding beach house for your family vacations",
-          logo: "/img/photo/content/events/carousel/21.jpg",
+          logo: "img/photo/content/events/carousel/21.jpg",
           location: "Torremolinos, Spain",
           price: 125,
           rating: 4.87,
@@ -50,7 +50,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Lone beach house with barbecue and all conveniences",
-          logo: "/img/photo/content/events/carousel/22.jpg",
+          logo: "img/photo/content/events/carousel/22.jpg",
           location: "Malaga, Spain",
           price: 90,
           rating: 4.12,
@@ -64,7 +64,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Personal palace located on the beach for a family trip",
-          logo: "/img/photo/content/events/carousel/23.jpg",
+          logo: "img/photo/content/events/carousel/23.jpg",
           location: "Malaga, Spain",
           price: 210,
           rating: 4.55,
@@ -78,7 +78,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Piloti beach house for friends or family trips",
-          logo: "/img/photo/content/events/carousel/24.jpg",
+          logo: "img/photo/content/events/carousel/24.jpg",
           location: "Benalmadena, Spain",
           price: 150,
           rating: 4.61,
@@ -92,7 +92,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Classy house on a cliff with all conveniences",
-          logo: "/img/photo/content/events/carousel/25.jpg",
+          logo: "img/photo/content/events/carousel/25.jpg",
           location: "Marbella, Spain",
           price: 260,
           rating: 4.97,
@@ -106,7 +106,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Incredible loft green house for a group of tourists",
-          logo: "/img/photo/content/events/carousel/26.jpg",
+          logo: "img/photo/content/events/carousel/26.jpg",
           location: "Torremolinos, Spain",
           price: 190,
           rating: 4.65,
@@ -120,7 +120,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Modern ranch near the see for a friends or family trip",
-          logo: "/img/photo/content/events/carousel/27.jpg",
+          logo: "img/photo/content/events/carousel/27.jpg",
           location: "Malaga, Spain",
           price: 230,
           rating: 4.99,
@@ -134,7 +134,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Outstanding beach side villa with swimming pool",
-          logo: "/img/photo/content/events/carousel/10.jpg",
+          logo: "img/photo/content/events/carousel/10.jpg",
           location: "Nazare, Portugal",
           price: 190,
           rating: 4.92,
@@ -148,7 +148,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Superb luxury house in the outskirts of New York",
-          logo: "/img/photo/content/events/carousel/11.jpg",
+          logo: "img/photo/content/events/carousel/11.jpg",
           location: "New York, NY",
           price: 240,
           rating: 4.38,
@@ -162,7 +162,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Cosy indoor for a perfect family weekend",
-          logo: "/img/photo/content/events/carousel/11.jpg",
+          logo: "img/photo/content/events/carousel/11.jpg",
           location: "Miami, FL",
           price: 95,
           rating: 4.87,
@@ -176,7 +176,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Modern villa in the heart of Copacabana",
-          logo: "/img/photo/content/events/carousel/16.jpg",
+          logo: "img/photo/content/events/carousel/16.jpg",
           location: "Copacabana, Brazil",
           price: 165,
           rating: 4.26,
@@ -190,7 +190,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Multifunctionnal studio for a few days stay",
-          logo: "/img/photo/content/events/carousel/13.jpg",
+          logo: "img/photo/content/events/carousel/13.jpg",
           location: "Toronto, Canada",
           price: 105,
           rating: 4.89,
@@ -204,7 +204,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Very classy apartment in the heart of Paris XVIe",
-          logo: "/img/photo/content/events/carousel/14.jpg",
+          logo: "img/photo/content/events/carousel/14.jpg",
           location: "Paris, France",
           price: 245,
           rating: 4.88,
@@ -218,7 +218,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice and cosy apartment near the Prado Museum",
-          logo: "/img/photo/content/events/carousel/15.jpg",
+          logo: "img/photo/content/events/carousel/15.jpg",
           location: "Madrid, Spain",
           price: 190,
           rating: 4.55,
@@ -232,7 +232,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Ideal and perfectly decorated studio",
-          logo: "/img/photo/content/events/carousel/17.jpg",
+          logo: "img/photo/content/events/carousel/17.jpg",
           location: "Paris, France",
           price: 80,
           rating: 3.84,
@@ -246,7 +246,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice and cosy beach house with all conveniences",
-          logo: "/img/photo/content/events/carousel/18.jpg",
+          logo: "img/photo/content/events/carousel/18.jpg",
           location: "Berlin, Germany",
           price: 220,
           rating: 4.99,
@@ -260,7 +260,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Very classy residence, private pool and all conveniences",
-          logo: "/img/photo/content/events/carousel/28.jpg",
+          logo: "img/photo/content/events/carousel/28.jpg",
           location: "Torremolinos, Spain",
           price: 180,
           rating: 4.81,
@@ -274,7 +274,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Incredible loft house with pool and conveniences",
-          logo: "/img/photo/content/events/carousel/29.jpg",
+          logo: "img/photo/content/events/carousel/29.jpg",
           location: "Benalmadena, Spain",
           price: 240,
           rating: 4.72,
@@ -288,7 +288,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Jet set beach house near Benalmadena puerto",
-          logo: "/img/photo/content/events/carousel/30.jpg",
+          logo: "img/photo/content/events/carousel/30.jpg",
           location: "Benalmadena, Spain",
           price: 310,
           rating: 4.81,
@@ -302,7 +302,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Beautiful traditional house in the heart of Fuengirola",
-          logo: "/img/photo/content/events/carousel/31.jpg",
+          logo: "img/photo/content/events/carousel/31.jpg",
           location: "Fuengirola, Spain",
           price: 145,
           rating: 4.74,
@@ -316,7 +316,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Modern duplex apartment in the center of Torremolinos",
-          logo: "/img/photo/content/events/carousel/32.jpg",
+          logo: "img/photo/content/events/carousel/32.jpg",
           location: "Torremolinos, Spain",
           price: 190,
           rating: 4.89,
@@ -330,7 +330,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice and modern villa in the outskirts of Malaga",
-          logo: "/img/photo/content/events/carousel/33.jpg",
+          logo: "img/photo/content/events/carousel/33.jpg",
           location: "Malaga, Spain",
           price: 130,
           rating: 4.21,
@@ -344,7 +344,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Incredible modern decorated apartment in the town center",
-          logo: "/img/photo/content/events/carousel/34.jpg",
+          logo: "img/photo/content/events/carousel/34.jpg",
           location: "Torremolinos, Spain",
           price: 160,
           rating: 4.97,
@@ -358,7 +358,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice and cosy apartment in the center of Benalmadena",
-          logo: "/img/photo/content/events/carousel/35.jpg",
+          logo: "img/photo/content/events/carousel/35.jpg",
           location: "Benalmadena, Spain",
           price: 150,
           rating: 4.84,
@@ -372,7 +372,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Impressive beach house right in front of the sea",
-          logo: "/img/photo/content/events/carousel/36.jpg",
+          logo: "img/photo/content/events/carousel/36.jpg",
           location: "Fuengirola, Spain",
           price: 280,
           rating: 4.99,
@@ -386,7 +386,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Great apartment in the center of the town",
-          logo: "/img/photo/content/events/carousel/37.jpg",
+          logo: "img/photo/content/events/carousel/37.jpg",
           location: "Torremolinos, Spain",
           price: 130,
           rating: 4.96,
@@ -400,7 +400,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Luxuous apartment with all conveniences",
-          logo: "/img/photo/content/events/carousel/38.jpg",
+          logo: "img/photo/content/events/carousel/38.jpg",
           location: "Benalmadena, Spain",
           price: 210,
           rating: 4.67,
@@ -414,7 +414,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice and cosy house in the center of the town",
-          logo: "/img/photo/content/events/carousel/39.jpg",
+          logo: "img/photo/content/events/carousel/39.jpg",
           location: "Benalmadena, Spain",
           price: 180,
           rating: 4.47,
@@ -428,7 +428,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice studio for and ideal trip in Fuengirola",
-          logo: "/img/photo/content/events/carousel/40.jpg",
+          logo: "img/photo/content/events/carousel/40.jpg",
           location: "Fuengirola, Spain",
           price: 110,
           rating: 4.69,
@@ -442,7 +442,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Vegetal house in the outskirts of Mijas",
-          logo: "/img/photo/content/events/carousel/41.jpg",
+          logo: "img/photo/content/events/carousel/41.jpg",
           location: "Mijas, Spain",
           price: 240,
           rating: 4.78,
@@ -456,7 +456,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Incredible garden house in the center of Malaga",
-          logo: "/img/photo/content/events/carousel/42.jpg",
+          logo: "img/photo/content/events/carousel/42.jpg",
           location: "Malaga, Spain",
           price: 210,
           rating: 4.77,
@@ -470,7 +470,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Sea facing villa with a private pool",
-          logo: "/img/photo/content/events/carousel/43.jpg",
+          logo: "img/photo/content/events/carousel/43.jpg",
           location: "Torremolinos, Spain",
           price: 160,
           rating: 4.21,
@@ -484,7 +484,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Magnificent garden house in the outskirts of the city",
-          logo: "/img/photo/content/events/carousel/44.jpg",
+          logo: "img/photo/content/events/carousel/44.jpg",
           location: "Fuengirola, Spain",
           price: 130,
           rating: 4.22,
@@ -498,7 +498,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Great post colonial house in the center of Malaga",
-          logo: "/img/photo/content/events/carousel/45.jpg",
+          logo: "img/photo/content/events/carousel/45.jpg",
           location: "Malaga, Spain",
           price: 310,
           rating: 4.87,
@@ -512,7 +512,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Hobbit-like house in the outskirts of Mijas",
-          logo: "/img/photo/content/events/carousel/46.jpg",
+          logo: "img/photo/content/events/carousel/46.jpg",
           location: "Mijas, Spain",
           price: 175,
           rating: 4.92,
@@ -526,7 +526,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice family house in the close suburbs",
-          logo: "/img/photo/content/events/carousel/47.jpg",
+          logo: "img/photo/content/events/carousel/47.jpg",
           location: "Benalmadena, Spain",
           price: 160,
           rating: 4.89,
@@ -540,7 +540,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Cosy family house for an ideal nature trip",
-          logo: "/img/photo/content/events/carousel/48.jpg",
+          logo: "img/photo/content/events/carousel/48.jpg",
           location: "Malaga, Spain",
           price: 200,
           rating: 4.95,
@@ -554,7 +554,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Very cute beach house with all conveniences",
-          logo: "/img/photo/content/events/carousel/49.jpg",
+          logo: "img/photo/content/events/carousel/49.jpg",
           location: "Torremolinos, Spain",
           price: 140,
           rating: 4.99,
@@ -568,7 +568,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice residence in the center with private pool",
-          logo: "/img/photo/content/events/carousel/50.jpg",
+          logo: "img/photo/content/events/carousel/50.jpg",
           location: "Torremolinos, Spain",
           price: 110,
           rating: 4.49,
@@ -582,7 +582,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Luxury house in the center of Fuengirola",
-          logo: "/img/photo/content/events/carousel/51.jpg",
+          logo: "img/photo/content/events/carousel/51.jpg",
           location: "Fuengirola, Spain",
           price: 280,
           rating: 4.94,
@@ -596,7 +596,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Cosy house in the center of Fuengirola",
-          logo: "/img/photo/content/events/carousel/52.jpg",
+          logo: "img/photo/content/events/carousel/52.jpg",
           location: "Fuengirola, Spain",
           price: 240,
           rating: 4.87,
@@ -610,7 +610,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Nice little house close to the beach and the center",
-          logo: "/img/photo/content/events/carousel/53.jpg",
+          logo: "img/photo/content/events/carousel/53.jpg",
           location: "Benalmadena, Spain",
           price: 160,
           rating: 4.38,
@@ -624,7 +624,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Garden villa with barbecue and private pool",
-          logo: "/img/photo/content/events/carousel/54.jpg",
+          logo: "img/photo/content/events/carousel/54.jpg",
           location: "Benalmadena, Spain",
           price: 190,
           rating: 4.59,
@@ -638,7 +638,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Post colonial house with a private pool and tennis court",
-          logo: "/img/photo/content/events/carousel/55.jpg",
+          logo: "img/photo/content/events/carousel/55.jpg",
           location: "Torremolinos, Spain",
           price: 360,
           rating: 4.92,
@@ -652,7 +652,7 @@ export function initFlatsMap() {
         type: "Feature",
         properties: {
           name: "Downtown private residence near to the town center",
-          logo: "/img/photo/content/events/carousel/56.jpg",
+          logo: "img/photo/content/events/carousel/56.jpg",
           location: "Malaga, Spain",
           price: 160,
           rating: 4.43,
