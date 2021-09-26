@@ -321,7 +321,7 @@ title: Event
                   <!--Dual picker wrapper-->
                   <div class="dual-picker-wrapper">
                     <!--Dual picker date-->
-                    <div x-show="bookingFormExpanded === true" class="dual-picker-panel" :class="{
+                    <div x-show="bookingFormExpanded === true" class="dual-picker-panel" x-bind:class="{
                         'is-compressed': participantsFormActive,
                         '': !participantsFormActive
                       }">
@@ -388,7 +388,7 @@ title: Event
                     </div>
                     <!--Dual picker-->
                     <div class="dual-picker">
-                      <div class="field" x-on:click="openDatesPanel()" :class="{
+                      <div class="field" x-on:click="openDatesPanel()" x-bind:class="{
                           'is-active': dateFormActive,
                           '': !dateFormActive
                         }">
@@ -398,7 +398,7 @@ title: Event
                           <input type="text" class="input" placeholder="Pick a date" :value="dateValue"/>
                         </div>
                       </div>
-                      <div class="field" x-on:click="openParticipantsPanel()" :class="{
+                      <div class="field" x-on:click="openParticipantsPanel()" x-bind:class="{
                           'is-active': participantsFormActive,
                           '': !participantsFormActive
                         }">

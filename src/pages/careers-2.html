@@ -148,7 +148,7 @@ title: Careers
           <a
             x-on:click.prevent="switchTabs($event)"
             data-tab="tab-1"
-            :class="{
+            x-bind:class="{
             'is-active': activeTab === 'tab-1',
           }"
           >
@@ -158,7 +158,7 @@ title: Careers
           <a
             x-on:click.prevent="switchTabs($event)"
             data-tab="tab-2"
-            :class="{
+            x-bind:class="{
             'is-active': activeTab === 'tab-2',
           }"
           >
@@ -168,7 +168,7 @@ title: Careers
           <a
             x-on:click.prevent="switchTabs($event)"
             data-tab="tab-3"
-            :class="{
+            x-bind:class="{
             'is-active': activeTab === 'tab-3',
           }"
           >
@@ -178,7 +178,7 @@ title: Careers
           <a
             x-on:click.prevent="switchTabs($event)"
             data-tab="tab-4"
-            :class="{
+            x-bind:class="{
             'is-active': activeTab === 'tab-4',
           }"
           >
@@ -364,19 +364,19 @@ title: Careers
             <a
               x-on:click.prevent="switchTabs($event)"
               data-tab="all"
-              :class="{'is-current': activeTab === 'all'}"
+              x-bind:class="{'is-current': activeTab === 'all'}"
               >All Jobs</a
             >
             <a
               x-on:click.prevent="switchTabs($event)"
               data-tab="full"
-              :class="{'is-current': activeTab === 'full'}"
+              x-bind:class="{'is-current': activeTab === 'full'}"
               >Full-time</a
             >
             <a
               x-on:click.prevent="switchTabs($event)"
               data-tab="part"
-              :class="{'is-current': activeTab === 'part'}"
+              x-bind:class="{'is-current': activeTab === 'part'}"
               >Part-time</a
             >
           </div>

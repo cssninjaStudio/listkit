@@ -3,7 +3,7 @@
   x-data="initListingNavbar()"
   x-init="initScrollAnchors()"
   x-on:scroll.window="scroll()"
-  :class="{
+  x-bind:class="{
     'is-active': scrolled,
     '': !scrolled,
   }"

@@ -3,7 +3,7 @@
   x-data="initNavbarLight()"
   x-on:scroll.window="scroll()"
   x-on:mouseleave="megamenuOpened = false"
-  :class="{
+  x-bind:class="{
         'is-scrolled': scrolled,
         '': !scrolled,
         'is-solid': megamenuOpened,

@@ -2,7 +2,7 @@
   class="mobile-sub-navigation"
   x-data="initNavbarBottom()"
   x-on:scroll.window="scroll()"
-  :class="{
+  x-bind:class="{
         '': isBottomNavActive,
         'is-dismissed': !isBottomNavActive
     }"

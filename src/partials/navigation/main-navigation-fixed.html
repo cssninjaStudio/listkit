@@ -2,7 +2,7 @@
   class="main-navigation is-scrolled"
   x-data="initNavbar()"
   x-on:click.away="foldSearch()"
-  :class="{
+  x-bind:class="{
         'is-expanded': searchExpanded,
         '': !searchExpanded
     }"
@@ -123,7 +123,7 @@
           class="block-30"
           x-on:click.stop="openDrop('location-drop'), $refs.locationInput.focus()"
           x-on:click.away="closeDrop('location-drop')"
-          :class="{
+          x-bind:class="{
                         'is-active': locationDropOpened,
                         '': !locationDropOpened
                     }"
@@ -167,7 +167,7 @@
           class="block-20"
           x-on:click="openDrop('start-date-drop'), $refs.startDateInput.focus()"
           x-on:click.away="closeDrop('start-date-drop')"
-          :class="{
+          x-bind:class="{
                         'is-active': startDateDropOpened,
                         '': !startDateDropOpened
                     }"
@@ -191,7 +191,7 @@
           class="block-20"
           x-on:click="openDrop('end-date-drop'), $refs.endDateInput.focus()"
           x-on:click.away="closeDrop('end-date-drop')"
-          :class="{
+          x-bind:class="{
                         'is-active': endDateDropOpened,
                         '': !endDateDropOpened
                     }"
@@ -219,7 +219,7 @@
           class="block-30"
           x-on:click="openDrop('type-drop'), $refs.typeInput.focus()"
           x-on:click.away="closeDrop('type-drop')"
-          :class="{
+          x-bind:class="{
                         'is-active': typeDropOpened,
                         '': !typeDropOpened
                     }"
@@ -295,7 +295,7 @@
           <button
             type="button"
             class="search-button"
-            :class="{
+            x-bind:class="{
                             'is-expanded': searchActive,
                             '': !searchActive
                         }"

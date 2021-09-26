@@ -442,7 +442,7 @@ title: Trip
                     <div
                       x-show="bookingFormExpanded === true"
                       class="dual-picker-panel"
-                      :class="{
+                      x-bind:class="{
                         'is-compressed': participantsFormActive,
                         '': !participantsFormActive
                       }"
@@ -539,7 +539,7 @@ title: Trip
                       <div
                         class="field"
                         x-on:click="openDatesPanel()"
-                        :class="{
+                        x-bind:class="{
                           'is-active': dateFormActive,
                           '': !dateFormActive
                         }"
@@ -558,7 +558,7 @@ title: Trip
                       <div
                         class="field"
                         x-on:click="openParticipantsPanel()"
-                        :class="{
+                        x-bind:class="{
                           'is-active': participantsFormActive,
                           '': !participantsFormActive
                         }"

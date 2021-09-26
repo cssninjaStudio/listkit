@@ -2,7 +2,7 @@
   class="mobile-main-navigation"
   x-data="initNavbarMobile()"
   x-on:scroll.window="scroll()"
-  :class="{
+  x-bind:class="{
         'is-active is-scrolled': mobileSearchOpened,
         '': !mobileSearchOpened,
         'is-scrolled': scrolled,
@@ -89,7 +89,7 @@
 
   <div
     class="mobile-search-panel"
-    :class="{
+    x-bind:class="{
             'is-active': mobileSearchPanelOpened,
             '': !mobileSearchPanelOpened
         }"
@@ -325,7 +325,7 @@
   <!--Wizard Navigation Buttons-->
   <div
     class="search-panel-buttons"
-    :class="{
+    x-bind:class="{
             'is-active': mobileSearchPanelOpened,
             '': !mobileSearchPanelOpened
         }"

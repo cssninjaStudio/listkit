@@ -9,7 +9,7 @@ title: Listkit
   x-data="initLandingNavbar()"
   x-on:scroll.window="scroll()"
   x-init="initScrollAnchors()"
-  :class="{
+  x-bind:class="{
       'is-scrolled': scrolled,
       '': !scrolled,
       'is-solid': mobileOpen,
@@ -24,7 +24,7 @@ title: Listkit
       </div>
       <div
         class="center"
-        :class="{
+        x-bind:class="{
             'is-mobile-active': mobileOpen,
             '': !mobileOpen
         }"
@@ -40,7 +40,7 @@ title: Listkit
           <div class="menu-toggle">
             <div
               class="icon-box-toggle is-navbar"
-              :class="{
+              x-bind:class="{
                   'active': mobileOpen,
                   '': !mobileOpen
               }"
