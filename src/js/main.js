@@ -37,7 +37,7 @@ document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
 
         //Switch demo images
-        const changeImages = switchDemoImages();
+        const changeImages = switchDemoImages(env);
 
         //Lazy Loading
         const lazy = initLazyLoading();

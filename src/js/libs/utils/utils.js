@@ -6,13 +6,15 @@ export function getUrlParams(param) {
   return urlParams.get(param);
 }
 
-export function switchDemoImages() {
-  const targets = document.querySelectorAll("[data-demo-src]");
+export function switchDemoImages(env) {
+  if (env === "development") {
+    const targets = document.querySelectorAll("[data-demo-src]");
 
-  if (typeof targets != "undefined" && targets != null) {
-    for (var i = 0, len = targets.length; i < len; i++) {
-      let demoUrl = targets[i].getAttribute("data-demo-src");
-      targets[i].setAttribute("src", demoUrl);
+    if (typeof targets != "undefined" && targets != null) {
+      for (var i = 0, len = targets.length; i < len; i++) {
+        let demoUrl = targets[i].getAttribute("data-demo-src");
+        targets[i].setAttribute("src", demoUrl);
+      }
     }
   }
 }
@@ -29,9 +31,7 @@ export function insertBgImages(env) {
         targets[i].style.backgroundImage = `url(${bgUrl})`;
       }
     }
-  }
-
-  else {
+  } else {
     const targets = document.querySelectorAll("[data-demo-background]");
 
     if (typeof targets != "undefined" && targets != null) {
@@ -52,7 +52,7 @@ export function insertHrefs(env) {
     if (typeof targets != "undefined" && targets != null) {
       for (var i = 0, len = targets.length; i < len; i++) {
         let href = targets[i].getAttribute("data-demo-href");
-        targets[i].setAttribute('href', href);
+        targets[i].setAttribute("href", href);
       }
     }
   }
@@ -65,7 +65,7 @@ export function insertPosters(env) {
     if (typeof targets != "undefined" && targets != null) {
       for (var i = 0, len = targets.length; i < len; i++) {
         let href = targets[i].getAttribute("data-demo-poster");
-        targets[i].setAttribute('poster', href);
+        targets[i].setAttribute("poster", href);
       }
     }
   }
