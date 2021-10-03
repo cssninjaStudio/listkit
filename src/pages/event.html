@@ -42,7 +42,7 @@ title: Event
       </div>
     </div>
 
-    <div id="lightgallery" class="listing-cover-wrapper" x-data="initCover()">
+    <div id="lightgallery" class="listing-cover-wrapper" data-x-data="initCover()">
       <a
         class="listing-cover has-background-image"
         data-background="https://dummyimage.com/940x650"
@@ -175,14 +175,14 @@ title: Event
             </div>
           </div>
 
-          <div class="listing-content" x-data="initListingContent()">
+          <div class="listing-content" data-x-data="initListingContent()">
             <h3 class="title is-5 is-narrow">What you'll be doing</h3>
             <div class="translate-block">
               <span>Translate now</span>
               <i class="la la-language"></i>
             </div>
 
-            <div x-show="isDescriptionExpanded === false">
+            <div data-x-show="isDescriptionExpanded === false">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Murenam
                 te accusante defenderem. Ipse Epicurus fortasse redderet, ut
@@ -205,7 +205,7 @@ title: Event
               </p>
             </div>
 
-            <div x-show="isDescriptionExpanded === true">
+            <div data-x-show="isDescriptionExpanded === true">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Murenam
                 te accusante defenderem. Ipse Epicurus fortasse redderet, ut
@@ -243,8 +243,8 @@ title: Event
               </p>
             </div>
 
-            <a x-show="isDescriptionExpanded === false" x-on:click.prevent="toggleListingDescription()" class="underlink">Read more</a>
-            <a x-show="isDescriptionExpanded === true" x-on:click.prevent="toggleListingDescription()" class="underlink">Read less</a>
+            <a data-x-show="isDescriptionExpanded === false" data-x-on:click.prevent="toggleListingDescription()" class="underlink">Read more</a>
+            <a data-x-show="isDescriptionExpanded === true" data-x-on:click.prevent="toggleListingDescription()" class="underlink">Read less</a>
           </div>
 
           <div class="listing-participation">
@@ -322,7 +322,7 @@ title: Event
             <div class="sticky-wrapper">
               <div class="sticky-wrapper-inner">
                 <!--Booking form-->
-                <div class="card booking-card" x-data="initBookingForm()"  x-on:click.away="closeBookingPanel()"> 
+                <div class="card booking-card" data-x-data="initBookingForm()"  data-x-on:click.away="closeBookingPanel()"> 
                   <div class="head">
                     <span>Starting from $20 <small>per person</small></span>
                     <a href="#availability" class="scroll-link">See all prices</a>
@@ -330,16 +330,16 @@ title: Event
                   <!--Dual picker wrapper-->
                   <div class="dual-picker-wrapper">
                     <!--Dual picker date-->
-                    <div x-show="bookingFormExpanded === true" class="dual-picker-panel" x-bind:class="{
+                    <div data-x-show="bookingFormExpanded === true" class="dual-picker-panel" data-x-bind:class="{
                         'is-compressed': participantsFormActive,
                         '': !participantsFormActive
                       }">
-                      <div x-show="dateFormActive === true" class="dual-picker-panel-inner">
+                      <div data-x-show="dateFormActive === true" class="dual-picker-panel-inner">
                         <h4 class="dual-picker-panel-title">Add some dates</h4>
                         <!--Calendars-->
                         <div class="booking-calendars">
-                          <input type="text" class="event-datepicker-start" x-on:click="getDateValue($event)">
-                          <input type="text" class="event-datepicker-end" x-on:click="getDateValue($event)">
+                          <input type="text" class="event-datepicker-start" data-x-on:click="getDateValue($event)">
+                          <input type="text" class="event-datepicker-end" data-x-on:click="getDateValue($event)">
                           <!--Actions-->
                           <div class="calendar-actions">
                             <button class="button is-light">Clear Dates</button>
@@ -348,7 +348,7 @@ title: Event
                         </div>
                       </div>
                       <!--Dual picker participants-->
-                      <div x-show="participantsFormActive === true" class="dual-picker-panel-inner">
+                      <div data-x-show="participantsFormActive === true" class="dual-picker-panel-inner">
                         <div class="participants-selector">
                           <div class="type-block">
                             <div class="meta">
@@ -397,7 +397,7 @@ title: Event
                     </div>
                     <!--Dual picker-->
                     <div class="dual-picker">
-                      <div class="field" x-on:click="openDatesPanel()" x-bind:class="{
+                      <div class="field" data-x-on:click="openDatesPanel()" data-x-bind:class="{
                           'is-active': dateFormActive,
                           '': !dateFormActive
                         }">
@@ -407,7 +407,7 @@ title: Event
                           <input type="text" class="input" placeholder="Pick a date" :value="dateValue"/>
                         </div>
                       </div>
-                      <div class="field" x-on:click="openParticipantsPanel()" x-bind:class="{
+                      <div class="field" data-x-on:click="openParticipantsPanel()" data-x-bind:class="{
                           'is-active': participantsFormActive,
                           '': !participantsFormActive
                         }">
@@ -736,7 +736,7 @@ title: Event
     <div id="listing-map" class="host-map">
       <h4 class="title is-5 is-narrow">Event Location</h4>
 
-      <div class="listing-map-wrapper" x-data="initListingMap()" x-init="initMainMap()">
+      <div class="listing-map-wrapper" data-x-data="initListingMap()" data-x-init="initMainMap()">
         <div class="listing-map-inner">
           <div id="main-map" class="listing-map" data-long="-122.332069" data-lat="47.606209"></div>
           <span class="listing-map-badge">Exact location after booking</span>
@@ -774,7 +774,7 @@ title: Event
       </div>
 
       <!--Available dates carousel wrapper-->
-      <div class="available-dates" x-data="initListingDates()">
+      <div class="available-dates" data-x-data="initListingDates()">
         <div class="available-dates-inner glide available-dates-glide">
           <div class="glide__track" data-glide-el="track">
             <!--Available dates carousel-->
@@ -920,7 +920,7 @@ title: Event
       <h4 class="title is-5">More scheduled events</h4>
 
       <!--Scheduled events carousel-->
-      <div class="scheduled-listings" x-data="initMoreListings()">
+      <div class="scheduled-listings" data-x-data="initMoreListings()">
         <div class="scheduled-listings-inner glide more-events-glide">
           <div class="glide__track" data-glide-el="track">
             <!--Carousel-->

@@ -1,9 +1,9 @@
 <div
   class="listing-nav"
-  x-data="initListingNavbar()"
-  x-init="initScrollAnchors()"
-  x-on:scroll.window="scroll()"
-  x-bind:class="{
+  data-x-data="initListingNavbar()"
+  data-x-init="initScrollAnchors()"
+  data-x-on:scroll.window="scroll()"
+  data-x-bind:class="{
     'is-active': scrolled,
     '': !scrolled,
   }"
@@ -35,7 +35,7 @@
         </a>
         <a
           id="listing-navigation-action"
-          x-show="scrolledFull === true"
+          data-x-show="scrolledFull === true"
           class="button is-primary is-raised-hover"
         >
           Book this flat

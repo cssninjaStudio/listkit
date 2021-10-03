@@ -1,8 +1,8 @@
 <div
   class="mobile-sub-navigation"
-  x-data="initNavbarBottom()"
-  x-on:scroll.window="scroll()"
-  x-bind:class="{
+  data-x-data="initNavbarBottom()"
+  data-x-on:scroll.window="scroll()"
+  data-x-bind:class="{
         '': isBottomNavActive,
         'is-dismissed': !isBottomNavActive
     }"
@@ -15,25 +15,25 @@
           <span>Explore</span>
         </div>
       </a>
-      <a x-show="$store.app.isLoggedIn === false" href="help-center.html" class="sub-link">
+      <a data-x-show="$store.app.isLoggedIn === false" href="help-center.html" class="sub-link">
         <div>
           <i data-feather="life-buoy"></i>
           <span>Help</span>
         </div>
       </a>
-      <a x-show="$store.app.isLoggedIn === false" href="login.html" class="sub-link">
+      <a data-x-show="$store.app.isLoggedIn === false" href="login.html" class="sub-link">
         <div>
           <i data-feather="log-in"></i>
           <span>Sign In</span>
         </div>
       </a>
-      <a x-show="$store.app.isLoggedIn === true" href="account-schedule.html" class="sub-link">
+      <a data-x-show="$store.app.isLoggedIn === true" href="account-schedule.html" class="sub-link">
         <div>
           <i data-feather="calendar"></i>
           <span>Schedule</span>
         </div>
       </a>
-      <a x-show="$store.app.isLoggedIn === true" href="account-main.html" class="sub-link">
+      <a data-x-show="$store.app.isLoggedIn === true" href="account-main.html" class="sub-link">
         <div>
           <i data-feather="user"></i>
           <span>Account</span>

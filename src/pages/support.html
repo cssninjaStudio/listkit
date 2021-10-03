@@ -36,8 +36,8 @@ title: Warranties
     <form>
       <div
         class="card card-form card-form-horizontal"
-        x-data="initHeroCreateListingForm()"
-        x-init="initSelects()"
+        data-x-data="initHeroCreateListingForm()"
+        data-x-init="initSelects()"
       >
         <div class="card-form-left">
           <div class="head">
@@ -100,7 +100,7 @@ title: Warranties
           class="video-player"
           playsinline
           controls
-          data-poster="https://dummyimage.com/440x440/ededed/000000"
+          data-poster="https://dummyimage.com/1200x675/ededed/000000"
           data-demo-poster="img/photo/content/video/poster-2g.jpg"
         >
           <source src="img/video/meeting.mp4" type="video/mp4" />
@@ -312,7 +312,7 @@ title: Warranties
           </div>
         </div>
         <div class="column is-6 is-offset-1">
-          <img src="img/photo/content/people/square-13.jpg" alt="" />
+          <img src="https://dummyimage.com/500x500/ededed/000000" data-demo-src="img/photo/content/people/square-13.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -497,7 +497,7 @@ title: Warranties
           <a class="underlink my-4">See how you can start offering services</a>
         </div>
         <div class="column is-6 is-offset-1">
-          <div class="accordion" x-data="initAccordion()" x-init="setup()">
+          <div class="accordion" data-x-data="initAccordion()" data-x-init="setup()">
             <div class="accordion-item">
               <button id="accordion-button-1" aria-expanded="false">
                 <span class="accordion-title"

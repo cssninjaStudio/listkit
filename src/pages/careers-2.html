@@ -69,8 +69,8 @@ title: Careers
       </div>
     </div>
 
-    <div class="py-6" x-data="initCareerTabs()">
-      <div x-show="activeTab === 'tab-1'" class="columns is-vcentered">
+    <div class="py-6" data-x-data="initCareerTabs()">
+      <div data-x-show="activeTab === 'tab-1'" class="columns is-vcentered">
         <div class="column is-5 is-offset-1 b-centered-tablet-p">
           <h4 class="subtitle is-6 pb-2 text-primary">BE CREATIVE</h4>
           <h2 class="title is-3 is-bold is-spaced">We value creators.</h2>
@@ -89,7 +89,7 @@ title: Careers
         </div>
       </div>
 
-      <div x-show="activeTab === 'tab-2'" class="columns is-vcentered">
+      <div data-x-show="activeTab === 'tab-2'" class="columns is-vcentered">
         <div class="column is-5 is-offset-1 b-centered-tablet-p">
           <h4 class="subtitle is-6 pb-2 text-primary">WORK TOGETHER</h4>
           <h2 class="title is-3 is-bold is-spaced">We value collaboration.</h2>
@@ -107,7 +107,7 @@ title: Careers
         </div>
       </div>
 
-      <div x-show="activeTab === 'tab-3'" class="columns is-vcentered">
+      <div data-x-show="activeTab === 'tab-3'" class="columns is-vcentered">
         <div class="column is-5 is-offset-1 b-centered-tablet-p">
           <h4 class="subtitle is-6 pb-2 text-primary">HAVE A LIFE</h4>
           <h2 class="title is-3 is-bold is-spaced">We value Free Time.</h2>
@@ -125,7 +125,7 @@ title: Careers
         </div>
       </div>
 
-      <div x-show="activeTab === 'tab-4'" class="columns is-vcentered">
+      <div data-x-show="activeTab === 'tab-4'" class="columns is-vcentered">
         <div class="column is-5 is-offset-1 b-centered-tablet-p">
           <h4 class="subtitle is-6 pb-2 text-primary">CLIMB THE LADDER</h4>
           <h2 class="title is-3 is-bold is-spaced">We have Career Plans.</h2>
@@ -146,9 +146,9 @@ title: Careers
       <div class="careers-switcher">
         <div class="careers-switcher-inner">
           <a
-            x-on:click.prevent="switchTabs($event)"
+            data-x-on:click.prevent="switchTabs($event)"
             data-tab="tab-1"
-            x-bind:class="{
+            data-x-bind:class="{
             'is-active': activeTab === 'tab-1',
           }"
           >
@@ -156,9 +156,9 @@ title: Careers
             <span>Creators</span>
           </a>
           <a
-            x-on:click.prevent="switchTabs($event)"
+            data-x-on:click.prevent="switchTabs($event)"
             data-tab="tab-2"
-            x-bind:class="{
+            data-x-bind:class="{
             'is-active': activeTab === 'tab-2',
           }"
           >
@@ -166,9 +166,9 @@ title: Careers
             <span>Collaboration</span>
           </a>
           <a
-            x-on:click.prevent="switchTabs($event)"
+            data-x-on:click.prevent="switchTabs($event)"
             data-tab="tab-3"
-            x-bind:class="{
+            data-x-bind:class="{
             'is-active': activeTab === 'tab-3',
           }"
           >
@@ -176,9 +176,9 @@ title: Careers
             <span>Free Time</span>
           </a>
           <a
-            x-on:click.prevent="switchTabs($event)"
+            data-x-on:click.prevent="switchTabs($event)"
             data-tab="tab-4"
-            x-bind:class="{
+            data-x-bind:class="{
             'is-active': activeTab === 'tab-4',
           }"
           >
@@ -196,7 +196,7 @@ title: Careers
           class="video-player"
           playsinline
           controls
-          data-poster="https://dummyimage.com/440x440/ededed/000000"
+          data-poster="https://dummyimage.com/1200x675/ededed/000000"
           data-demo-poster="img/photo/content/video/poster-2e.jpg"
         >
           <source src="img/video/meeting.mp4" type="video/mp4" />
@@ -358,25 +358,25 @@ title: Careers
       </div>
     </div>
     <div class="py-6">
-      <div class="career-jobs-wrapper" x-data="initJobTabs()">
+      <div class="career-jobs-wrapper" data-x-data="initJobTabs()">
         <header class="career-jobs-header">
           <div class="nav">
             <a
-              x-on:click.prevent="switchTabs($event)"
+              data-x-on:click.prevent="switchTabs($event)"
               data-tab="all"
-              x-bind:class="{'is-current': activeTab === 'all'}"
+              data-x-bind:class="{'is-current': activeTab === 'all'}"
               >All Jobs</a
             >
             <a
-              x-on:click.prevent="switchTabs($event)"
+              data-x-on:click.prevent="switchTabs($event)"
               data-tab="full"
-              x-bind:class="{'is-current': activeTab === 'full'}"
+              data-x-bind:class="{'is-current': activeTab === 'full'}"
               >Full-time</a
             >
             <a
-              x-on:click.prevent="switchTabs($event)"
+              data-x-on:click.prevent="switchTabs($event)"
               data-tab="part"
-              x-bind:class="{'is-current': activeTab === 'part'}"
+              data-x-bind:class="{'is-current': activeTab === 'part'}"
               >Part-time</a
             >
           </div>
@@ -384,7 +384,7 @@ title: Careers
 
         <ul class="listing-timeline">
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'full'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'full'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -415,7 +415,7 @@ title: Careers
           </template>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'part'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'part'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -448,7 +448,7 @@ title: Careers
           <li class="date">Today</li>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'full'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'full'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -479,7 +479,7 @@ title: Careers
           </template>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'full'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'full'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -510,7 +510,7 @@ title: Careers
           </template>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'full'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'full'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -541,7 +541,7 @@ title: Careers
           </template>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'part'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'part'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -574,7 +574,7 @@ title: Careers
           <li class="date">Jan 28th</li>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'full'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'full'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -605,7 +605,7 @@ title: Careers
           </template>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'full'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'full'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
@@ -636,7 +636,7 @@ title: Careers
           </template>
 
           <!--Job listing-->
-          <template x-if="activeTab === 'all' || activeTab === 'part'">
+          <template data-x-if="activeTab === 'all' || activeTab === 'part'">
             <a href="#">
               <li class="listing">
                 <div class="image-wrapper">
