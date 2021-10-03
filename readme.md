@@ -13,3 +13,7 @@ npm install
 npm run dev
 ```
 
+3. To build the project
+```sh
+npm run build
+```
