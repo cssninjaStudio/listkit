@@ -1,6 +1,6 @@
 FROM bitnami/node:14 AS build
 WORKDIR /app
-
+RUN npm install --global npm
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install --unsafe-perm
