@@ -136,6 +136,23 @@ function devImages() {
   return src(`${options.paths.src.img}/**/*`).pipe(dest(options.paths.dist.img));
 }
 
+// COPIES AND MINIFY IMAGE TO DIST
+function minifyImages() {
+  console.log('---------------OPTIMIZING IMAGES---------------');
+  return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm|ogg)')
+    .pipe(newer('dist/assets/img/'))
+    .pipe(imagemin([
+      imagemin.gifsicle({ optimizationLevel: 3, interlaced: true }),
+      imagemin.mozjpeg({ quality: 85 }),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.svgo()
+    ], {
+      verbose: true
+    }))
+    .pipe(dest('dist/assets/img/'))
+    .pipe(browserSync.stream());
+}
+
 // Let's write our task in a function to keep things clean
 function javascriptBuild() {
   // Start by calling browserify with our entry pointing to our main javascript file
@@ -149,6 +166,7 @@ function javascriptBuild() {
       .bundle()
       // Source the bundle
       .pipe(source("bundle.js"))
+      .pipe(uglify())
       // Then write the resulting files to a folder
       .pipe(dest(`dist/js`))
   );
@@ -191,5 +209,5 @@ exports.default = series(
 exports.build = series(
   devClean, // Clean Dist Folder
   resetPages,
-  parallel(copyFonts, concatCssPlugins, compileSCSS, javascriptBuild, devImages, compileHTML)
+  parallel(copyFonts, minifyImages, concatCssPlugins, compileSCSS, javascriptBuild, devImages, compileHTML)
 );
