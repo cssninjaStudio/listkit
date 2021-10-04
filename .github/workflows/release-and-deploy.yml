@@ -49,7 +49,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./.release/release-${{ steps.get_meta.outputs.project }}-${{ steps.get_meta.outputs.tag }}.zip
+          asset_path: ./.release/template-${{ steps.get_meta.outputs.project }}-${{ steps.get_meta.outputs.tag }}.zip
           asset_name: release-${{ steps.get_meta.outputs.project }}-${{ steps.get_meta.outputs.tag }}.zip
           asset_content_type: application/zip
 

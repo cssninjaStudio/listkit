@@ -37,16 +37,5 @@ zip -r .release/template-${PROJECT}-${TAG}.zip . \
   -x ".github/*" \
   -x "docker-compose.yml"
 
-# zip preview ${PROJECT}-preview.zip
-zip -j .release/${PROJECT}-preview.zip \
-  .release/${PROJECT}-preview.png
-
-# top level zip release-${PROJECT}-${TAG}.zip 
-zip -j .release/release-${PROJECT}-${TAG}.zip \
-  .release/template-${PROJECT}-${TAG}.zip 
-
-# remove zip sources template-${PROJECT}-${TAG}.zip
-rm -rf .release/${PROJECT}-preview.zip .release/template-${PROJECT}-${TAG}.zip
-
 # revert ./src changes
 git checkout ./src
