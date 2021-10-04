@@ -27,14 +27,14 @@
 
     <div
       class="progress-wrap"
-      x-data="initBackToTop()"
-      x-init="setup()"
-      x-on:scroll.window="scroll()"
-      x-bind:class="{
+      data-x-data="initBackToTop()"
+      data-x-init="setup()"
+      data-x-on:scroll.window="scroll()"
+      data-x-bind:class="{
         'active-progress': scrolled,
         '': !scrolled,
         }"
-      x-on:click="scrollTop()"
+      data-x-on:click="scrollTop()"
     >
       <svg
         class="progress-circle svg-content"

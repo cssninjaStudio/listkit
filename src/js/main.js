@@ -8,7 +8,7 @@ import Alpine from 'alpinejs'
 import intersect from '@alpinejs/intersect'
 import Fern from '@ryangjchandler/fern'
 //Prefix alpine special attributes to pass W3C validation
-//document.addEventListener('alpine:init', () => Alpine.prefix('data-x-'))
+document.addEventListener('alpine:init', () => Alpine.prefix('data-x-'))
 window.Alpine = Alpine
 //Init intersect plugin
 Alpine.plugin(intersect)

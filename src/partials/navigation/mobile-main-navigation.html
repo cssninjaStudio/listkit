@@ -1,8 +1,8 @@
 <div
   class="mobile-main-navigation"
-  x-data="initNavbarMobile()"
-  x-on:scroll.window="scroll()"
-  x-bind:class="{
+  data-x-data="initNavbarMobile()"
+  data-x-on:scroll.window="scroll()"
+  data-x-bind:class="{
         'is-active is-scrolled': mobileSearchOpened,
         '': !mobileSearchOpened,
         'is-scrolled': scrolled,
@@ -13,7 +13,7 @@
     <div class="field">
       <div class="control has-icon">
         <input
-          x-on:focus="toggleMobileSearch()"
+          data-x-on:focus="toggleMobileSearch()"
           type="text"
           class="input is-rounded"
           placeholder="Where are you?"
@@ -24,15 +24,15 @@
       </div>
     </div>
     <a
-      x-show="mobileSearchOpened"
-      x-on:click="toggleMobileSearch()"
+      data-x-show="mobileSearchOpened"
+      data-x-on:click="toggleMobileSearch()"
       class="cancel-link"
       >Cancel</a
     >
   </div>
 
   <div class="mobile-main-navigation--location">
-    <a class="near-link" x-on:click="toggleMobileSearchPanel()">
+    <a class="near-link" data-x-on:click="toggleMobileSearchPanel()">
       <div class="near-icon">
         <i data-feather="map-pin"></i>
       </div>
@@ -89,19 +89,19 @@
 
   <div
     class="mobile-search-panel"
-    x-bind:class="{
+    data-x-bind:class="{
             'is-active': mobileSearchPanelOpened,
             '': !mobileSearchPanelOpened
         }"
   >
     <div class="mobile-search-panel--inner">
       <div class="panel-header">
-        <button class="close-button" x-on:click="toggleMobileSearchPanel()">
+        <button class="close-button" data-x-on:click="toggleMobileSearchPanel()">
           <i data-feather="chevron-left"></i>
         </button>
       </div>
       <div class="panel-body">
-        <div x-show.transition="activeWizardStep === 0" class="panel-step">
+        <div data-x-show.transition="activeWizardStep === 0" class="panel-step">
           <h3>What are you looking for?</h3>
           <div class="radio-cards-group">
             <!--Card-->
@@ -151,7 +151,7 @@
           </div>
         </div>
 
-        <div x-show.transition="activeWizardStep === 1" class="panel-step">
+        <div data-x-show.transition="activeWizardStep === 1" class="panel-step">
           <h3>When should that start?</h3>
 
           <div class="mobile-dates is-relative">
@@ -263,7 +263,7 @@
           </div>
         </div>
 
-        <div x-show.transition="activeWizardStep === 2" class="panel-step">
+        <div data-x-show.transition="activeWizardStep === 2" class="panel-step">
           <h3>What type of audience?</h3>
 
           <div class="type-blocks">
@@ -325,7 +325,7 @@
   <!--Wizard Navigation Buttons-->
   <div
     class="search-panel-buttons"
-    x-bind:class="{
+    data-x-bind:class="{
             'is-active': mobileSearchPanelOpened,
             '': !mobileSearchPanelOpened
         }"
@@ -333,13 +333,13 @@
     <div class="search-panel-buttons-inner">
       <button
         class="button h-button is-light is-bold"
-        x-on:click="wizardBack($event)"
+        data-x-on:click="wizardBack($event)"
       >
         Previous
       </button>
       <button
         class="button h-button is-primary is-bold"
-        x-on:click="wizardForward($event)"
+        data-x-on:click="wizardForward($event)"
       >
         Next
       </button>

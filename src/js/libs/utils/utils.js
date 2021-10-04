@@ -9,7 +9,6 @@ export function getUrlParams(param) {
 export function switchDemoImages(env) {
   if (env === "development") {
     const targets = document.querySelectorAll("[data-demo-src]");
-
     if (typeof targets != "undefined" && targets != null) {
       for (var i = 0, len = targets.length; i < len; i++) {
         let demoUrl = targets[i].getAttribute("data-demo-src");

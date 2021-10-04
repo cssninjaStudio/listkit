@@ -21,18 +21,18 @@ title: Schedule
       </div>
     </div>
 
-    <div class="account-schedule py-6" x-data="{activeTab: 'scheduled'}">
+    <div class="account-schedule py-6" data-x-data="{activeTab: 'scheduled'}">
       <div class="tabs-wrapper">
         <div class="tabs">
           <ul>
             <li
               class="is-active"
-              x-bind:class="{'is-active': activeTab === 'scheduled'}"
+              data-x-bind:class="{'is-active': activeTab === 'scheduled'}"
             >
-              <a x-on:click.prevent="activeTab = 'scheduled'">Scheduled</a>
+              <a data-x-on:click.prevent="activeTab = 'scheduled'">Scheduled</a>
             </li>
-            <li x-bind:class="{'is-active': activeTab === 'completed'}">
-              <a x-on:click.prevent="activeTab = 'completed'">Complete</a>
+            <li data-x-bind:class="{'is-active': activeTab === 'completed'}">
+              <a data-x-on:click.prevent="activeTab = 'completed'">Complete</a>
             </li>
           </ul>
         </div>
@@ -40,7 +40,7 @@ title: Schedule
         <div class="tab-content-wrap">
           <!--Scheduled-->
           <div
-            x-show.transition="activeTab === 'scheduled'"
+            data-x-show.transition="activeTab === 'scheduled'"
             class="tab-content"
           >
             <div class="tab-placeholder">
@@ -57,7 +57,7 @@ title: Schedule
 
           <!--Scheduled-->
           <div
-            x-show.transition="activeTab === 'completed'"
+            data-x-show.transition="activeTab === 'completed'"
             class="tab-content"
           >
             <div class="tab-info mb-5">
