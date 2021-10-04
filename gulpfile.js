@@ -6,19 +6,18 @@ const browserSync = require('browser-sync').create();
 //const sass = require('gulp-sass');
 const sass = require('gulp-sass')(require('sass'));
 const bourbon = require('node-bourbon').includePaths;
-const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const imagemin = require('gulp-imagemin');
-const cleanCSS = require('gulp-clean-css');
 const purgecss = require('gulp-purgecss');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const panini = require('panini');
-
+const newer = require('gulp-newer');
 const browserify = require("browserify");
 const babelify = require("babelify");
 const source = require("vinyl-source-stream");
+const buffer = require('vinyl-buffer');
 const nodepath = 'node_modules/';
 
 //Note : Webp still not supported in major browsers including forefox
@@ -166,6 +165,7 @@ function javascriptBuild() {
       .bundle()
       // Source the bundle
       .pipe(source("bundle.js"))
+      .pipe(buffer())
       .pipe(uglify())
       // Then write the resulting files to a folder
       .pipe(dest(`dist/js`))
