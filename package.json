@@ -14,6 +14,8 @@
     "choices.js": "9.0.1",
     "codemirror": "5.58.3",
     "feather-icons": "4.24.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-uglify-es": "^3.0.0",
     "ionicons": "5.2.3",
     "js-datepicker": "5.16.0",
     "lightgallery.js": "1.4.0",
