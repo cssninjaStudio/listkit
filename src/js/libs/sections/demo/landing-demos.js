@@ -264,6 +264,12 @@ const demos = [
     new: false,
   },
   {
+    name: 'Error 404',
+    screenshot: 'img/screenshots/error-1.png',
+    link: '/error-1.html',
+    new: false,
+  },
+  {
     name: 'Terms Of Service',
     screenshot: 'img/screenshots/terms.png',
     link: '/terms.html',

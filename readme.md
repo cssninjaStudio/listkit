@@ -1,4 +1,4 @@
-# ListKit 1.0.0
+# ListKit 1.1.0
 
 Multipurpose Listing Template
 
