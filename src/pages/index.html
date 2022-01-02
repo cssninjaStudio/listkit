@@ -6,10 +6,10 @@ title: Listkit
 <!--Navigation-->
 <div
   class="landing-navigation"
-  data-x-data="initLandingNavbar()"
-  data-x-on:scroll.window="scroll()"
-  data-x-init="initScrollAnchors()"
-  data-x-bind:class="{
+  x-data="initLandingNavbar()"
+  x-on:scroll.window="scroll()"
+  x-init="initScrollAnchors()"
+  x-bind:class="{
       'is-scrolled': scrolled,
       '': !scrolled,
       'is-solid': mobileOpen,
@@ -24,7 +24,7 @@ title: Listkit
       </div>
       <div
         class="center"
-        data-x-bind:class="{
+        x-bind:class="{
             'is-mobile-active': mobileOpen,
             '': !mobileOpen
         }"
@@ -36,11 +36,11 @@ title: Listkit
       </div>
       <div class="right">
         <a class="button is-primary is-raised-hover mx-1">Buy Now</a>
-        <div class="navbar-burger" data-x-on:click="openMobileMenu()">
+        <div class="navbar-burger" x-on:click="openMobileMenu()">
           <div class="menu-toggle">
             <div
               class="icon-box-toggle is-navbar"
-              data-x-bind:class="{
+              x-bind:class="{
                   'active': mobileOpen,
                   '': !mobileOpen
               }"
@@ -67,7 +67,7 @@ title: Listkit
         <div class="py-6">
           <div class="hero-text">
             <h1 class="title is-1 is-bold is-narrow">Hello, Iam Listkit.</h1>
-            <h4 class="midtitle">Alpine JS Listing UI - v1.0</h4>
+            <h4 class="midtitle">Alpine JS Listing UI - v1.1</h4>
             <p class="subtitle is-left">
               Explore events scheduled by members of the community and prepare
               to have loads of fun.
@@ -319,7 +319,7 @@ title: Listkit
     </div>
 
     <!--Software-->
-    <div class="demo-section py-6" data-x-data="initRenderDemos()">
+    <div class="demo-section py-6" x-data="initRenderDemos()">
       <div class="demo-section-title">
         <img src="img/illustrations/landing/layout.svg" alt="" />
         <div class="title-meta">
@@ -329,26 +329,31 @@ title: Listkit
       </div>
 
       <div class="columns is-multiline b-columns-third-tablet-p">
-        <template data-x-for="screenshot in screenshots">
+        <template x-for="screenshot in screenshots">
           <div class="column is-4 has-text-centered">
             <figure class="demo-wrapper">
-              <template data-x-if="screenshot.new">
+              <template x-if="screenshot.new">
                 <span class="new-tag">New</span>
               </template>
 
               <img
-                data-x-bind:data-src="screenshot.screenshot"
+                x-bind:data-src="screenshot.screenshot"
                 alt=""
                 data-lazy-load
               />
               <div class="circle-overlay is-landing"></div>
               <div class="demo-info has-text-centered">
                 <div class="wrapper">
-                  <div class="demo-title" data-x-text="screenshot.name"></div>
+                  <div class="demo-title" x-text="screenshot.name"></div>
                   <div class="demo-link">
                     <a
                       class="is-dm"
+<<<<<<< HEAD
                       data-x-bind:href="screenshot.link"
+=======
+                      x-bind:href="screenshot.link"
+                      target="_blank"
+>>>>>>> envato-1.0.0
                       >Go to demo <i class="las la-arrow-right"></i
                     ></a>
                   </div>
@@ -375,12 +380,12 @@ title: Listkit
         <div class="column is-5">
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -402,12 +407,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -429,12 +434,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -458,12 +463,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -487,12 +492,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -515,12 +520,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -542,12 +547,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -569,12 +574,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -598,12 +603,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -625,12 +630,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -657,12 +662,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">
@@ -684,12 +689,12 @@ title: Listkit
           <div class="py-8"></div>
           <!--Feature-->
           <div
-            data-x-data="{ shown: false }"
-            data-x-intersect:enter="shown = true"
+            x-data="{ shown: false }"
+            x-intersect:enter="shown = true"
           >
             <div
-              data-x-show="shown"
-              data-x-transition.delay.500ms
+              x-show="shown"
+              x-transition.delay.500ms
               class="landing-feature"
             >
               <div class="svg-icon">

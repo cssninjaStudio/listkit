@@ -47,7 +47,7 @@ title: Flat
     <div
       id="lightgallery"
       class="listing-cover-wrapper is-2"
-      data-x-data="initCover()"
+      x-data="initCover()"
     >
       <a
         class="listing-cover has-background-image"
@@ -151,14 +151,14 @@ title: Flat
             </div>
           </div>
 
-          <div class="listing-content" data-x-data="initListingContent()">
+          <div class="listing-content" x-data="initListingContent()">
             <h3 class="title is-5">About this flat</h3>
             <div class="translate-block">
               <span>Translate now</span>
               <i class="la la-language"></i>
             </div>
 
-            <div data-x-show="isDescriptionExpanded === false">
+            <div x-show="isDescriptionExpanded === false">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Murenam
                 te accusante defenderem. Ipse Epicurus fortasse redderet, ut
@@ -181,7 +181,7 @@ title: Flat
               </p>
             </div>
 
-            <div data-x-show="isDescriptionExpanded === true">
+            <div x-show="isDescriptionExpanded === true">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Murenam
                 te accusante defenderem. Ipse Epicurus fortasse redderet, ut
@@ -220,14 +220,14 @@ title: Flat
             </div>
 
             <a
-              data-x-show="isDescriptionExpanded === false"
-              data-x-on:click.prevent="toggleListingDescription()"
+              x-show="isDescriptionExpanded === false"
+              x-on:click.prevent="toggleListingDescription()"
               class="underlink"
               >Read more</a
             >
             <a
-              data-x-show="isDescriptionExpanded === true"
-              data-x-on:click.prevent="toggleListingDescription()"
+              x-show="isDescriptionExpanded === true"
+              x-on:click.prevent="toggleListingDescription()"
               class="underlink"
               >Read less</a
             >
@@ -340,7 +340,7 @@ title: Flat
             </div>
           </div>
 
-          <div class="listing-calendar" data-x-data="initListingCalendar()">
+          <div class="listing-calendar" x-data="initListingCalendar()">
             <h3 class="title is-5 is-narrow">Select check-in date</h3>
             <div class="listing-calendar-inner">
               <input type="text" class="static-datepicker-start" />
@@ -357,8 +357,8 @@ title: Flat
                 <!--Booking form-->
                 <div
                   class="card booking-card"
-                  data-x-data="initBookingForm()"
-                  data-x-on:click.away="closeBookingPanel()"
+                  x-data="initBookingForm()"
+                  x-on:click.away="closeBookingPanel()"
                 >
                   <div class="head is-flex">
                     <span>$185 <small>/per night</small></span>
@@ -373,15 +373,15 @@ title: Flat
                   <div class="dual-picker-wrapper">
                     <!--Dual picker date-->
                     <div
-                      data-x-show="bookingFormExpanded === true"
+                      x-show="bookingFormExpanded === true"
                       class="dual-picker-panel"
-                      data-x-bind:class="{
+                      x-bind:class="{
                         'is-compressed': participantsFormActive,
                         '': !participantsFormActive
                       }"
                     >
                       <div
-                        data-x-show="dateFormActive === true"
+                        x-show="dateFormActive === true"
                         class="dual-picker-panel-inner"
                       >
                         <h4 class="dual-picker-panel-title">Add some dates</h4>
@@ -390,12 +390,12 @@ title: Flat
                           <input
                             type="text"
                             class="event-datepicker-start"
-                            data-x-on:click="getDateValue($event)"
+                            x-on:click="getDateValue($event)"
                           />
                           <input
                             type="text"
                             class="event-datepicker-end"
-                            data-x-on:click="getDateValue($event)"
+                            x-on:click="getDateValue($event)"
                           />
                           <!--Actions-->
                           <div class="calendar-actions">
@@ -408,7 +408,7 @@ title: Flat
                       </div>
                       <!--Dual picker participants-->
                       <div
-                        data-x-show="participantsFormActive === true"
+                        x-show="participantsFormActive === true"
                         class="dual-picker-panel-inner"
                       >
                         <div class="participants-selector">
@@ -471,8 +471,8 @@ title: Flat
                     <div class="dual-picker">
                       <div
                         class="field"
-                        data-x-on:click="openDatesPanel()"
-                        data-x-bind:class="{
+                        x-on:click="openDatesPanel()"
+                        x-bind:class="{
                           'is-active': dateFormActive,
                           '': !dateFormActive
                         }"
@@ -490,8 +490,8 @@ title: Flat
                       </div>
                       <div
                         class="field"
-                        data-x-on:click="openParticipantsPanel()"
-                        data-x-bind:class="{
+                        x-on:click="openParticipantsPanel()"
+                        x-bind:class="{
                           'is-active': participantsFormActive,
                           '': !participantsFormActive
                         }"
@@ -794,8 +794,8 @@ title: Flat
 
       <div
         class="listing-map-wrapper"
-        data-x-data="initListingMap()"
-        data-x-init="initMainMap()"
+        x-data="initListingMap()"
+        x-init="initMainMap()"
       >
         <div class="listing-map-inner">
           <div
@@ -920,7 +920,7 @@ title: Flat
       </div>
 
       <!--Available dates carousel wrapper-->
-      <div class="available-dates" data-x-data="initListingDates()">
+      <div class="available-dates" x-data="initListingDates()">
         <div class="available-dates-inner glide available-dates-glide">
           <div class="glide__track" data-glide-el="track">
             <!--Available dates carousel-->
@@ -1157,7 +1157,7 @@ title: Flat
       <h4 class="title is-5">More scheduled events</h4>
 
       <!--Scheduled events carousel-->
-      <div class="scheduled-listings" data-x-data="initMoreListings()">
+      <div class="scheduled-listings" x-data="initMoreListings()">
         <div class="scheduled-listings-inner glide more-events-glide">
           <div class="glide__track" data-glide-el="track">
             <!--Carousel-->

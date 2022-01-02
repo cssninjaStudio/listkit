@@ -26,7 +26,7 @@ title: Login
       </div>
 
       <!--Form-->
-      <div class="form-card" data-x-data="initLogin()">
+      <div class="form-card" x-data="initLogin()">
         <form>
           <div id="signin-form" class="login-form">
             <!-- Input -->
@@ -71,10 +71,10 @@ title: Login
                   h-button
                   is-primary is-bold is-fullwidth is-raised
                 "
-                data-x-bind:class="{
+                x-bind:class="{
                     'is-loading': isLoading,
                 }"
-                data-x-on:click="login()"
+                x-on:click="login()"
               >
                 Sign In
               </button>
