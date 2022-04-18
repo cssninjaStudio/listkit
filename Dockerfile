@@ -1,6 +1,6 @@
-FROM bitnami/node:14 AS build
+FROM bitnami/node:16 AS build
 WORKDIR /app
-RUN npm install --global npm
+
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install --unsafe-perm
@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build
 
 
-FROM bitnami/nginx:1.19 AS prod
+FROM bitnami/nginx:1.21 AS prod
 WORKDIR /app
 
 COPY --from=build /app/dist .
