@@ -26,10 +26,6 @@ echo "::debug::${ARCHIVE}"
 # remove "development" in constants.js
 sed -i 's/env = "development"/env = ""/g' src/js/libs/utils/constants.js
 
-# move demo data
-rm -rf ./src/data
-mv ./src/data-demo ./src/data
-
 # top level zip release-${INPUT_PROJECT}-${INPUT_TAG}.zip 
 zip -r $ARCHIVE . \
   -x "src/assets/img/photo/*" \
