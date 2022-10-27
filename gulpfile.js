@@ -2,14 +2,12 @@ const { src, dest, task, watch, series, parallel } = require('gulp');
 const del = require('del');
 const options = require("./config");
 const browserSync = require('browser-sync').create();
-
-//const sass = require('gulp-sass');
 const sass = require('gulp-sass')(require('sass'));
 const bourbon = require('node-bourbon').includePaths;
 const concat = require('gulp-concat');
+const replace = require('gulp-replace');
 const uglify = require('gulp-uglify-es').default;
 const imagemin = require('gulp-imagemin');
-const purgecss = require('gulp-purgecss');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const panini = require('panini');
@@ -19,6 +17,7 @@ const babelify = require("babelify");
 const source = require("vinyl-source-stream");
 const buffer = require('vinyl-buffer');
 const nodepath = 'node_modules/';
+const packageJson = require('./package.json')
 
 //Note : Webp still not supported in major browsers including forefox
 //const webp = require('gulp-webp'); //For converting images to WebP format
@@ -78,6 +77,7 @@ function compileHTML() {
   console.log("\n\t" + logSymbols.info, "Compiling HTML..\n");
   panini.refresh();
   return src('src/pages/**/*.html')
+    .pipe(replace('{{PACKAGE_VERSION}}', packageJson.version))
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',

@@ -8,14 +8,15 @@ Multipurpose Listing Template
 
 1. Install Dev Depedencies
 ```sh
-npm install
+pnpm i
 ```
+
 2. To start development and server for live preview
 ```sh
-npm run dev
+pnpm dev
 ```
 
 3. To build the project
 ```sh
-npm run build
+pnpm build
 ```
