@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/cssninjaStudio/listkit/compare/v1.2.4...v1.3.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([639947e](https://github.com/cssninjaStudio/listkit/commit/639947e9ffe918bb56537f24a7c0bfe332dd9a73))
+
 ### [1.2.4](https://github.com/cssninjaStudio/listkit/compare/v1.2.3...v1.2.4) (2023-04-26)
 
 ### [1.2.3](https://github.com/cssninjaStudio/listkit/compare/v1.2.2...v1.2.3) (2023-04-26)
